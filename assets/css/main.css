@@ -1,0 +1,223 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
+body {
+	/* Margin bottom by footer height */
+	margin-bottom: 8em;
+	padding-top: 4.5em;
+	counter-reset: h1counter;
+	
+}
+
+h1 {
+	counter-reset: h2counter;
+	text-align: justify;
+	color: #EABE3F;
+	font-weight: bold;
+}
+
+h2 {
+	counter-reset: h3counter;
+}
+
+h2:before {
+	content: counter(h2counter) ".\0000a0\0000a0";
+	counter-increment: h2counter;
+}
+
+h3:before {
+	content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+	counter-increment: h3counter;
+}
+
+.container {
+	font-size: 1.5em;
+}
+
+.jumbotron {
+	background: #000000;
+}
+
+.jumbotron h1 {
+	color: #CDA434;
+	letter-spacing: 0.2em;
+	font-size: 4em;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+}
+
+.footer {
+	position: absolute;
+	padding-right: 1em;
+	padding-top: 1.5em;
+	bottom: 0;
+	width: 100%;
+	/* Set the fixed height of the footer here */
+	height: 8em;
+	background-color: black;
+	bottom: 0;
+}
+
+.footer-links {
+	margin: 0 0 0 0em;
+	padding: 0;
+	float: right;
+	text-align: right;
+}
+
+.footer-links>li {
+	padding-right: 1em;
+	display: inline-block;
+}
+
+.navbar-default {
+	background-color: black;
+	border-color: #12421f;
+	text-transform: uppercase;
+	font-size: 1.3em;
+}
+
+.navbar-default .navbar-brand {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus
+	{
+	color: #ffffff;
+}
+
+.navbar-default .navbar-text {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>a:hover, .navbar-default .navbar-nav>li>a:focus
+	{
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>.dropdown-menu {
+	background-color: black;
+}
+
+.navbar-default .navbar-nav>li>.dropdown-menu>li>a {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-nav>li>.dropdown-menu>li>a:hover,
+	.navbar-default .navbar-nav>li>.dropdown-menu>li>a:focus {
+	color: #ffffff;
+	background-color: #12421f;
+}
+
+.navbar-default .navbar-nav>li>.dropdown-menu>li>.divider {
+	background-color: #12421f;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu>.active>a,
+	.navbar-default .navbar-nav .open .dropdown-menu>.active>a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu>.active>a:focus {
+	color: #ffffff;
+	background-color: #12421f;
+}
+
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover,
+	.navbar-default .navbar-nav>.active>a:focus {
+	color: #ffffff;
+	background-color: #12421f;
+}
+
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:hover,
+	.navbar-default .navbar-nav>.open>a:focus {
+	color: #ffffff;
+	background-color: #12421f;
+}
+
+.navbar-default .navbar-toggle {
+	border-color: #12421f;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus
+	{
+	background-color: #12421f;
+}
+
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #ffffff;
+}
+
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
+	border-color: #ffffff;
+}
+
+.navbar-default .navbar-link {
+	color: #ffffff;
+}
+
+.navbar-default .navbar-link:hover {
+	color: #ffffff;
+}
+
+.post-container {
+    max-width: 90%; /* ajusta el ancho máximo según tus preferencias */
+    margin: 0 auto; /* centra el contenido */
+    padding: 20px; /* añade un relleno alrededor del contenido del post */
+}
+
+
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 767px) {
+    body {
+        /* Ajusta el padding y margin para dispositivos móviles */
+        margin-bottom: 4em;
+        padding-top: 2em;
+    }
+	
+    .container {
+        /* Ajusta el tamaño de fuente para dispositivos móviles */
+        font-size: 1em;
+    }
+
+    .jumbotron h1 {
+        /* Ajusta el tamaño de fuente del encabezado para dispositivos móviles */
+        font-size: 2em;
+    }
+
+    /* Ajusta el estilo del footer para dispositivos móviles */
+    .footer {
+        position: relative;
+        padding: 1em;
+        height: auto;
+        text-align: center;
+    }
+
+    .footer-links {
+        text-align: center;
+        float: none;
+        margin: 0;
+    }
+
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a,
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:hover,
+    .navbar-default .navbar-nav .open .dropdown-menu>li>a:focus {
+        /* Ajusta el color de los elementos del menú desplegable en dispositivos móviles */
+        color: #FFFFFF;
+        background-color: transparent; /* Cambia el fondo a transparente */
+    }
+	.post-container {
+		max-width: 90%; /* ajusta el ancho máximo según tus preferencias */
+		margin: 0 auto; /* centra el contenido */
+		padding: 10px; /* añade un relleno alrededor del contenido del post */
+	}
+	
+	h1 {
+		font-size: 1.8em;
+	}
+}

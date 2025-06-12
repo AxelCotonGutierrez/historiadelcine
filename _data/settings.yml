@@ -1,0 +1,27 @@
+# Change 'comments' to true for Disqus comments
+disqus:
+  comments: true
+  disqus_shortname: 'learningmathematicas'
+
+# If you are not using Google Analytics, please change 'google-ID' to an empty string
+google-ID: 'G-K1CHGHX488'
+
+menu: 
+  - name: Cursos y Materias
+    link: /projects/Cursos/
+  - name: Niveles
+    link: /projects/Niveles/
+  - name: Entradas
+    link: /
+  - name: Etiquetas
+    link: /tags
+  - name: Blog
+    link: /about
+  - name: Utilidades
+    submenu:
+      - name: Glosario
+        link: /projects/Utilidades/Glosario.html
+      - name: Programación
+        link: /projects/Utilidades/Programacion.html
+      - name: Soroban
+        link: /projects/Utilidades/Soroban.html

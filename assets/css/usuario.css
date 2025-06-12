@@ -1,0 +1,95 @@
+body {
+    background: #fff;
+    color: #f0c040;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .perfil-container {
+    padding: 2em 1em;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-top: 1em;
+  }
+  
+  
+  
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 1em;
+  }
+  
+  .galeria img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    border: 2px solid #f0c040;
+    border-radius: 10px;
+    background-color: #222;
+    transition: transform 0.2s ease;
+  }
+  
+  .galeria img:hover {
+    transform: scale(1.1);
+  }
+  .oculto {
+    display: none;
+  }
+  
+  .seccion h2 {
+    cursor: pointer;
+    padding: 10px;
+    background-color: #222;
+    border-radius: 6px;
+    margin: 10px 0;
+    transition: background 0.3s;
+  }
+  
+  .seccion h2:hover {
+    background-color: #333;
+  }
+  
+  .boton-logout {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .boton-logout:hover {
+    background-color: darkred;
+  }
+  
+  
+  @media (max-width: 600px) {
+    .perfil-container {
+      padding: 1em;
+    }
+  
+    .galeria img {
+      width: 80px;
+      height: 80px;
+    }
+  
+    h1 {
+      font-size: 1.5em;
+    }
+  
+    h2 {
+      font-size: 1.2em;
+    }
+  }
+  
+ 

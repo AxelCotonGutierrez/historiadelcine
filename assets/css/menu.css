@@ -1,0 +1,211 @@
+/* === DISEÑO GENERAL === */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffff;
+  color: #f2f2f2;
+  font-size: 1.2rem;
+}
+
+/* === CONTENEDOR PRINCIPAL === */
+.menu {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* === MENÚ LATERAL === */
+.index-container {
+  width: 300px;
+  background-color: #000;
+  color: #f0c040;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 1rem 0;
+  overflow-y: auto;
+  box-shadow: 2px 0 10px rgba(0,0,0,0.3);
+}
+
+#index1 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding: 0 1rem;
+}
+
+#index1 h1 {
+  color: #f0c040;
+  font-size: 3rem !important;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* === BOTONES DEL MENÚ === */
+.menu-boton {
+  background-color: #222;
+  color: #f0c040;
+  border: 1px solid #f0c040;
+  padding: 0.75rem 1rem;
+  font-size: 1.6rem;
+  text-align: left;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-boton:hover,
+.menu-boton.activo {
+  background-color: #f0c040;
+  color: #000;
+}
+
+/* === VISOR DE CONTENIDO === */
+#visor {
+  flex: 1;
+  padding: 2rem;
+  overflow-y: auto;
+  background-color: #1a1a1a;
+}
+
+.visor-bloque h2 {
+  font-size: 2rem;
+  color: #f0c040;
+  margin-bottom: 1rem;
+}
+
+.visor-bloque h2::before {
+  content: none !important; /* Elimina el número "1." */
+}
+
+.contenido {
+  font-size: 1.8rem;
+  line-height: 1.8;
+  color: #e0e0e0;
+}
+
+/* === VÍDEO === */
+.video-embed {
+  width: 70%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 8px;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* === IMAGEN DE ACTIVIDAD === */
+.actividad-img {
+  width: 80%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+}
+
+/* === BOTÓN DE PANTALLA COMPLETA === */
+#fullscreen-toggle {
+  background-color: #000;
+  color: #f0c040;
+  border: 1px solid #f0c040;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 2rem;
+  cursor: pointer;
+  margin: 1rem;
+  align-self: center;
+}
+.titulo-portada {
+  font-size: 6rem;
+  color: #f0c040;
+  text-align: center;
+  margin-top: 3rem;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes balanceo {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(1.5deg); }
+  50%  { transform: rotate(0deg); }
+  75%  { transform: rotate(-1.5deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.actividad-img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 1rem auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(255, 215, 0, 0.2);
+
+  animation: balanceo 3s ease-in-out infinite;
+  transform-origin: center;
+}
+/* === Botón hamburguesa personalizado === */
+.hamburguesa {
+  display: none;
+  background-color: #000;
+  color: #f0c040;
+  border: 1px solid #f0c040;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin: 0.5rem auto;
+  cursor: pointer;
+}
+
+/* === RESPONSIVE === */
+@media screen and (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .index-container {
+    width: 100%;
+    flex-direction: column;
+    overflow: visible;
+    align-items: stretch;
+  }
+
+  .hamburguesa {
+    display: block;
+    background-color: #000;
+    color: #f0c040;
+    border: 1px solid #f0c040;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin: 0.5rem auto;
+    cursor: pointer;
+  }
+
+  #index1 {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0 1rem;
+  }
+
+  .index-container.mostrar #index1 {
+    display: flex;
+  }
+
+  #fullscreen-toggle {
+    align-self: center;
+    margin-bottom: 1rem;
+  }
+
+  #visor {
+    padding: 1rem;
+    width: 100%;
+  }
+}

@@ -1,0 +1,35 @@
+---
+layout: default
+title: Usuario
+permalink: /usuario/
+description: Perfil de Usuario
+comments: true
+---
+
+<link href="/learningmathematicas/assets/css/usuario.css" rel="stylesheet">
+<script src="/learningmathematicas/assets/js/usuario.js" defer></script>
+
+<div class="perfil-container">
+  <h1>Perfil de <span id="usuario-nick"></span></h1>
+
+  <div class="secciones">
+    <div class="seccion">
+      <h2 onclick="toggleSeccion(this)">Datos del usuario</h2>
+      <ul id="datos-usuario" class="contenido-seccion oculto"></ul>
+    </div>
+
+    <div class="seccion">
+      <h2 onclick="toggleSeccion(this)">Insignias obtenidas</h2>
+      <div id="galeria-insignias" class="galeria contenido-seccion oculto"></div>
+    </div>
+
+    <div class="seccion">
+      <h2 onclick="toggleSeccion(this)">Colección de cartas</h2>
+      <div id="galeria-cartas" class="galeria contenido-seccion oculto"></div>
+    </div>
+  </div>
+</div>
+<div style="text-align:center; margin-top: 2em;">
+    <button onclick="cerrarSesion()" class="boton-logout">Cerrar sesión</button>
+  </div>
+  

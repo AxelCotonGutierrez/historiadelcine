@@ -1,0 +1,79 @@
+.container {
+    width: 90%;
+    margin: 0 auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #EABE3F;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.sub-levels, .level-details {
+    display: none;
+}
+
+.level-content {
+    display: none;
+}
+
+.button {
+    color: rgb(54, 121, 229);
+    padding: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid #ccc;
+    width: 95%; /* Ajustar el ancho al 90% del contenedor */
+    background-color: transparent; /* Fondo transparente */
+    font-size: smaller; /* Texto más pequeño */
+    margin: 10px auto; /* Centrar el botón en el contenedor */
+    display: block; /* Asegurar que el botón se muestre como un bloque */
+    border: 1px solid #EABE3F;
+}
+
+
+.nivel-info h2::before {
+    content: none; /* Esto eliminará el contenido generado antes del título */
+}
+.nivel-info {
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.nivel-info h2 {
+    font-size: 20px; /* Tamaño de título */
+    list-style-type: none; /* Elimina el estilo de lista para los títulos */
+    margin-left: 0; /* Elimina el margen izquierdo adicional */
+}
+
+.nivel-info ol {
+    list-style-type: decimal; /* Estilo de lista decimal para los elementos ordenados */
+}
+@media (max-width: 768px) {
+    .button {
+        width: 90%; /* Ancho completo en dispositivos móviles */
+    }
+}
+
+.nivel-info h2::before {
+    content: none; /* Esto eliminará el contenido generado antes del título */
+}
+
+.nivel-info {
+    font-size: 16px; /* Ajusta el tamaño del texto */
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+
+.nivel-info h2 {
+    font-size: 20px; /* Tamaño de título */
+    list-style-type: none; /* Elimina el estilo de lista para los títulos */
+    margin-left: 0; /* Elimina el margen izquierdo adicional */
+}
+
+.nivel-info ol {
+    list-style-type: decimal; /* Estilo de lista decimal para los elementos ordenados */
+}
