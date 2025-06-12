@@ -1,27 +1,21 @@
 # Change 'comments' to true for Disqus comments
 disqus:
   comments: true
-  disqus_shortname: 'learningmathematicas'
+  disqus_shortname: 'historia-del-cine'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
 google-ID: 'G-K1CHGHX488'
 
-menu: 
-  - name: Cursos y Materias
-    link: /projects/Cursos/
-  - name: Niveles
-    link: /projects/Niveles/
-  - name: Entradas
+menu:
+  - name: Inicio
     link: /
+  - name: Buscador
+    link: /buscador/
+  - name: Películas
+    link: /peliculas/
+  - name: Directores
+    link: /directores/
+  - name: Artículos
+    link: /ensayos/
   - name: Etiquetas
-    link: /tags
-  - name: Blog
-    link: /about
-  - name: Utilidades
-    submenu:
-      - name: Glosario
-        link: /projects/Utilidades/Glosario.html
-      - name: Programación
-        link: /projects/Utilidades/Programacion.html
-      - name: Soroban
-        link: /projects/Utilidades/Soroban.html
+    link: /tags/

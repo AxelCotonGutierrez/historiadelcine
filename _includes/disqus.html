@@ -1,20 +1,17 @@
-{% if site.data.settings.disqus.comments and page.comments %}
+{% if site.disqus.comments and page.comments %}
 <div id="disqus_thread"></div>
 <script>
-    /**
-    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
-    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
-    */
-    var disqus_config = function () {
-        this.page.url = "https://axelcotongutierrez.github.io/learningmathematicas{{ page.url }}";
-    };
+  var disqus_config = function () {
+    this.page.url = "https://axelcotongutierrez.github.io/historiadelcine{{ page.url }}";
+    this.page.identifier = "{{ page.id | default: page.url }}";
+  };
 
-    (function() { // DON'T EDIT BELOW THIS LINE
-        var d = document, s = d.createElement('script');
-        s.src = 'https://learningmathematicas.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
+  (function() {
+    var d = document, s = d.createElement('script');
+    s.src = 'https://historia-del-cine.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+  })();
 </script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<noscript>Por favor, activa JavaScript para ver los <a href="https://disqus.com/?ref_noscript">comentarios.</a></noscript>
 {% endif %}

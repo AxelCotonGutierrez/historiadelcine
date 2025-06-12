@@ -13,12 +13,12 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Mathematĭca
-name: Mathematĭca
-description: 
-  Blog dedicado a juegos para aprender Matemáticas
-baseurl: /learningmathematicas
-github_username:  AxelCotonGutierrez
+title: Historia del Cine
+name: Historia del Cine
+description: >
+  Blog dedicado a la historia del cine, la animación y el patrimonio audiovisual en dominio público.
+baseurl: /historiadelcine
+github_username: AxelCotonGutierrez
 
 # jekyll-paginate configuration
 paginate: 10

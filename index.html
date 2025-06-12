@@ -1,12 +1,14 @@
---- 
-layout: default 
-title: Mathematĭca
-description: Blog de Matemáticas para Educación de Personas Adultas
-comments: true 
+---
+layout: default
+title: Historia del Cine
+description: Blog sobre cine, animación, documental y patrimonio audiovisual en dominio público
+comments: true
 ---
 
-<!-- Pagination links -->
-<script src="/learningmathematicas/assets/js/tags.js"></script>
+<!-- Script para redirigir etiquetas -->
+<script src="/historiadelcine/assets/js/tags.js"></script>
+
+<!-- Navegación por páginas -->
 <div>
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | relative_url }}">Anterior</a>
@@ -14,7 +16,7 @@ comments: true
     <span>Anterior</span>
   {% endif %}
   | <span class="page_number">
-    Página: {{ paginator.page }} of {{ paginator.total_pages }}
+    Página: {{ paginator.page }} de {{ paginator.total_pages }}
   </span> |
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | relative_url }}">Posterior</a>
@@ -23,29 +25,40 @@ comments: true
   {% endif %}
 </div>
 
+<!-- Lista de entradas -->
 <div class="list-group">
   {% for post in paginator.posts %}
     <div class="list-group-item">
       <a href="{{ post.url | relative_url }}">
         <h4 class="list-group-item-heading">{{ post.title }}</h4>
-     <h6 class="list-group-item-heading">{{ post.published | date: '%d/%m/%Y' }} | (Última actualización: {{ post.date | date: '%d/%m/%Y' }})</h6>
-    
+        <h6 class="list-group-item-heading">
+          {{ post.published | date: '%d/%m/%Y' }} |
+          (Última actualización: {{ post.date | date: '%d/%m/%Y' }})
+        </h6>
       </a>
+
+      <!-- Etiquetas -->
       {% for tag in post.tags %}
-      <a class="label label-default" href="javascript:void(0);" onclick="redirectToTagPage('{{ tag | slugify }}')">{{ tag }}</a>
-  {% endfor %}
-     
-        {% if post.noimage %}
-      {% else %}
-        <img alt="{{ post.title }}" src="{{ '/assets/images/' | relative_url }}{{ post.id }}/top.jpg" class="img-responsive">
-      {% endif %}
+        <a class="label label-default"
+           href="javascript:void(0);"
+           onclick="redirectToTagPage('{{ tag | slugify }}')">{{ tag }}</a>
+      {% endfor %}
+
+      <!-- Imagen si existe -->
+      {% unless post.noimage %}
+        <img alt="{{ post.title }}"
+             src="{{ '/assets/images/' | relative_url }}{{ post.id }}/top.jpg"
+             class="img-responsive">
+      {% endunless %}
+
+      <!-- Resumen -->
       <p>{{ post.excerpt | strip_html }}</p>
       <a href="{{ post.url | relative_url }}">Leer más...</a>
     </div>
   {% endfor %}
 </div>
 
-<!-- Pagination links -->
+<!-- Navegación repetida al final -->
 <div>
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path | relative_url }}">Anterior</a>
@@ -53,7 +66,7 @@ comments: true
     <span>Anterior</span>
   {% endif %}
   | <span class="page_number">
-    Página: {{ paginator.page }} of {{ paginator.total_pages }}
+    Página: {{ paginator.page }} de {{ paginator.total_pages }}
   </span> |
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path | relative_url }}">Posterior</a>

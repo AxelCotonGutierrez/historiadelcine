@@ -1,78 +1,67 @@
 <!doctype html>
 <html lang="es">
-{% include head.html %}
+  {% include head.html %}
 
-<body>
-  <script src="/learningmathematicas/assets/js/tags.js"></script>
-  {% include header.html %}
+  <body>
+    <script src="/historiadelcine/assets/js/tags.js"></script>
 
-  <!-- Estado del login -->
-  <div style="position: absolute; top: 10px; right: 20px; z-index: 1000; font-weight: bold;">
-    <span id="estado-login" style="color: #f0c040;">Conectando...</span>
-  </div>
+    {% include header.html %}
 
-  <div class="container">
+    <!-- Estado del login -->
+    <div style="position: absolute; top: 10px; right: 20px; z-index: 1000; font-weight: bold;">
+      <span id="estado-login" style="color: #f0c040;">Conectando...</span>
+    </div>
 
-    {% if page.id %}
-    <p>
-      <strong>{{ page.published | date: '%d/%m/%Y' }} (última actualización: {{ page.date | date: '%d/%m/%Y' }})
-      <br>
-      {% for tag in page.tags %}
-      <a class="label label-default" href="javascript:void(0);" onclick="redirectToTagPage('{{ tag | slugify }}')">{{ tag }}</a>
-      {% endfor %}
-    </p>
+    <div class="container">
 
-    {% if page.github %}
-    <p><a href="{{ page.github }}" class="btn btn-default"><i class="fa fa-github fa-2x"></i> {{ page.github }}</a></p>
-    {% endif %}
+      {% if page.id %}
+        <p>
+          <strong>{{ page.published | date: '%d/%m/%Y' }} (última actualización: {{ page.date | date: '%d/%m/%Y' }})</strong>
+          <br>
+          {% for tag in page.tags %}
+            <a class="label label-default" href="javascript:void(0);" onclick="redirectToTagPage('{{ tag | slugify }}')">{{ tag }}</a>
+          {% endfor %}
+        </p>
 
-    {% if page.github2 %}
-    <p><a href="{{ page.github2 }}" class="btn btn-default"><i class="fa fa-github fa-2x"></i> {{ page.github2 }}</a></p>
-    {% endif %}
+        {% for i in (1..5) %}
+          {% assign github_var = 'page.github' | append: i %}
+          {% if [github_var] %}
+            <p><a href="{{ [github_var] }}" class="btn btn-default">
+              <i class="fa fa-github fa-2x"></i> {{ [github_var] }}
+            </a></p>
+          {% endif %}
+        {% endfor %}
 
-    {% if page.github3 %}
-    <p><a href="{{ page.github3 }}" class="btn btn-default"><i class="fa fa-github fa-2x"></i> {{ page.github3 }}</a></p>
-    {% endif %}
-
-    {% if page.github4 %}
-    <p><a href="{{ page.github4 }}" class="btn btn-default"><i class="fa fa-github fa-2x"></i> {{ page.github4 }}</a></p>
-    {% endif %}
-
-    {% if page.github5 %}
-    <p><a href="{{ page.github5 }}" class="btn btn-default"><i class="fa fa-github fa-2x"></i> {{ page.github5 }}</a></p>
-    {% endif %}
-
-    <hr>
-    {% endif %}
-
-    {{ content }}
-
-    {% if page.id %}
-    <p>Originalmente publicado {{ page.published | date: '%d/%m/%Y' }}
-    <br> Última actualización {{ page.date | date: '%d/%m/%Y' }}</p>
-
-    <p><strong>Últimas Entradas relacionadas:</strong></p>
-    <ul>
-      {% assign count = 0 %}
-      {% for allpost in site.posts %}
-      {% if count < 5 %}
-      {% assign common_tags = allpost.tags | where_exp: "tag", "page.tags contains tag" %}
-      {% if common_tags.size > 0 and allpost.id != page.id %}
-      <li><a href="{{ site.baseurl }}{{ allpost.url }}">{{ allpost.title }}</a></li>
-      {% assign count = count | plus: 1 %}
+        <hr>
       {% endif %}
+
+      {{ content }}
+
+      {% if page.id %}
+        <p>
+          Originalmente publicado {{ page.published | date: '%d/%m/%Y' }}  
+          <br>Última actualización {{ page.date | date: '%d/%m/%Y' }}
+        </p>
+
+        <p><strong>Últimas entradas relacionadas:</strong></p>
+        <ul>
+          {% assign count = 0 %}
+          {% for allpost in site.posts %}
+            {% if count < 5 %}
+              {% assign common_tags = allpost.tags | where_exp: "tag", "page.tags contains tag" %}
+              {% if common_tags.size > 0 and allpost.id != page.id %}
+                <li><a href="{{ site.baseurl }}{{ allpost.url }}">{{ allpost.title }}</a></li>
+                {% assign count = count | plus: 1 %}
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </ul>
       {% endif %}
-      {% endfor %}
-    </ul>
-    {% endif %}
 
-    {% include disqus.html %}
-  </div>
+      {% include disqus.html %}
+    </div>
 
-  {% include footer.html %}
-  {% include analytics.html %}
-
- 
-
-</body>
+    {% include footer.html %}
+    {% include analytics.html %}
+  </body>
 </html>
