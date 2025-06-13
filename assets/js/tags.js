@@ -1,7 +1,7 @@
 // Función para manejar los enlaces internos
 function redirectToTagPage(tag) {
   localStorage.setItem('selectedTag', tag);
-  window.location.href = '/learningmathematicas/tags/';
+  window.location.href = '/historiadelcine/tags/';
 }
 
 // Esperar a que el contenido del DOM esté cargado

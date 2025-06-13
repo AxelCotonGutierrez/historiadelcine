@@ -16,6 +16,6 @@ menu:
   - name: Directores
     link: /directores/
   - name: Artículos
-    link: /ensayos/
+    link: /post/
   - name: Etiquetas
     link: /tags/
