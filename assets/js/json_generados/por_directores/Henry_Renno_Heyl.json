@@ -1,0 +1,71 @@
+[
+  {
+    "id": "waltzing-couple-heyl",
+    "titulo": "Pareja bailando vals",
+    "titulo_original": "Waltzing Couple",
+    "año": 1870,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación fotográfica proyectada con acompañamiento musical, mostrando a una pareja en movimiento de vals.",
+    "imagen": "/assets/images/henry-renno-heyl/pareja.jpg",
+    "post": "/posts/henry-renno-heyl/",
+    "directores": [
+      "Henry Renno Heyl"
+    ],
+    "productores": [
+      "Henry Renno Heyl"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos"
+    ],
+    "observaciones": "No se conserva el disco completo ni los negativos originales. Solo se han recuperado cuatro imágenes fotográficas sueltas. La película no puede visualizarse."
+  },
+  {
+    "id": "brother-jonathan-heyl",
+    "titulo": "El Tío Sam dando un discurso",
+    "titulo_original": "Brother Jonathan Addressing the Audience",
+    "año": 1870,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación simbólica de un personaje estadounidense hablando al público, con voz sincronizada en directo.",
+    "imagen": "/assets/images/henry-renno-heyl/brother-jonathan.jpg",
+    "post": "/posts/henry-renno-heyl/",
+    "directores": [
+      "Henry Renno Heyl"
+    ],
+    "productores": [
+      "Henry Renno Heyl"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos"
+    ],
+    "observaciones": "No se conservan los negativos ni el disco original. La película no puede visualizarse y solo se conoce por fuentes escritas contemporáneas."
+  },
+  {
+    "id": "little-all-right-heyl",
+    "titulo": "Pequeño acróbata japonés",
+    "titulo_original": "Little All Right, the Japanese Acrobat",
+    "año": 1870,
+    "duracion": "5 seg",
+    "resumen_breve": "Breve animación fotográfica que representa un truco acrobático con poses cuidadosamente ensayadas.",
+    "imagen": "/assets/images/henry-renno-heyl/acrobata.jpg",
+    "post": "/posts/henry-renno-heyl/",
+    "directores": [
+      "Henry Renno Heyl"
+    ],
+    "productores": [
+      "Henry Renno Heyl"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos"
+    ],
+    "observaciones": "No se conservan los negativos ni el disco original. La película no puede visualizarse y solo se conoce por descripciones documentadas de la época."
+  }
+]

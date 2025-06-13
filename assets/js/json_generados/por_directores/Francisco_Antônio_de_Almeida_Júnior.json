@@ -1,0 +1,27 @@
+[
+  {
+    "id": "transito-de-venus",
+    "titulo": "Tránsito de Venus",
+    "titulo_original": "Passage de Venus",
+    "año": 1874,
+    "duracion": "1 min",
+    "resumen_breve": "Primera secuencia científica animada capturada con fines astronómicos.",
+    "imagen": "/assets/images/posts/transito-de-venus/tr-nsito-de-venus.jpg",
+    "post": "/posts/transito-de-venus/",
+    "directores": [
+      "P.C.J. Janssen",
+      "Francisco Antônio de Almeida Júnior"
+    ],
+    "productores": [
+      "P.C.J. Janssen"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Francia",
+      "Brasil"
+    ],
+    "observaciones": "Película parcialmente conservada. Solo se han recuperado algunas imágenes digitales reconstruidas a partir de placas fotográficas."
+  }
+]

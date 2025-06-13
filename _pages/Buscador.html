@@ -1,0 +1,134 @@
+---
+layout: default
+title: Buscador
+permalink: /Buscador/
+description: Buscador de películas, directores, actores, ...
+comments: true
+---
+<div class="container">
+  <h1>🎬 Buscador por categoría</h1>
+
+  <ul class="nav nav-tabs" id="pestanas-busqueda" role="tablist">
+    <li class="nav-item"><a class="nav-link active" data-carpeta="por_directores" data-toggle="tab" href="#tab" role="tab">Directores</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_productores" data-toggle="tab" href="#tab" role="tab">Productores</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_guionistas" data-toggle="tab" href="#tab" role="tab">Guionistas</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_actores" data-toggle="tab" href="#tab" role="tab">Actores</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_estudio" data-toggle="tab" href="#tab" role="tab">Estudios</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_paises" data-toggle="tab" href="#tab" role="tab">Países</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_año" data-toggle="tab" href="#tab" role="tab">Año</a></li>
+  </ul>
+
+  <div class="mt-3">
+    <input type="text" id="input-busqueda" class="form-control" placeholder="Buscar en esta categoría..." oninput="filtrarResultados()" />
+    <div id="resultados" class="mt-3"></div>
+  </div>
+</div>
+---
+layout: default
+title: Buscador
+permalink: /Buscador/
+description: Buscador por categorías de películas
+comments: true
+---
+
+<div class="container" style="max-width: 900px;">
+  <h1>🎬 Buscador por categoría</h1>
+
+  <ul class="nav nav-tabs mb-3" id="pestanas-busqueda">
+    <li class="nav-item"><a class="nav-link active" data-carpeta="por_directores" href="#">Directores</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_productores" href="#">Productores</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_guionistas" href="#">Guionistas</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_actores" href="#">Actores</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_estudio" href="#">Estudios</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_paises" href="#">Países</a></li>
+    <li class="nav-item"><a class="nav-link" data-carpeta="por_año" href="#">Años</a></li>
+  </ul>
+
+  <input type="text" id="input-busqueda" class="form-control mb-3" placeholder="Buscar por nombre de categoría (ej. Francia, Muybridge...)">
+
+  <div id="resultados"></div>
+</div>
+
+<script>
+const BASE_URL = "/historiadelcine/assets/js/json_generados/";
+let carpetaActual = "por_directores";
+let datosCargados = {};
+let cache = {};
+
+// Cargar lista de archivos de una categoría (requiere que tengas listado de archivos conocido o precargado)
+function cargarCarpeta(carpeta) {
+  carpetaActual = carpeta;
+  document.getElementById("resultados").innerHTML = "<p>Cargando datos...</p>";
+
+  if (cache[carpeta]) {
+    mostrarListado(cache[carpeta]);
+    return;
+  }
+
+  // Aquí se debería cargar un archivo índice tipo index.json generado al build
+  fetch(BASE_URL + carpeta + "/index.json")
+    .then(r => r.json())
+    .then(archivos => {
+      let promesas = archivos.map(nombre =>
+        fetch(BASE_URL + carpeta + "/" + nombre)
+          .then(r => r.json())
+          .catch(() => [])
+      );
+
+      Promise.all(promesas).then(resultados => {
+        let todos = resultados.flat();
+        cache[carpeta] = todos;
+        mostrarListado(todos);
+      });
+    })
+    .catch(() => {
+      document.getElementById("resultados").innerHTML = "<p>Error al cargar datos.</p>";
+    });
+}
+
+function mostrarListado(peliculas) {
+  const contenedor = document.getElementById("resultados");
+  const texto = document.getElementById("input-busqueda").value.toLowerCase().trim();
+  contenedor.innerHTML = "";
+
+  const filtradas = peliculas.filter(p =>
+    p.id?.toLowerCase().includes(texto) ||
+    p.titulo?.toLowerCase().includes(texto) ||
+    p.titulo_original?.toLowerCase().includes(texto)
+  );
+
+  if (filtradas.length === 0) {
+    contenedor.innerHTML = "<p>No se encontraron resultados.</p>";
+    return;
+  }
+
+  filtradas.forEach(p => {
+    const div = document.createElement("div");
+    div.className = "list-group-item";
+    div.innerHTML = `
+      <h5>${p.titulo} (${p.año})</h5>
+      <p><b>Original:</b> ${p.titulo_original || "—"}</p>
+      <p><a href="${p.post}" class="btn btn-sm btn-outline-primary">Ver ficha completa</a></p>
+    `;
+    contenedor.appendChild(div);
+  });
+}
+
+document.getElementById("input-busqueda").addEventListener("input", () => {
+  if (cache[carpetaActual]) {
+    mostrarListado(cache[carpetaActual]);
+  }
+});
+
+document.querySelectorAll("#pestanas-busqueda .nav-link").forEach(tab => {
+  tab.addEventListener("click", e => {
+    e.preventDefault();
+    document.querySelectorAll("#pestanas-busqueda .nav-link").forEach(el => el.classList.remove("active"));
+    tab.classList.add("active");
+    const carpeta = tab.getAttribute("data-carpeta");
+    cargarCarpeta(carpeta);
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => cargarCarpeta(carpetaActual));
+</script>
