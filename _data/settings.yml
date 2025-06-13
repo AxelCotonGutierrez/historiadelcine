@@ -10,7 +10,7 @@ menu:
   - name: Inicio
     link: /
   - name: Buscador
-    link: /buscador/
+    link: /Buscador/
   - name: Películas
     link: /peliculas/
   - name: Directores
