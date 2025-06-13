@@ -29,88 +29,74 @@ const BASE_URL = "/historiadelcine/assets/js/json_generados/";
 let carpetaActual = "";
 let cache = {};
 
-function cargarCarpeta(carpeta) {
-  carpetaActual = carpeta;
-  document.getElementById("resultados").innerHTML = "<p>Cargando datos...</p>";
-  document.getElementById("input-busqueda").value = "";
-
-  if (cache[carpeta]) {
-    mostrarListado(cache[carpeta], "");
+function buscarYMostrarArchivo() {
+  const texto = document.getElementById("input-busqueda").value.trim();
+  if (!texto || !carpetaActual) {
+    document.getElementById("resultados").innerHTML = "<p>Introduce un valor de búsqueda.</p>";
     return;
   }
 
-  fetch(BASE_URL + carpeta + "/index.json")
-    .then(r => r.json())
-    .then(archivos => {
-      const promesas = archivos.map(nombre =>
-        fetch(BASE_URL + carpeta + "/" + nombre)
-          .then(r => r.json())
-          .catch(() => [])
-      );
+  const nombreArchivo = texto.replace(/ /g, "_").replace(/\//g, "-") + ".json";
+  const ruta = BASE_URL + carpetaActual + "/" + nombreArchivo;
 
-      Promise.all(promesas).then(resultados => {
-        const todos = resultados.flat();
+  document.getElementById("resultados").innerHTML = "<p>Buscando...</p>";
 
-        // Eliminar duplicados por ID
-        const unicos = [];
-        const ids = new Set();
-        for (const peli of todos) {
-          if (!ids.has(peli.id)) {
-            ids.add(peli.id);
-            unicos.push(peli);
-          }
-        }
-
-        cache[carpeta] = unicos;
-        mostrarListado(unicos, "");
-      });
+  fetch(ruta)
+    .then(r => {
+      if (!r.ok) throw new Error("Archivo no encontrado");
+      return r.json();
+    })
+    .then(peliculas => {
+      mostrarListado(peliculas);
     })
     .catch(() => {
-      document.getElementById("resultados").innerHTML = "<p>Error al cargar datos.</p>";
+      document.getElementById("resultados").innerHTML = "<p>No se encontraron resultados.</p>";
     });
 }
 
-function mostrarListado(peliculas, filtroTexto) {
+function mostrarListado(peliculas) {
   const contenedor = document.getElementById("resultados");
   contenedor.innerHTML = "";
 
-  const filtradas = peliculas.filter(p =>
-    p.id?.toLowerCase().includes(filtroTexto) ||
-    p.titulo?.toLowerCase().includes(filtroTexto) ||
-    p.titulo_original?.toLowerCase().includes(filtroTexto)
-  );
-
-  if (filtradas.length === 0) {
-    contenedor.innerHTML = "<p>No se encontraron resultados.</p>";
-    return;
-  }
-
-  filtradas.forEach(p => {
+  peliculas.forEach(p => {
     const div = document.createElement("div");
     div.className = "list-group-item";
     div.innerHTML = `
-      <h5>${p.titulo} (${p.año})</h5>
-      <p><strong>Original:</strong> ${p.titulo_original || "—"}</p>
-      <p><a href="${p.post}" class="btn btn-sm btn-outline-primary">Ver ficha completa</a></p>
+      <div class="row">
+        <div class="col-md-4">
+          <img src="${p.imagen}" alt="${p.titulo}" class="img-fluid rounded mb-3" />
+        </div>
+        <div class="col-md-8">
+          <h4>${p.titulo} (${p.año})</h4>
+          <p><strong>Original:</strong> ${p.titulo_original || "—"}</p>
+          <p><strong>Duración:</strong> ${p.duracion || "—"}</p>
+          <p><strong>Directores:</strong> ${(p.directores || []).join(", ") || "—"}</p>
+          <p><strong>Productores:</strong> ${(p.productores || []).join(", ") || "—"}</p>
+          <p><strong>Guionistas:</strong> ${(p.guionistas || []).join(", ") || "—"}</p>
+          <p><strong>Actores:</strong> ${(p.actores || []).join(", ") || "—"}</p>
+          <p><strong>Estudio:</strong> ${(p.estudio || []).join(", ") || "—"}</p>
+          <p><strong>Países:</strong> ${(p.paises || []).join(", ") || "—"}</p>
+          <p><strong>Notas:</strong> ${p.observaciones || "—"}</p>
+          <p><a href="${p.post}" class="btn btn-sm btn-outline-primary">Ver ficha completa</a></p>
+        </div>
+      </div>
     `;
     contenedor.appendChild(div);
   });
 }
 
-document.getElementById("input-busqueda").addEventListener("input", () => {
-  const texto = document.getElementById("input-busqueda").value.toLowerCase().trim();
-  if (cache[carpetaActual]) {
-    mostrarListado(cache[carpetaActual], texto);
-  }
-});
-
+// Evento al cambiar de pestaña
 document.querySelectorAll("#pestanas-busqueda .nav-link").forEach(tab => {
   tab.addEventListener("click", e => {
     e.preventDefault();
     document.querySelectorAll("#pestanas-busqueda .nav-link").forEach(el => el.classList.remove("active"));
     tab.classList.add("active");
-    const carpeta = tab.getAttribute("data-carpeta");
-    cargarCarpeta(carpeta);
+    carpetaActual = tab.getAttribute("data-carpeta");
+    document.getElementById("resultados").innerHTML = "";
   });
 });
+
+// Evento de búsqueda
+document.getElementById("input-busqueda").addEventListener("input", buscarYMostrarArchivo);
 </script>
+
