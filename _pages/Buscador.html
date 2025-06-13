@@ -26,34 +26,43 @@ comments: true
 
 <script>
 const BASE_URL = "/historiadelcine/assets/js/json_generados/";
-let carpetaActual = "por_directores";
-let datosCargados = {};
+let carpetaActual = "";
 let cache = {};
 
-// Cargar lista de archivos de una categoría (requiere que tengas listado de archivos conocido o precargado)
 function cargarCarpeta(carpeta) {
   carpetaActual = carpeta;
   document.getElementById("resultados").innerHTML = "<p>Cargando datos...</p>";
+  document.getElementById("input-busqueda").value = "";
 
   if (cache[carpeta]) {
-    mostrarListado(cache[carpeta]);
+    mostrarListado(cache[carpeta], "");
     return;
   }
 
-  // Aquí se debería cargar un archivo índice tipo index.json generado al build
   fetch(BASE_URL + carpeta + "/index.json")
     .then(r => r.json())
     .then(archivos => {
-      let promesas = archivos.map(nombre =>
+      const promesas = archivos.map(nombre =>
         fetch(BASE_URL + carpeta + "/" + nombre)
           .then(r => r.json())
           .catch(() => [])
       );
 
       Promise.all(promesas).then(resultados => {
-        let todos = resultados.flat();
-        cache[carpeta] = todos;
-        mostrarListado(todos);
+        const todos = resultados.flat();
+
+        // Eliminar duplicados por ID
+        const unicos = [];
+        const ids = new Set();
+        for (const peli of todos) {
+          if (!ids.has(peli.id)) {
+            ids.add(peli.id);
+            unicos.push(peli);
+          }
+        }
+
+        cache[carpeta] = unicos;
+        mostrarListado(unicos, "");
       });
     })
     .catch(() => {
@@ -61,15 +70,14 @@ function cargarCarpeta(carpeta) {
     });
 }
 
-function mostrarListado(peliculas) {
+function mostrarListado(peliculas, filtroTexto) {
   const contenedor = document.getElementById("resultados");
-  const texto = document.getElementById("input-busqueda").value.toLowerCase().trim();
   contenedor.innerHTML = "";
 
   const filtradas = peliculas.filter(p =>
-    p.id?.toLowerCase().includes(texto) ||
-    p.titulo?.toLowerCase().includes(texto) ||
-    p.titulo_original?.toLowerCase().includes(texto)
+    p.id?.toLowerCase().includes(filtroTexto) ||
+    p.titulo?.toLowerCase().includes(filtroTexto) ||
+    p.titulo_original?.toLowerCase().includes(filtroTexto)
   );
 
   if (filtradas.length === 0) {
@@ -82,7 +90,7 @@ function mostrarListado(peliculas) {
     div.className = "list-group-item";
     div.innerHTML = `
       <h5>${p.titulo} (${p.año})</h5>
-      <p><b>Original:</b> ${p.titulo_original || "—"}</p>
+      <p><strong>Original:</strong> ${p.titulo_original || "—"}</p>
       <p><a href="${p.post}" class="btn btn-sm btn-outline-primary">Ver ficha completa</a></p>
     `;
     contenedor.appendChild(div);
@@ -90,8 +98,9 @@ function mostrarListado(peliculas) {
 }
 
 document.getElementById("input-busqueda").addEventListener("input", () => {
+  const texto = document.getElementById("input-busqueda").value.toLowerCase().trim();
   if (cache[carpetaActual]) {
-    mostrarListado(cache[carpetaActual]);
+    mostrarListado(cache[carpetaActual], texto);
   }
 });
 
@@ -104,6 +113,4 @@ document.querySelectorAll("#pestanas-busqueda .nav-link").forEach(tab => {
     cargarCarpeta(carpeta);
   });
 });
-
-document.addEventListener("DOMContentLoaded", () => cargarCarpeta(carpetaActual));
 </script>
