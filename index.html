@@ -52,7 +52,10 @@ comments: true
       {% endunless %}
 
       <!-- Resumen -->
-      <p>{{ post.excerpt | strip_html }}</p>
+      {% assign inicio = post.content | split: '<!--excerpt-es-->' | last %}
+{% assign solo_es = inicio | split: '<!--/excerpt-es-->' | first %}
+<p>{{ solo_es | markdownify }}</p>
+
       <a href="{{ post.url | relative_url }}">Leer más...</a>
     </div>
   {% endfor %}
