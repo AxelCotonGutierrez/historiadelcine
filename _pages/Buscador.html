@@ -123,10 +123,9 @@ function mostrarFicha(peliculas) {
   const cont = document.getElementById("resultados");
   cont.innerHTML = "";
 
-  // Cabecera de tabla con todos los campos
   let html = `
-    <table class="table table-striped table-bordered table-hover table-sm table-responsive">
-
+    <div class="table-responsive">
+    <table class="table table-striped table-bordered table-hover table-sm">
       <thead>
         <tr>
           <th>Año</th>
@@ -166,10 +165,12 @@ function mostrarFicha(peliculas) {
   html += `
       </tbody>
     </table>
+    </div>
   `;
 
   cont.innerHTML = html;
 }
+
 
 </script>
 
