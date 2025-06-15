@@ -9,94 +9,123 @@ comments: true
 <div class="container" style="max-width: 900px;">
   <h1>🎬 Buscador por categoría</h1>
 
-  <ul class="nav nav-tabs mb-3" id="pestanas-busqueda">
-    <li class="nav-item"><a class="nav-link active" data-carpeta="por_directores" href="#">Directores</a></li>
-    <li class="nav-item"><a class="nav-link" data-carpeta="por_productores" href="#">Productores</a></li>
-    <li class="nav-item"><a class="nav-link" data-carpeta="por_guionistas" href="#">Guionistas</a></li>
-    <li class="nav-item"><a class="nav-link" data-carpeta="por_actores" href="#">Actores</a></li>
-    <li class="nav-item"><a class="nav-link" data-carpeta="por_estudio" href="#">Estudios</a></li>
-    <li class="nav-item"><a class="nav-link" data-carpeta="por_paises" href="#">Países</a></li>
-    <li class="nav-item"><a class="nav-link" data-carpeta="por_año" href="#">Años</a></li>
-  </ul>
+  <!-- Inputs independientes por categoría -->
+  <div class="form-group mb-3">
+    <label for="input-directores">Directores</label>
+    <input id="input-directores" class="form-control" placeholder="Buscar director...">
+  </div>
 
-  <input type="text" id="input-busqueda" class="form-control mb-3" placeholder="Buscar por nombre de categoría (ej. Francia, Muybridge...)">
+  <div class="form-group mb-3">
+    <label for="input-productores">Productores</label>
+    <input id="input-productores" class="form-control" placeholder="Buscar productor...">
+  </div>
 
+  <div class="form-group mb-3">
+    <label for="input-guionistas">Guionistas</label>
+    <input id="input-guionistas" class="form-control" placeholder="Buscar guionista...">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="input-actores">Actores</label>
+    <input id="input-actores" class="form-control" placeholder="Buscar actor...">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="input-estudio">Estudios</label>
+    <input id="input-estudio" class="form-control" placeholder="Buscar estudio...">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="input-paises">Países</label>
+    <input id="input-paises" class="form-control" placeholder="Buscar país...">
+  </div>
+
+  <div class="form-group mb-3">
+    <label for="input-ano">Años</label>
+    <input id="input-ano" class="form-control" placeholder="Buscar año...">
+  </div>
+
+  <hr>
   <div id="resultados"></div>
 </div>
 
+<!-- Choices.js CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+
+<!-- Choices.js JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
 <script>
-const BASE_URL = "/historiadelcine/assets/js/json_generados/";
-let carpetaActual = "";
-let cache = {};
+const BASE = "{{ '/assets/js/json_generados/' | relative_url }}";
+const categorias = {
+  "directores": "por_directores",
+  "productores": "por_productores",
+  "guionistas": "por_guionistas",
+  "actores": "por_actores",
+  "estudio": "por_estudio",
+  "paises": "por_paises",
+  "ano": "por_año"
+};
 
-function buscarYMostrarArchivo() {
-  const texto = document.getElementById("input-busqueda").value.trim();
-  if (!texto || !carpetaActual) {
-    document.getElementById("resultados").innerHTML = "<p>Introduce un valor de búsqueda.</p>";
-    return;
-  }
+const inputs = {};
+const indexCache = {};
 
-  const nombreArchivo = texto.replace(/ /g, "_").replace(/\//g, "-") + ".json";
-  const ruta = BASE_URL + carpetaActual + "/" + nombreArchivo;
+// 1) Inicializa Choices para cada input y carga index.json de su carpeta
+for (const [inputId, carpeta] of Object.entries(categorias)) {
+  const selector = `#input-${inputId}`;
+  const choices = new Choices(selector, {
+    removeItemButton: true,
+    placeholder: true,
+    shouldSort: true,
+    searchEnabled: true
+  });
+  inputs[inputId] = choices;
 
-  document.getElementById("resultados").innerHTML = "<p>Buscando...</p>";
-
-  fetch(ruta)
-    .then(r => {
-      if (!r.ok) throw new Error("Archivo no encontrado");
-      return r.json();
-    })
-    .then(peliculas => {
-      mostrarListado(peliculas);
-    })
-    .catch(() => {
-      document.getElementById("resultados").innerHTML = "<p>No se encontraron resultados.</p>";
+  // Cargar index.json de la carpeta
+  fetch(`${BASE}${carpeta}/index.json`)
+    .then(r => r.json())
+    .then(data => {
+      indexCache[inputId] = data;
+      const opciones = data.map(item => ({ value: item, label: item }));
+      choices.setChoices(opciones, 'value', 'label', true);
     });
 }
 
-function mostrarListado(peliculas) {
-  const contenedor = document.getElementById("resultados");
-  contenedor.innerHTML = "";
+// 2) Al seleccionar opción, buscar su JSON y mostrar detalles
+for (const [inputId, carpeta] of Object.entries(categorias)) {
+  inputs[inputId].passedElement.element.addEventListener('change', e => {
+    const valor = e.detail.value;
+    if (!valor) return;
 
-  peliculas.forEach(p => {
-    const div = document.createElement("div");
-    div.className = "list-group-item";
-    div.innerHTML = `
-      <div class="row">
-        <div class="col-md-4">
-          <img src="${p.imagen}" alt="${p.titulo}" class="img-fluid rounded mb-3" />
-        </div>
-        <div class="col-md-8">
-          <h4>${p.titulo} (${p.año})</h4>
-          <p><strong>Original:</strong> ${p.titulo_original || "—"}</p>
-          <p><strong>Duración:</strong> ${p.duracion || "—"}</p>
-          <p><strong>Directores:</strong> ${(p.directores || []).join(", ") || "—"}</p>
-          <p><strong>Productores:</strong> ${(p.productores || []).join(", ") || "—"}</p>
-          <p><strong>Guionistas:</strong> ${(p.guionistas || []).join(", ") || "—"}</p>
-          <p><strong>Actores:</strong> ${(p.actores || []).join(", ") || "—"}</p>
-          <p><strong>Estudio:</strong> ${(p.estudio || []).join(", ") || "—"}</p>
-          <p><strong>Países:</strong> ${(p.paises || []).join(", ") || "—"}</p>
-          <p><strong>Notas:</strong> ${p.observaciones || "—"}</p>
-          <p><a href="${p.post}" class="btn btn-sm btn-outline-primary">Ver ficha completa</a></p>
-        </div>
-      </div>
-    `;
-    contenedor.appendChild(div);
+    const archivo = valor.replace(/ /g, "_") + ".json";
+    const url = `${BASE}${carpeta}/${archivo}`;
+
+    fetch(url)
+      .then(r => r.json())
+      .then(data => mostrarFicha(data))
+      .catch(() => {
+        document.getElementById("resultados").innerHTML = "<p>No encontrado.</p>";
+      });
   });
 }
 
-// Evento al cambiar de pestaña
-document.querySelectorAll("#pestanas-busqueda .nav-link").forEach(tab => {
-  tab.addEventListener("click", e => {
-    e.preventDefault();
-    document.querySelectorAll("#pestanas-busqueda .nav-link").forEach(el => el.classList.remove("active"));
-    tab.classList.add("active");
-    carpetaActual = tab.getAttribute("data-carpeta");
-    document.getElementById("resultados").innerHTML = "";
+// 3) Mostrar resultados
+function mostrarFicha(peliculas) {
+  const cont = document.getElementById("resultados");
+  cont.innerHTML = "";
+  peliculas.forEach(p => {
+    cont.innerHTML += `
+      <div class="card mb-3">
+        <div class="card-body">
+          <h5 class="card-title">${p.titulo} (${p.año})</h5>
+          <p class="card-text"><strong>Título original:</strong> ${p.titulo_original || ""}</p>
+          <p class="card-text">${p.resumen_breve || ""}</p>
+          <p><a href="${p.post}" class="btn btn-primary btn-sm">Ver ficha completa</a></p>
+        </div>
+      </div>
+    `;
   });
-});
-
-// Evento de búsqueda
-document.getElementById("input-busqueda").addEventListener("input", buscarYMostrarArchivo);
+}
 </script>
+
 
