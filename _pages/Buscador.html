@@ -9,51 +9,59 @@ comments: true
 <div class="container" style="max-width: 900px;">
   <h1>🎬 Buscador por categoría</h1>
 
-  <!-- Inputs independientes por categoría -->
+  <!-- Directores -->
   <div class="form-group mb-3">
     <label for="input-directores">Directores</label>
-    <input id="input-directores" class="form-control" placeholder="Buscar director...">
+    <input id="input-directores" class="form-control" list="list-directores" placeholder="Buscar director...">
+    <datalist id="list-directores"></datalist>
   </div>
 
+  <!-- Productores -->
   <div class="form-group mb-3">
     <label for="input-productores">Productores</label>
-    <input id="input-productores" class="form-control" placeholder="Buscar productor...">
+    <input id="input-productores" class="form-control" list="list-productores" placeholder="Buscar productor...">
+    <datalist id="list-productores"></datalist>
   </div>
 
+  <!-- Guionistas -->
   <div class="form-group mb-3">
     <label for="input-guionistas">Guionistas</label>
-    <input id="input-guionistas" class="form-control" placeholder="Buscar guionista...">
+    <input id="input-guionistas" class="form-control" list="list-guionistas" placeholder="Buscar guionista...">
+    <datalist id="list-guionistas"></datalist>
   </div>
 
+  <!-- Actores -->
   <div class="form-group mb-3">
     <label for="input-actores">Actores</label>
-    <input id="input-actores" class="form-control" placeholder="Buscar actor...">
+    <input id="input-actores" class="form-control" list="list-actores" placeholder="Buscar actor...">
+    <datalist id="list-actores"></datalist>
   </div>
 
+  <!-- Estudios -->
   <div class="form-group mb-3">
     <label for="input-estudio">Estudios</label>
-    <input id="input-estudio" class="form-control" placeholder="Buscar estudio...">
+    <input id="input-estudio" class="form-control" list="list-estudio" placeholder="Buscar estudio...">
+    <datalist id="list-estudio"></datalist>
   </div>
 
+  <!-- Países -->
   <div class="form-group mb-3">
     <label for="input-paises">Países</label>
-    <input id="input-paises" class="form-control" placeholder="Buscar país...">
+    <input id="input-paises" class="form-control" list="list-paises" placeholder="Buscar país...">
+    <datalist id="list-paises"></datalist>
   </div>
 
+  <!-- Años -->
   <div class="form-group mb-3">
     <label for="input-ano">Años</label>
-    <input id="input-ano" class="form-control" placeholder="Buscar año...">
+    <input id="input-ano" class="form-control" list="list-ano" placeholder="Buscar año...">
+    <datalist id="list-ano"></datalist>
   </div>
 
   <hr>
   <div id="resultados"></div>
 </div>
 
-<!-- Choices.js CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
-
-<!-- Choices.js JS -->
-<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
 
 <script>
 const BASE = "{{ '/assets/js/json_generados/' | relative_url }}";
@@ -67,40 +75,41 @@ const categorias = {
   "ano": "por_año"
 };
 
-const inputs = {};
-const indexCache = {};
+// Guardar etiquetas en memoria
+const etiquetas = {};
 
-// 1) Inicializa Choices para cada input y carga index.json de su carpeta
-for (const [inputId, carpeta] of Object.entries(categorias)) {
-  const selector = `#input-${inputId}`;
-  const choices = new Choices(selector, {
-    removeItemButton: true,
-    placeholder: true,
-    shouldSort: true,
-    searchEnabled: true
-  });
-  inputs[inputId] = choices;
-
-  // Cargar index.json de la carpeta
+// Cargar todos los index.json al inicio
+for (const [id, carpeta] of Object.entries(categorias)) {
   fetch(`${BASE}${carpeta}/index.json`)
     .then(r => r.json())
     .then(data => {
-      indexCache[inputId] = data;
-      const opciones = data.map(item => ({ value: item, label: item }));
-      choices.setChoices(opciones, 'value', 'label', true);
+      etiquetas[id] = data;
     });
 }
 
-// 2) Al seleccionar opción, buscar su JSON y mostrar detalles
-for (const [inputId, carpeta] of Object.entries(categorias)) {
-  inputs[inputId].passedElement.element.addEventListener('change', e => {
-    const valor = e.detail.value;
+// Escuchar cada input: filtrar y actualizar datalist
+for (const [id, carpeta] of Object.entries(categorias)) {
+  const input = document.getElementById(`input-${id}`);
+  const datalist = document.getElementById(`list-${id}`);
+
+  input.addEventListener('input', () => {
+    const texto = input.value.toLowerCase();
+    const filtrados = (etiquetas[id] || []).filter(name =>
+      name.toLowerCase().includes(texto)
+    );
+
+    datalist.innerHTML = "";
+    filtrados.forEach(name => {
+      datalist.innerHTML += `<option value="${name}">`;
+    });
+  });
+
+  // Al elegir uno exacto → cargar JSON
+  input.addEventListener('change', () => {
+    const valor = input.value.trim();
     if (!valor) return;
-
     const archivo = valor.replace(/ /g, "_") + ".json";
-    const url = `${BASE}${carpeta}/${archivo}`;
-
-    fetch(url)
+    fetch(`${BASE}${carpeta}/${archivo}`)
       .then(r => r.json())
       .then(data => mostrarFicha(data))
       .catch(() => {
@@ -109,7 +118,7 @@ for (const [inputId, carpeta] of Object.entries(categorias)) {
   });
 }
 
-// 3) Mostrar resultados
+// Mostrar ficha detallada
 function mostrarFicha(peliculas) {
   const cont = document.getElementById("resultados");
   cont.innerHTML = "";
@@ -117,15 +126,21 @@ function mostrarFicha(peliculas) {
     cont.innerHTML += `
       <div class="card mb-3">
         <div class="card-body">
-          <h5 class="card-title">${p.titulo} (${p.año})</h5>
-          <p class="card-text"><strong>Título original:</strong> ${p.titulo_original || ""}</p>
-          <p class="card-text">${p.resumen_breve || ""}</p>
-          <p><a href="${p.post}" class="btn btn-primary btn-sm">Ver ficha completa</a></p>
+          <h5>${p.titulo} (${p.año})</h5>
+          <p><strong>Título original:</strong> ${p.titulo_original || ""}</p>
+          <p><strong>Duración:</strong> ${p.duracion || "—"}</p>
+          <p><strong>Directores:</strong> ${(p.directores || []).join(", ")}</p>
+          <p><strong>Productores:</strong> ${(p.productores || []).join(", ")}</p>
+          <p><strong>Guionistas:</strong> ${(p.guionistas || []).join(", ")}</p>
+          <p><strong>Actores:</strong> ${(p.actores || []).join(", ")}</p>
+          <p><strong>Estudio:</strong> ${(p.estudio || []).join(", ")}</p>
+          <p><strong>Países:</strong> ${(p.paises || []).join(", ")}</p>
+          <p>${p.resumen_breve || ""}</p>
+          <p><a href="${p.post}" class="btn btn-sm btn-primary">Ver ficha completa</a></p>
         </div>
       </div>
     `;
   });
 }
 </script>
-
 
