@@ -32,7 +32,6 @@ const tablaBody = document.querySelector("#tabla-peliculas tbody");
 fetch(BASE_URL + "index.json")
   .then(r => r.json())
   .then(listaAnios => {
-    // Ahora añadir ".json" a cada número
     const promesas = listaAnios.map(anio =>
       fetch(BASE_URL + anio + ".json")
         .then(r => r.json())
@@ -40,12 +39,8 @@ fetch(BASE_URL + "index.json")
     );
 
     Promise.all(promesas).then(resultados => {
-      // Combinar todos los arrays de cada año
       const peliculas = resultados.flat();
-
-      // Ordenar por año numérico ascendente
       peliculas.sort((a, b) => (a.año || 0) - (b.año || 0));
-
       mostrarPeliculas(peliculas);
     }).catch(err => {
       console.error("Error combinando JSONs:", err);
@@ -59,19 +54,24 @@ function mostrarPeliculas(peliculas) {
   peliculas.forEach(p => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td>${p.año || "-"}</td>
+      <td><a href="/Buscador/?nombre=${p.año}&carpeta=por_año">${p.año || "-"}</a></td>
       <td><a href="${p.post}">${p.titulo_original || "-"}</a></td>
       <td>
-        ${(p.directores || []).map(d => `<a href="/Buscador/?dir=${encodeURIComponent(d)}">${d}</a>`).join(", ") || "—"}
+        ${(p.directores || []).map(d => 
+          `<a href="/Buscador/?nombre=${encodeURIComponent(d)}&carpeta=por_directores">${d}</a>`
+        ).join(", ") || "—"}
       </td>
       <td>
-        ${(p.paises || []).map(pais => `<a href="/Buscador/?pais=${encodeURIComponent(pais)}">${pais}</a>`).join(", ") || "—"}
+        ${(p.paises || []).map(pais => 
+          `<a href="/Buscador/?nombre=${encodeURIComponent(pais)}&carpeta=por_paises">${pais}</a>`
+        ).join(", ") || "—"}
       </td>
     `;
     tablaBody.appendChild(tr);
   });
 }
 </script>
+
 <style>
 #tabla-peliculas {
   width: 95%;
