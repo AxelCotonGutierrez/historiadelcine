@@ -27,9 +27,9 @@ comments: true
 <script>
 const BASE_URL = "/historiadelcine/assets/js/json_generados/";
 const tablaBody = document.querySelector("#tabla-peliculas tbody");
-const contenedorFicha = document.getElementById("resultados"); // Zona donde mostrar la ficha
+const contenedorFicha = document.getElementById("resultados"); // debe existir en el HTML
 
-// Cargar índice de años
+// 1️⃣ Cargar TODA la tabla principal: index por año + cada año.json
 fetch(BASE_URL + "por_año/index.json")
   .then(r => r.json())
   .then(listaAnios => {
@@ -43,21 +43,17 @@ fetch(BASE_URL + "por_año/index.json")
       const peliculas = resultados.flat();
       peliculas.sort((a, b) => (a.año || 0) - (b.año || 0));
       mostrarPeliculas(peliculas);
-    }).catch(err => {
-      console.error("Error combinando JSONs:", err);
-    });
+    }).catch(err => console.error("Error combinando JSONs:", err));
   })
-  .catch(err => {
-    console.error("No se pudo cargar index.json:", err);
-  });
+  .catch(err => console.error("No se pudo cargar index.json:", err));
 
-// Pintar tabla con enlaces internos
+// 2️⃣ Mostrar tabla con links dinámicos (sin redirigir)
 function mostrarPeliculas(peliculas) {
   peliculas.forEach(p => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td><a href="#" onclick="buscarDirecto('por_año', '${p.año}'); return false;">${p.año || "-"}</a></td>
-      <td><a href="${p.post}">${p.titulo_original || "-"}</a></td>
+      <td><a href="${p.post}" target="_blank">${p.titulo_original || "-"}</a></td>
       <td>
         ${(p.directores || []).map(d =>
           `<a href="#" onclick="buscarDirecto('por_directores', '${d}'); return false;">${d}</a>`
@@ -73,23 +69,23 @@ function mostrarPeliculas(peliculas) {
   });
 }
 
-// Buscar y mostrar ficha dentro de Peliculas
-function buscarDirecto(carpeta, nombre) {
+// 3️⃣ Función GLOBAL: buscar un archivo filtrado y pintar ficha bajo la tabla
+window.buscarDirecto = function(carpeta, nombre) {
   const archivo = nombre.replace(/ /g, "_") + ".json";
   const ruta = `${BASE_URL}${carpeta}/${archivo}`;
 
-  contenedorFicha.innerHTML = "<p>Cargando ficha...</p>";
+  contenedorFicha.innerHTML = "<p style='padding:1em;'>🔍 Cargando información...</p>";
 
   fetch(ruta)
     .then(r => r.json())
     .then(data => mostrarFicha(data))
     .catch(() => {
-      contenedorFicha.innerHTML = "<p>No se encontró información.</p>";
+      contenedorFicha.innerHTML = "<p style='padding:1em;'>❌ No se encontró información.</p>";
     });
 }
 
-// Pintar ficha igual que en Buscador
-function mostrarFicha(peliculas) {
+// 4️⃣ Pintar la ficha completa de resultados filtrados
+window.mostrarFicha = function(peliculas) {
   let html = `
     <div class="table-responsive">
       <table class="table ficha-table">
@@ -104,11 +100,10 @@ function mostrarFicha(peliculas) {
   };
 
   peliculas.forEach(p => {
-    const imagen = p.imagen;
     html += `
       <tr>
         <td rowspan="7" style="width: 200px;">
-          <img src="${imagen}" alt="Portada de ${p.titulo}" style="width: 100%; border-radius: 6px;">
+          <img src="${p.imagen}" alt="Portada de ${p.titulo}" style="width: 100%; border-radius: 6px;">
         </td>
         <td><strong>Año:</strong> <a href="#" onclick="buscarDirecto('por_año', '${p.año}'); return false;">${p.año || "—"}</a></td>
       </tr>
