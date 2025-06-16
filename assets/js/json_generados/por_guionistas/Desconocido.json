@@ -1,0 +1,32 @@
+[
+  {
+    "id": "sallie-gardner-at-a-gallop",
+    "titulo": "Sallie Gardner al galope",
+    "titulo_original": "Sallie Gardner at a Gallop",
+    "año": 1878,
+    "duracion": "1 min",
+    "resumen_breve": "Secuencia pionera de 24 fotografías de Muybridge que demuestra científicamente el galope de un caballo, considerada una de las semillas del cine moderno.",
+    "imagen": "/historiadelcine/assets/images/posts/sallie-gardner-at-a-gallop/sallie-gardner-al-galope.jpg",
+    "post": "/historiadelcine/posts/sallie-gardner-at-a-gallop/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Leland Stanford"
+    ],
+    "guionistas": [
+      "Desconocido"
+    ],
+    "actores": [
+      "Gilbert Domm",
+      "Sallie Gardner"
+    ],
+    "estudio": [
+      "Palo Alto Stock Farm"
+    ],
+    "paises": [
+      "Estados Unidos de América"
+    ],
+    "observaciones": "No se conserva como película convencional; es una secuencia fotográfica reproducida mediante zoopraxiscopio. Registrada en el National Film Registry de EE.UU. por su valor patrimonial."
+  }
+]

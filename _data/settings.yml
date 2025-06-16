@@ -11,10 +11,6 @@ menu:
     link: /
   - name: Buscador
     link: /Buscador/
-  - name: Películas
-    link: /peliculas/
-  - name: Directores
-    link: /directores/
   - name: Artículos
     link: /
   - name: Etiquetas
