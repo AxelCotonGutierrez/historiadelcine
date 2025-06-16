@@ -126,13 +126,13 @@ function mostrarFicha(peliculas) {
 
   let html = `
     <div class="table-responsive">
-      <table class="table table-small ficha-table">
+      <table class="table ficha-table">
         <tbody>
   `;
 
   peliculas.forEach(p => {
-    // Asumimos que la imagen está en la misma carpeta del post y se llama portada.jpg
-    const imagen = `/historiadelcine/assets/images/posts/${p.id}/portada.jpg`;
+    // Usa la URL tal cual la tienes en el campo `imagen`
+    const imagen = p.imagen;
 
     html += `
       <tr>
@@ -181,14 +181,12 @@ function mostrarFicha(peliculas) {
 }
 
 
-
-
 </script>
 
 <style>
   .ficha-table {
     width: 97% !important;
-    margin: 0 auto;
+    margin: 20px auto;
     font-size: 16px;
     border-collapse: collapse;
   }
@@ -230,3 +228,4 @@ function mostrarFicha(peliculas) {
     }
   }
 </style>
+
