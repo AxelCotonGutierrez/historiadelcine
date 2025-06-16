@@ -7,7 +7,7 @@ comments: true
 ---
 
 <div class="container" style="max-width: 1000px;">
-  <h1>📽️ Todas las películas (orden cronológico)</h1>
+  <h1>📽️ Películas (orden cronológico)</h1>
   <table id="tabla-peliculas" style="width: 100%; border-collapse: collapse;">
     <thead>
       <tr>
@@ -72,6 +72,46 @@ function mostrarPeliculas(peliculas) {
   });
 }
 </script>
+<style>
+#tabla-peliculas {
+  width: 95%;
+  max-width: 1000px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+#tabla-peliculas th,
+#tabla-peliculas td {
+  border: 1px solid #ddd;
+  padding: 8px 12px;
+  text-align: left;
+  vertical-align: top;
+}
+
+#tabla-peliculas th {
+  background-color: #f8f8f8;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#tabla-peliculas tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+#tabla-peliculas tr:hover {
+  background-color: #f1f1f1;
+}
+
+#tabla-peliculas a {
+  color: #007acc;
+  text-decoration: none;
+}
+
+#tabla-peliculas a:hover {
+  text-decoration: underline;
+}
+</style>
 
 
 
