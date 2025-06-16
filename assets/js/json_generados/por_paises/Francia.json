@@ -73,5 +73,30 @@
       "Francia"
     ],
     "observaciones": "Animación número 6 de la serie para praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. Ejemplo pionero de animación cíclica aplicada a la acción cotidiana."
+  },
+  {
+    "id": "la-amazona-l-amazone-1878",
+    "titulo": "La amazona",
+    "titulo_original": "L'Amazone",
+    "año": 1878,
+    "duracion": "9 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a una mujer montando a caballo al estilo amazona, reflejando elegancia y códigos sociales del siglo XIX.",
+    "imagen": "/historiadelcine/assets/images/posts/la-amazona-l-amazone-1878/la-amazona.jpg",
+    "post": "/historiadelcine/posts/la-amazona-l-amazone-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación número 7 de la serie para praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. La mayor parte de las tiras originales se perdieron por destrucción del autor."
   }
 ]
