@@ -4,7 +4,7 @@
     "titulo": "Sallie Gardner al galope",
     "titulo_original": "Sallie Gardner at a Gallop",
     "año": 1878,
-    "duracion": "1 min",
+    "duracion": "15 seg",
     "resumen_breve": "Secuencia pionera de 24 fotografías de Muybridge que demuestra científicamente el galope de un caballo, considerada una de las semillas del cine moderno.",
     "imagen": "/historiadelcine/assets/images/posts/sallie-gardner-at-a-gallop/sallie-gardner-al-galope.jpg",
     "post": "/historiadelcine/posts/sallie-gardner-at-a-gallop/",
@@ -14,9 +14,7 @@
     "productores": [
       "Leland Stanford"
     ],
-    "guionistas": [
-      "Desconocido"
-    ],
+    "guionistas": [],
     "actores": [
       "Gilbert Domm",
       "Sallie Gardner"
@@ -28,5 +26,30 @@
       "Estados Unidos de América"
     ],
     "observaciones": "No se conserva como película convencional; es una secuencia fotográfica reproducida mediante zoopraxiscopio. Registrada en el National Film Registry de EE.UU. por su valor patrimonial."
+  },
+  {
+    "id": "el-acuario-1878",
+    "titulo": "El acuario",
+    "titulo_original": "L'Aquarium",
+    "año": 1878,
+    "duracion": "16 seg",
+    "resumen_breve": "Animación de Reynaud donde una niña observa peces en un acuario, precursora de la animación narrativa costumbrista.",
+    "imagen": "/historiadelcine/assets/images/posts/el-acuario-1878/el-acuario.jpg",
+    "post": "/historiadelcine/posts/el-acuario-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Primera animación numerada por Reynaud, parte de la serie para praxinoscopio mostrada en la Exposición Universal de París de 1878."
   }
 ]
