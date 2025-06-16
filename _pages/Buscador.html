@@ -131,8 +131,16 @@ function mostrarFicha(peliculas) {
   `;
 
   peliculas.forEach(p => {
-    // Usa la URL tal cual la tienes en el campo `imagen`
+    // URL de la portada tal cual
     const imagen = p.imagen;
+
+    // Función para crear enlaces internos de cada etiqueta
+    const crearEnlaces = (lista, categoria) => {
+      if (!lista || lista.length === 0) return "—";
+      return lista.map(nombre => 
+        `<a href="#" onclick="buscarDirecto('${categoria}', '${nombre}'); return false;">${nombre}</a>`
+      ).join(", ");
+    };
 
     html += `
       <tr>
@@ -145,24 +153,24 @@ function mostrarFicha(peliculas) {
         <td><strong>Título Original:</strong> ${p.titulo_original || "—"}</td>
       </tr>
       <tr>
-        <td><strong>Director:</strong> ${(p.directores || []).join(", ") || "—"}</td>
+        <td><strong>Director:</strong> ${crearEnlaces(p.directores, "por_directores")}</td>
       </tr>
       <tr>
         <td><strong>Duración:</strong> ${p.duracion || "—"}</td>
       </tr>
       <tr>
-        <td><strong>Productores:</strong> ${(p.productores || []).join(", ") || "—"}</td>
+        <td><strong>Productores:</strong> ${crearEnlaces(p.productores, "por_productores")}</td>
       </tr>
       <tr>
-        <td><strong>Guionistas:</strong> ${(p.guionistas || []).join(", ") || "—"}</td>
+        <td><strong>Guionistas:</strong> ${crearEnlaces(p.guionistas, "por_guionistas")}</td>
       </tr>
 
       <tr>
-        <td colspan="2"><strong>Actores:</strong> ${(p.actores || []).join(", ") || "—"}</td>
+        <td colspan="2"><strong>Actores:</strong> ${crearEnlaces(p.actores, "por_actores")}</td>
       </tr>
       <tr>
-        <td colspan="2"><strong>Estudio:</strong> ${(p.estudio || []).join(", ") || "—"} &nbsp; | &nbsp; 
-        <strong>Países:</strong> ${(p.paises || []).join(", ") || "—"}</td>
+        <td colspan="2"><strong>Estudio:</strong> ${crearEnlaces(p.estudio, "por_estudio")} &nbsp; | &nbsp; 
+        <strong>Países:</strong> ${crearEnlaces(p.paises, "por_paises")}</td>
       </tr>
       <tr>
         <td colspan="2"><strong>Observaciones:</strong> ${p.observaciones || "—"}</td>
@@ -179,6 +187,50 @@ function mostrarFicha(peliculas) {
 
   cont.innerHTML = html;
 }
+/**
+ * Forzar búsqueda inmediata al hacer clic en cualquier enlace interno.
+ * @param {string} carpeta - Ej: 'por_directores', 'por_actores', etc.
+ * @param {string} nombre  - El nombre exacto del archivo JSON.
+ */
+function buscarDirecto(carpeta, nombre) {
+  // Cambiar pestaña activa visualmente
+  document.querySelectorAll("#pestanas-busqueda .nav-link").forEach(el => {
+    el.classList.remove("active");
+    if (el.getAttribute("data-carpeta") === carpeta) el.classList.add("active");
+  });
+
+  // Cambiar variable y cargar el JSON correcto
+  carpetaActual = carpeta;
+
+  // Poner el nombre buscado en el input de esa categoría
+  const inputId = carpeta.replace("por_", "input-");
+  const input = document.getElementById(inputId);
+  if (input) input.value = nombre;
+
+  // Cargar el archivo directamente
+  buscarYMostrarArchivo(carpeta, nombre);
+}
+
+/**
+ * Cargar archivo JSON individual desde nombre exacto.
+ */
+function buscarYMostrarArchivo(carpeta, nombre) {
+  const archivo = nombre.replace(/ /g, "_").replace(/\//g, "-") + ".json";
+  const ruta = BASE_URL + carpeta + "/" + archivo;
+
+  document.getElementById("resultados").innerHTML = "<p>Cargando...</p>";
+
+  fetch(ruta)
+    .then(r => {
+      if (!r.ok) throw new Error("Archivo no encontrado");
+      return r.json();
+    })
+    .then(data => mostrarFicha(data))
+    .catch(() => {
+      document.getElementById("resultados").innerHTML = "<p>No se encontraron resultados.</p>";
+    });
+}
+
 
 
 </script>
