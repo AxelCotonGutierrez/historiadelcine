@@ -28,7 +28,7 @@ comments: true
 const BASE_URL = "/historiadelcine/assets/js/json_generados/por_año/";
 const tablaBody = document.querySelector("#tabla-peliculas tbody");
 
-// Cargar índice simple (solo números)
+// 1️⃣ Cargar índice de años
 fetch(BASE_URL + "index.json")
   .then(r => r.json())
   .then(listaAnios => {
@@ -38,6 +38,7 @@ fetch(BASE_URL + "index.json")
         .catch(() => [])
     );
 
+    // 2️⃣ Cuando todos están listos, unirlos, ordenarlos y pintar tabla
     Promise.all(promesas).then(resultados => {
       const peliculas = resultados.flat();
       peliculas.sort((a, b) => (a.año || 0) - (b.año || 0));
@@ -50,20 +51,29 @@ fetch(BASE_URL + "index.json")
     console.error("No se pudo cargar index.json:", err);
   });
 
+// 3️⃣ Pintar tabla con enlaces correctos
 function mostrarPeliculas(peliculas) {
   peliculas.forEach(p => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
-      <td><a href="/Buscador/?nombre=${p.año}&carpeta=por_año">${p.año || "-"}</a></td>
-      <td><a href="${p.post}">${p.titulo_original || "-"}</a></td>
+      <td>
+        <a href="/historiadelcine/Buscador/?nombre=${encodeURIComponent(p.año)}&carpeta=por_año">
+          ${p.año || "-"}
+        </a>
+      </td>
+      <td>
+        <a href="${p.post}">
+          ${p.titulo_original || "-"}
+        </a>
+      </td>
       <td>
         ${(p.directores || []).map(d => 
-          `<a href="/Buscador/?nombre=${encodeURIComponent(d)}&carpeta=por_directores">${d}</a>`
+          `<a href="/historiadelcine/Buscador/?nombre=${encodeURIComponent(d)}&carpeta=por_directores">${d}</a>`
         ).join(", ") || "—"}
       </td>
       <td>
         ${(p.paises || []).map(pais => 
-          `<a href="/Buscador/?nombre=${encodeURIComponent(pais)}&carpeta=por_paises">${pais}</a>`
+          `<a href="/historiadelcine/Buscador/?nombre=${encodeURIComponent(pais)}&carpeta=por_paises">${pais}</a>`
         ).join(", ") || "—"}
       </td>
     `;
@@ -71,6 +81,7 @@ function mostrarPeliculas(peliculas) {
   });
 }
 </script>
+
 
 <style>
 #tabla-peliculas {
