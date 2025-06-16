@@ -169,32 +169,66 @@ function mostrarFicha(peliculas) {
   `;
 
   cont.innerHTML = html;
+}function mostrarFicha(peliculas) {
+  const cont = document.getElementById("resultados");
+  cont.innerHTML = "";
+
+  let html = `
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover table-sm table-small">
+        <tbody>
+  `;
+
+  peliculas.forEach(p => {
+    html += `
+      <tr>
+        <td><strong>Año:</strong> ${p.año || "—"}</td>
+        <td><strong>Título:</strong> ${p.titulo || "—"}</td>
+        <td><strong>Título Original:</strong> ${p.titulo_original || "—"}</td>
+        <td><strong>Duración:</strong> ${p.duracion || "—"}</td>
+      </tr>
+      <tr>
+        <td><strong>Directores:</strong> ${(p.directores || []).join(", ") || "—"}</td>
+        <td><strong>Productores:</strong> ${(p.productores || []).join(", ") || "—"}</td>
+        <td><strong>Guionistas:</strong> ${(p.guionistas || []).join(", ") || "—"}</td>
+        <td><strong>Actores:</strong> ${(p.actores || []).join(", ") || "—"}</td>
+        <td><strong>Estudio:</strong> ${(p.estudio || []).join(", ") || "—"}</td>
+        <td><strong>Países:</strong> ${(p.paises || []).join(", ") || "—"}</td>
+      </tr>
+      <tr>
+        <td colspan="6"><strong>Observaciones:</strong> ${p.observaciones || "—"}</td>
+      </tr>
+      <tr><td colspan="6" style="background:#ddd; height:2px; padding:0;"></td></tr>
+    `;
+  });
+
+  html += `
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  cont.innerHTML = html;
 }
+
 
 
 </script>
 
 <style>
   .table-small {
-    width: 90% !important;    /* Anchura controlada */
-    margin: 0 auto;           /* Centrada */
-    font-size: 8px !important; /* Letra pequeña exacta */
+    width: 90% !important;
+    margin: 0 auto;
+    font-size: 10px !important; /* un poco mayor que 8px si quieres leerlo bien */
   }
 
-  .table-small td,
-  .table-small th {
-    padding: 4px 6px;         /* Espaciado compacto */
-    vertical-align: middle;
-    white-space: nowrap;
+  .table-small td {
+    padding: 4px 8px;
+    vertical-align: top;
+    white-space: normal;
   }
 
-  .table-small td:last-child {
-    white-space: normal;      /* Solo Observaciones se permite expandir */
-    max-width: 200px;
-    word-wrap: break-word;
-  }
-
-  .table-responsive {
-    overflow-x: auto;
+  .table-small tr:nth-child(4n) {
+    background: #f1f1f1; /* línea divisoria decorativa */
   }
 </style>
