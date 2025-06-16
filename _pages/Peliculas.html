@@ -25,20 +25,20 @@ comments: true
 <br>
 <br>
 <script>
-const BASE_URL = "/historiadelcine/assets/js/json_generados/por_año/";
+const BASE_URL = "/historiadelcine/assets/js/json_generados/";
 const tablaBody = document.querySelector("#tabla-peliculas tbody");
+const contenedorFicha = document.getElementById("resultados"); // Zona donde mostrar la ficha
 
-// 1️⃣ Cargar índice de años
-fetch(BASE_URL + "index.json")
+// Cargar índice de años
+fetch(BASE_URL + "por_año/index.json")
   .then(r => r.json())
   .then(listaAnios => {
     const promesas = listaAnios.map(anio =>
-      fetch(BASE_URL + anio + ".json")
+      fetch(BASE_URL + "por_año/" + anio + ".json")
         .then(r => r.json())
         .catch(() => [])
     );
 
-    // 2️⃣ Cuando todos están listos, unirlos, ordenarlos y pintar tabla
     Promise.all(promesas).then(resultados => {
       const peliculas = resultados.flat();
       peliculas.sort((a, b) => (a.año || 0) - (b.año || 0));
@@ -51,36 +51,109 @@ fetch(BASE_URL + "index.json")
     console.error("No se pudo cargar index.json:", err);
   });
 
-// 3️⃣ Pintar tabla con enlaces correctos
+// Pintar tabla con enlaces internos
 function mostrarPeliculas(peliculas) {
   peliculas.forEach(p => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
+      <td><a href="#" onclick="buscarDirecto('por_año', '${p.año}'); return false;">${p.año || "-"}</a></td>
+      <td><a href="${p.post}">${p.titulo_original || "-"}</a></td>
       <td>
-        <a href="/historiadelcine/Buscador/?nombre=${encodeURIComponent(p.año)}&carpeta=por_año">
-          ${p.año || "-"}
-        </a>
-      </td>
-      <td>
-        <a href="${p.post}">
-          ${p.titulo_original || "-"}
-        </a>
-      </td>
-      <td>
-        ${(p.directores || []).map(d => 
-          `<a href="/historiadelcine/Buscador/?nombre=${encodeURIComponent(d)}&carpeta=por_directores">${d}</a>`
+        ${(p.directores || []).map(d =>
+          `<a href="#" onclick="buscarDirecto('por_directores', '${d}'); return false;">${d}</a>`
         ).join(", ") || "—"}
       </td>
       <td>
-        ${(p.paises || []).map(pais => 
-          `<a href="/historiadelcine/Buscador/?nombre=${encodeURIComponent(pais)}&carpeta=por_paises">${pais}</a>`
+        ${(p.paises || []).map(pais =>
+          `<a href="#" onclick="buscarDirecto('por_paises', '${pais}'); return false;">${pais}</a>`
         ).join(", ") || "—"}
       </td>
     `;
     tablaBody.appendChild(tr);
   });
 }
+
+// Buscar y mostrar ficha dentro de Peliculas
+function buscarDirecto(carpeta, nombre) {
+  const archivo = nombre.replace(/ /g, "_") + ".json";
+  const ruta = `${BASE_URL}${carpeta}/${archivo}`;
+
+  contenedorFicha.innerHTML = "<p>Cargando ficha...</p>";
+
+  fetch(ruta)
+    .then(r => r.json())
+    .then(data => mostrarFicha(data))
+    .catch(() => {
+      contenedorFicha.innerHTML = "<p>No se encontró información.</p>";
+    });
+}
+
+// Pintar ficha igual que en Buscador
+function mostrarFicha(peliculas) {
+  let html = `
+    <div class="table-responsive">
+      <table class="table ficha-table">
+        <tbody>
+  `;
+
+  const crearEnlaces = (lista, carpeta) => {
+    if (!lista || lista.length === 0) return "—";
+    return lista.map(nombre =>
+      `<a href="#" onclick="buscarDirecto('${carpeta}', '${nombre}'); return false;">${nombre}</a>`
+    ).join(", ");
+  };
+
+  peliculas.forEach(p => {
+    const imagen = p.imagen;
+    html += `
+      <tr>
+        <td rowspan="7" style="width: 200px;">
+          <img src="${imagen}" alt="Portada de ${p.titulo}" style="width: 100%; border-radius: 6px;">
+        </td>
+        <td><strong>Año:</strong> <a href="#" onclick="buscarDirecto('por_año', '${p.año}'); return false;">${p.año || "—"}</a></td>
+      </tr>
+      <tr>
+        <td><strong>Título:</strong> <a href="${p.post}" target="_blank">${p.titulo || "—"}</a></td>
+      </tr>
+      <tr>
+        <td><strong>Título Original:</strong> ${p.titulo_original || "—"}</td>
+      </tr>
+      <tr>
+        <td><strong>Director:</strong> ${crearEnlaces(p.directores, "por_directores")}</td>
+      </tr>
+      <tr>
+        <td><strong>Duración:</strong> ${p.duracion || "—"}</td>
+      </tr>
+      <tr>
+        <td><strong>Productores:</strong> ${crearEnlaces(p.productores, "por_productores")}</td>
+      </tr>
+      <tr>
+        <td><strong>Guionistas:</strong> ${crearEnlaces(p.guionistas, "por_guionistas")}</td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Actores:</strong> ${crearEnlaces(p.actores, "por_actores")}</td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Estudio:</strong> ${crearEnlaces(p.estudio, "por_estudio")} &nbsp; | &nbsp;
+        <strong>Países:</strong> ${crearEnlaces(p.paises, "por_paises")}</td>
+      </tr>
+      <tr>
+        <td colspan="2"><strong>Observaciones:</strong> ${p.observaciones || "—"}</td>
+      </tr>
+      <tr><td colspan="2" class="separador"></td></tr>
+    `;
+  });
+
+  html += `
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  contenedorFicha.innerHTML = html;
+}
 </script>
+
 
 
 <style>
