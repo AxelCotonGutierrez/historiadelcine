@@ -48,5 +48,30 @@
       "Francia"
     ],
     "observaciones": "Primera animación numerada por Reynaud, parte de la serie para praxinoscopio mostrada en la Exposición Universal de París de 1878."
+  },
+  {
+    "id": "el-asador-le-rotisseur-1878",
+    "titulo": "El asador",
+    "titulo_original": "Le Rotisseur",
+    "año": 1878,
+    "duracion": "15 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a un cocinero girando espetones de carne sobre el fuego, destacando la vida laboral del siglo XIX.",
+    "imagen": "/historiadelcine/assets/images/posts/el-asador-le-rotisseur-1878/el-asador.jpg",
+    "post": "/historiadelcine/posts/el-asador-le-rotisseur-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación número 6 de la serie para praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. Ejemplo pionero de animación cíclica aplicada a la acción cotidiana."
   }
 ]

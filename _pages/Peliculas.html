@@ -28,39 +28,50 @@ comments: true
 const BASE_URL = "/historiadelcine/assets/js/json_generados/por_año/";
 const tablaBody = document.querySelector("#tabla-peliculas tbody");
 
-// Cargar listado de archivos JSON por año
+// Cargar índice simple (solo números)
 fetch(BASE_URL + "index.json")
   .then(r => r.json())
-  .then(archivos => {
-    // Cargar todos los archivos por año
-    let promesas = archivos.map(nombre =>
-      fetch(BASE_URL + nombre)
+  .then(listaAnios => {
+    // Ahora añadir ".json" a cada número
+    const promesas = listaAnios.map(anio =>
+      fetch(BASE_URL + anio + ".json")
         .then(r => r.json())
         .catch(() => [])
     );
 
     Promise.all(promesas).then(resultados => {
-      // Aplanar y ordenar por año
-      let peliculas = resultados.flat();
+      // Combinar todos los arrays de cada año
+      const peliculas = resultados.flat();
+
+      // Ordenar por año numérico ascendente
       peliculas.sort((a, b) => (a.año || 0) - (b.año || 0));
+
       mostrarPeliculas(peliculas);
+    }).catch(err => {
+      console.error("Error combinando JSONs:", err);
     });
+  })
+  .catch(err => {
+    console.error("No se pudo cargar index.json:", err);
   });
 
 function mostrarPeliculas(peliculas) {
   peliculas.forEach(p => {
     const tr = document.createElement("tr");
-
     tr.innerHTML = `
       <td>${p.año || "-"}</td>
       <td><a href="${p.post}">${p.titulo_original || "-"}</a></td>
-      <td>${(p.directores || []).map(d => `<a href="/Buscador/?dir=${encodeURIComponent(d)}">${d}</a>`).join(", ") || "-"}</td>
-      <td>${(p.paises || []).map(pais => `<a href="/Buscador/?pais=${encodeURIComponent(pais)}">${pais}</a>`).join(", ") || "-"}</td>
+      <td>
+        ${(p.directores || []).map(d => `<a href="/Buscador/?dir=${encodeURIComponent(d)}">${d}</a>`).join(", ") || "—"}
+      </td>
+      <td>
+        ${(p.paises || []).map(pais => `<a href="/Buscador/?pais=${encodeURIComponent(pais)}">${pais}</a>`).join(", ") || "—"}
+      </td>
     `;
-
     tablaBody.appendChild(tr);
   });
 }
 </script>
+
 
 
