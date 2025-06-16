@@ -125,7 +125,7 @@ function mostrarFicha(peliculas) {
 
   let html = `
     <div class="table-responsive">
-    <table class="table table-striped table-bordered table-hover table-sm">
+    <table class="table table-striped table-bordered table-hover table-sm table-small">
       <thead>
         <tr>
           <th>Año</th>
@@ -175,15 +175,26 @@ function mostrarFicha(peliculas) {
 </script>
 
 <style>
-  .table td {
+  .table-small {
+    width: 90% !important;    /* Anchura controlada */
+    margin: 0 auto;           /* Centrada */
+    font-size: 8px !important; /* Letra pequeña exacta */
+  }
+
+  .table-small td,
+  .table-small th {
+    padding: 4px 6px;         /* Espaciado compacto */
+    vertical-align: middle;
     white-space: nowrap;
   }
-  .table td:last-child {
-    white-space: normal; /* solo Observaciones puede expandirse */
-    max-width: 300px; /* límite para desbordar */
-    overflow-wrap: break-word;
+
+  .table-small td:last-child {
+    white-space: normal;      /* Solo Observaciones se permite expandir */
+    max-width: 200px;
+    word-wrap: break-word;
   }
-  .table-small {
-    font-size: 0.8rem;  /* Ajusta a tu gusto: 0.75rem aún más pequeño */
+
+  .table-responsive {
+    overflow-x: auto;
   }
 </style>
