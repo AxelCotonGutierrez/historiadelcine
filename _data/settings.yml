@@ -11,6 +11,8 @@ menu:
     link: /
   - name: Buscador
     link: /Buscador/
+  - name: Peliculas
+    link: /Peliculas/
   - name: Artículos
     link: /
   - name: Etiquetas

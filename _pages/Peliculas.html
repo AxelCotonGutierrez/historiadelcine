@@ -1,0 +1,66 @@
+---
+layout: default
+title: Películas
+permalink: /Peliculas/
+description: Lista cronológica de todas las películas del archivo histórico.
+comments: true
+---
+
+<<div class="container" style="max-width: 1000px;">
+  <h1>📽️ Todas las películas (orden cronológico)</h1>
+  <table id="tabla-peliculas" style="width: 100%; border-collapse: collapse;">
+    <thead>
+      <tr>
+        <th style="border-bottom: 2px solid #333;">Año</th>
+        <th style="border-bottom: 2px solid #333;">Título Original</th>
+        <th style="border-bottom: 2px solid #333;">Directores</th>
+        <th style="border-bottom: 2px solid #333;">Países</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+
+<br>
+<br>
+<script>
+const BASE_URL = "/historiadelcine/assets/js/json_generados/por_año/";
+const tablaBody = document.querySelector("#tabla-peliculas tbody");
+
+// Cargar listado de archivos JSON por año
+fetch(BASE_URL + "index.json")
+  .then(r => r.json())
+  .then(archivos => {
+    // Cargar todos los archivos por año
+    let promesas = archivos.map(nombre =>
+      fetch(BASE_URL + nombre)
+        .then(r => r.json())
+        .catch(() => [])
+    );
+
+    Promise.all(promesas).then(resultados => {
+      // Aplanar y ordenar por año
+      let peliculas = resultados.flat();
+      peliculas.sort((a, b) => (a.año || 0) - (b.año || 0));
+      mostrarPeliculas(peliculas);
+    });
+  });
+
+function mostrarPeliculas(peliculas) {
+  peliculas.forEach(p => {
+    const tr = document.createElement("tr");
+
+    tr.innerHTML = `
+      <td>${p.año || "-"}</td>
+      <td><a href="${p.post}">${p.titulo_original || "-"}</a></td>
+      <td>${(p.directores || []).map(d => `<a href="/Buscador/?dir=${encodeURIComponent(d)}">${d}</a>`).join(", ") || "-"}</td>
+      <td>${(p.paises || []).map(pais => `<a href="/Buscador/?pais=${encodeURIComponent(pais)}">${pais}</a>`).join(", ") || "-"}</td>
+    `;
+
+    tablaBody.appendChild(tr);
+  });
+}
+</script>
+
+
