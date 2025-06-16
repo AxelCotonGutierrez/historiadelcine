@@ -161,19 +161,73 @@ function mostrarFicha(peliculas) {
   `;
 
   cont.innerHTML = html;
+}function mostrarFicha(peliculas) {
+  const cont = document.getElementById("resultados");
+  cont.innerHTML = "";
+
+  let html = `
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover table-small">
+        <tbody>
+  `;
+
+  peliculas.forEach(p => {
+    html += `
+      <tr>
+        <td><strong>Año:</strong> ${p.año || "—"}</td>
+        <td colspan="2"><strong>Título:</strong> 
+          <a href="${p.post}" target="_blank">${p.titulo || "—"}</a>
+        </td>
+        <td colspan="2"><strong>Título Original:</strong> ${p.titulo_original || "—"}</td>
+        <td><strong>Duración:</strong> ${p.duracion || "—"}</td>
+      </tr>
+      <tr>
+        <td><strong>Directores:</strong> ${(p.directores || []).join(", ") || "—"}</td>
+        <td><strong>Productores:</strong> ${(p.productores || []).join(", ") || "—"}</td>
+        <td><strong>Guionistas:</strong> ${(p.guionistas || []).join(", ") || "—"}</td>
+        <td><strong>Actores:</strong> ${(p.actores || []).join(", ") || "—"}</td>
+        <td><strong>Estudio:</strong> ${(p.estudio || []).join(", ") || "—"}</td>
+        <td><strong>Países:</strong> ${(p.paises || []).join(", ") || "—"}</td>
+      </tr>
+      <tr>
+        <td colspan="6"><strong>Observaciones:</strong> ${p.observaciones || "—"}</td>
+      </tr>
+      <tr><td colspan="6" class="separador"></td></tr>
+    `;
+  });
+
+  html += `
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  cont.innerHTML = html;
 }
+
 
 
 </script>
 
 <style>
   .table-small {
-    width: 90% !important;
+    width: 95% !important;
     margin: 0 auto;
-    font-size: 18px !important;
+    font-size: 16px !important;
+    border-collapse: collapse;
   }
+
   .table-small td {
     padding: 6px 10px;
     vertical-align: top;
+    white-space: normal;
+    border: 1px solid #ccc;
+  }
+
+  .table-small .separador {
+    height: 4px;
+    background: #000; /* línea negra */
+    padding: 0;
+    border: none;
   }
 </style>
