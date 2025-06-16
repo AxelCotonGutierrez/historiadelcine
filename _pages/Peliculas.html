@@ -29,29 +29,38 @@ comments: true
 <script>
 const BASE_URL = "/historiadelcine/assets/js/json_generados/";
 const tablaBody = document.querySelector("#tabla-peliculas tbody");
-const contenedorFicha = document.getElementById("resultados"); // debe existir en el HTML
+const contenedorFicha = document.getElementById("resultados");
+const contenedorPaginacion = document.getElementById("paginacion");
 
-// 1️⃣ Cargar TODA la tabla principal: index por año + cada año.json
+let peliculas = [];
+let paginaActual = 1;
+const porPagina = 25;
+
+// 1️⃣ Cargar todo una vez
 fetch(BASE_URL + "por_año/index.json")
   .then(r => r.json())
   .then(listaAnios => {
     const promesas = listaAnios.map(anio =>
-      fetch(BASE_URL + "por_año/" + anio + ".json")
-        .then(r => r.json())
-        .catch(() => [])
+      fetch(BASE_URL + "por_año/" + anio + ".json").then(r => r.json()).catch(() => [])
     );
 
     Promise.all(promesas).then(resultados => {
-      const peliculas = resultados.flat();
+      peliculas = resultados.flat();
       peliculas.sort((a, b) => (a.año || 0) - (b.año || 0));
-      mostrarPeliculas(peliculas);
-    }).catch(err => console.error("Error combinando JSONs:", err));
+      mostrarPagina(1);
+      crearPaginacion();
+    });
   })
   .catch(err => console.error("No se pudo cargar index.json:", err));
 
-// 2️⃣ Mostrar tabla con links dinámicos (sin redirigir)
-function mostrarPeliculas(peliculas) {
-  peliculas.forEach(p => {
+// 2️⃣ Mostrar una página concreta
+function mostrarPagina(num) {
+  tablaBody.innerHTML = "";
+  const inicio = (num - 1) * porPagina;
+  const fin = inicio + porPagina;
+  const paginaPeliculas = peliculas.slice(inicio, fin);
+
+  paginaPeliculas.forEach(p => {
     const tr = document.createElement("tr");
     tr.innerHTML = `
       <td><a href="#" onclick="buscarDirecto('por_año', '${p.año}'); return false;">${p.año || "-"}</a></td>
@@ -69,24 +78,50 @@ function mostrarPeliculas(peliculas) {
     `;
     tablaBody.appendChild(tr);
   });
+
+  paginaActual = num;
+  actualizarPaginacion();
 }
 
-// 3️⃣ Función GLOBAL: buscar un archivo filtrado y pintar ficha bajo la tabla
+// 3️⃣ Crear estructura de paginación
+function crearPaginacion() {
+  const totalPaginas = Math.ceil(peliculas.length / porPagina);
+  contenedorPaginacion.innerHTML = `
+    <button id="btn-prev">⬅️ Anterior</button>
+    <span id="num-pagina">Página ${paginaActual} de ${totalPaginas}</span>
+    <button id="btn-next">Siguiente ➡️</button>
+  `;
+
+  document.getElementById("btn-prev").addEventListener("click", () => {
+    if (paginaActual > 1) mostrarPagina(paginaActual - 1);
+  });
+
+  document.getElementById("btn-next").addEventListener("click", () => {
+    if (paginaActual < totalPaginas) mostrarPagina(paginaActual + 1);
+  });
+}
+
+// 4️⃣ Actualizar texto de número de página
+function actualizarPaginacion() {
+  const totalPaginas = Math.ceil(peliculas.length / porPagina);
+  document.getElementById("num-pagina").textContent = `Página ${paginaActual} de ${totalPaginas}`;
+}
+
+// 5️⃣ Ficha (idéntica)
 window.buscarDirecto = function(carpeta, nombre) {
   const archivo = nombre.replace(/ /g, "_") + ".json";
   const ruta = `${BASE_URL}${carpeta}/${archivo}`;
 
-  contenedorFicha.innerHTML = "<p style='padding:1em;'>🔍 Cargando información...</p>";
+  contenedorFicha.innerHTML = "<p>Cargando ficha...</p>";
 
   fetch(ruta)
     .then(r => r.json())
     .then(data => mostrarFicha(data))
     .catch(() => {
-      contenedorFicha.innerHTML = "<p style='padding:1em;'>❌ No se encontró información.</p>";
+      contenedorFicha.innerHTML = "<p>No se encontró información.</p>";
     });
 }
 
-// 4️⃣ Pintar la ficha completa de resultados filtrados
 window.mostrarFicha = function(peliculas) {
   let html = `
     <div class="table-responsive">
@@ -109,34 +144,16 @@ window.mostrarFicha = function(peliculas) {
         </td>
         <td><strong>Año:</strong> <a href="#" onclick="buscarDirecto('por_año', '${p.año}'); return false;">${p.año || "—"}</a></td>
       </tr>
-      <tr>
-        <td><strong>Título:</strong> <a href="${p.post}" target="_blank">${p.titulo || "—"}</a></td>
-      </tr>
-      <tr>
-        <td><strong>Título Original:</strong> ${p.titulo_original || "—"}</td>
-      </tr>
-      <tr>
-        <td><strong>Director:</strong> ${crearEnlaces(p.directores, "por_directores")}</td>
-      </tr>
-      <tr>
-        <td><strong>Duración:</strong> ${p.duracion || "—"}</td>
-      </tr>
-      <tr>
-        <td><strong>Productores:</strong> ${crearEnlaces(p.productores, "por_productores")}</td>
-      </tr>
-      <tr>
-        <td><strong>Guionistas:</strong> ${crearEnlaces(p.guionistas, "por_guionistas")}</td>
-      </tr>
-      <tr>
-        <td colspan="2"><strong>Actores:</strong> ${crearEnlaces(p.actores, "por_actores")}</td>
-      </tr>
-      <tr>
-        <td colspan="2"><strong>Estudio:</strong> ${crearEnlaces(p.estudio, "por_estudio")} &nbsp; | &nbsp;
-        <strong>Países:</strong> ${crearEnlaces(p.paises, "por_paises")}</td>
-      </tr>
-      <tr>
-        <td colspan="2"><strong>Observaciones:</strong> ${p.observaciones || "—"}</td>
-      </tr>
+      <tr><td><strong>Título:</strong> <a href="${p.post}" target="_blank">${p.titulo || "—"}</a></td></tr>
+      <tr><td><strong>Título Original:</strong> ${p.titulo_original || "—"}</td></tr>
+      <tr><td><strong>Director:</strong> ${crearEnlaces(p.directores, "por_directores")}</td></tr>
+      <tr><td><strong>Duración:</strong> ${p.duracion || "—"}</td></tr>
+      <tr><td><strong>Productores:</strong> ${crearEnlaces(p.productores, "por_productores")}</td></tr>
+      <tr><td><strong>Guionistas:</strong> ${crearEnlaces(p.guionistas, "por_guionistas")}</td></tr>
+      <tr><td colspan="2"><strong>Actores:</strong> ${crearEnlaces(p.actores, "por_actores")}</td></tr>
+      <tr><td colspan="2"><strong>Estudio:</strong> ${crearEnlaces(p.estudio, "por_estudio")} &nbsp; | &nbsp;
+      <strong>Países:</strong> ${crearEnlaces(p.paises, "por_paises")}</td></tr>
+      <tr><td colspan="2"><strong>Observaciones:</strong> ${p.observaciones || "—"}</td></tr>
       <tr><td colspan="2" class="separador"></td></tr>
     `;
   });
@@ -146,10 +163,10 @@ window.mostrarFicha = function(peliculas) {
       </table>
     </div>
   `;
-
   contenedorFicha.innerHTML = html;
-}
+};
 </script>
+
 
 
 
