@@ -144,11 +144,11 @@ function mostrarFicha(peliculas) {
 
     html += `
       <tr>
-        <td rowspan="7" style="width: 200px;">
+        <td rowspan="6" style="width: 200px;">
           <img src="${imagen}" alt="Portada de ${p.titulo}" style="width: 100%; border-radius: 6px;">
         </td>
-        <td><strong>Título:</strong> <a href="${p.post}" target="_blank">${p.titulo || "—"}</a></td>
-      <td><strong>Año:</strong> <a href="#" onclick="buscarDirecto('por_año', '${p.año}'); return false;">${p.año || "—"}</a></td>
+        <td><strong>Título:</strong> <a href="${p.post}" target="_blank">${p.titulo || "—"}</a></td> </tr>
+      <tr><td><strong>Año:</strong> <a href="#" onclick="buscarDirecto('por_año', '${p.año}'); return false;">${p.año || "—"}</a></td>
   </tr>
       <tr>
         <td><strong>Título Original:</strong> ${p.titulo_original || "—"}</td>
