@@ -5,7 +5,7 @@ permalink: /tags/
 ---
 
 {% comment %}
-Genera todas las etiquetas agrupadas por letra inicial, preservando tu estructura.
+Generar todas las tags, ordenarlas, agrupar por inicial y mostrar separadas por letra.
 {% endcomment %}
 
 {% assign tag_posts = site.posts | where_exp: "post", "post.tags.size > 0" %}
@@ -17,33 +17,29 @@ Genera todas las etiquetas agrupadas por letra inicial, preservando tu estructur
 
 {% assign sorted_tags = tags | sort %}
 
-{% comment %}
-Agrupa por primera letra
-{% endcomment %}
-{% assign grouped = {} %}
-{% for tag in sorted_tags %}
-  {% assign first = tag | slice: 0 | upcase %}
-  {% if grouped[first] %}
-    {% assign grouped = grouped | merge: { first: grouped[first] | push: tag } %}
-  {% else %}
-    {% assign grouped = grouped | merge: { first: [tag] } %}
-  {% endif %}
-{% endfor %}
-
 <br/>
 
-<!-- ✅ Mostrar por bloques de letra -->
-{% assign keys = grouped | keys | sort %}
-{% for letter in keys %}
-  <details style="margin-bottom: 1em;">
-    <summary><strong>{{ letter }}</strong> ({{ grouped[letter].size }})</summary>
-    {% for tag in grouped[letter] | sort %}
-      <a class="label label-success tag-link" href="#" data-tag="{{ tag | slugify }}">{{ tag }}</a> &nbsp;
+<!-- Agrupar por inicial -->
+{% assign grouped = "" | split: "" %}
+{% for tag in sorted_tags %}
+  {% assign initial = tag | slice: 0 | upcase %}
+  {% assign grouped = grouped | push: initial %}
+{% endfor %}
+{% assign grouped = grouped | uniq | sort %}
+
+<!-- Mostrar agrupadas -->
+{% for letter in grouped %}
+  <h3>{{ letter }}</h3>
+  <div class="tag-group">
+    {% for tag in sorted_tags %}
+      {% if tag startswith letter %}
+        <a class="label label-success tag-link" href="#" data-tag="{{ tag | slugify }}">{{ tag }}</a> &nbsp;
+      {% endif %}
     {% endfor %}
-  </details>
+  </div>
 {% endfor %}
 
-<!-- ✅ Mantén el mismo bloque de posts por etiqueta -->
+<!-- Mostrar posts relacionados por tag -->
 {% for tag in sorted_tags %}
   <div id="{{ tag | slugify }}" class="related-posts" style="display: none;">
     <h4>{{ tag }}</h4>
