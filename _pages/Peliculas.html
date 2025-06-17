@@ -153,6 +153,7 @@ window.mostrarFicha = function(peliculas) {
       <tr><td colspan="2"><strong>Actores:</strong> ${crearEnlaces(p.actores, "por_actores")}</td></tr>
       <tr><td colspan="2"><strong>Estudio:</strong> ${crearEnlaces(p.estudio, "por_estudio")} &nbsp; | &nbsp;
       <strong>Países:</strong> ${crearEnlaces(p.paises, "por_paises")}</td></tr>
+               <tr><td colspan="2"><strong>Resumen Breve:</strong> ${p.resumen_breve || "—"}</td></tr>
       <tr><td colspan="2"><strong>Observaciones:</strong> ${p.observaciones || "—"}</td></tr>
       <tr><td colspan="2" class="separador"></td></tr>
     `;
