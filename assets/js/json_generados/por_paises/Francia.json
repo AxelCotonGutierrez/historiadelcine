@@ -123,5 +123,30 @@
       "Francia"
     ],
     "observaciones": "Animación de la primera serie de praxinoscopio (1877–1879). Destaca por su sencillez, su vaivén hipnótico y su eficacia demostrativa en exhibiciones públicas."
+  },
+  {
+    "id": "el-desayuno-del-bebe-le-dejeuner-de-bebe-1878",
+    "titulo": "El desayuno del bebé",
+    "titulo_original": "Le Déjeuner de Bébé",
+    "año": 1878,
+    "duracion": "15 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a un bebé siendo alimentado, representando emociones básicas en un bucle hipnótico y colorido.",
+    "imagen": "/historiadelcine/assets/images/posts/el-desayuno-del-bebe-le-dejeuner-de-bebe-1878/el-desayuno-del-beb.jpg",
+    "post": "/historiadelcine/posts/el-desayuno-del-bebe-le-dejeuner-de-bebe-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Pertenece a la serie de 30 animaciones para el praxinoscopio presentada en la Exposición Universal de París de 1878. Escena doméstica y emotiva coloreada a mano."
   }
 ]
