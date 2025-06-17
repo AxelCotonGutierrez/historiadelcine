@@ -148,5 +148,30 @@
       "Francia"
     ],
     "observaciones": "Pertenece a la serie de 30 animaciones para el praxinoscopio presentada en la Exposición Universal de París de 1878. Escena doméstica y emotiva coloreada a mano."
+  },
+  {
+    "id": "el-deslizamiento-sobre-hielo-la-glissade-1878",
+    "titulo": "El deslizamiento sobre hielo",
+    "titulo_original": "La Glissade",
+    "año": 1878,
+    "duracion": "15 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a niños deslizándose y saltando sobre hielo, capturando la vitalidad del juego invernal en París del siglo XIX.",
+    "imagen": "/historiadelcine/assets/images/posts/el-deslizamiento-sobre-hielo-la-glissade-1878/el-deslizamiento-sobre-hielo.jpg",
+    "post": "/historiadelcine/posts/el-deslizamiento-sobre-hielo-la-glissade-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación número 10 de la segunda serie para praxinoscopio, exhibida en la Exposición Universal de París de 1878. Ejemplo de animación narrativa con entorno interactivo."
   }
 ]
