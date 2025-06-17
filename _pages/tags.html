@@ -5,7 +5,7 @@ permalink: /tags/
 ---
 
 {% comment %}
-Here we generate all the tags and sort them alphabetically.
+Genera todas las etiquetas agrupadas por letra inicial, preservando tu estructura.
 {% endcomment %}
 
 {% assign tag_posts = site.posts | where_exp: "post", "post.tags.size > 0" %}
@@ -17,14 +17,33 @@ Here we generate all the tags and sort them alphabetically.
 
 {% assign sorted_tags = tags | sort %}
 
-<br/>
-
-<!-- Displaying tags alphabetically -->
+{% comment %}
+Agrupa por primera letra
+{% endcomment %}
+{% assign grouped = {} %}
 {% for tag in sorted_tags %}
-   <a class="label label-success tag-link" href="#" data-tag="{{ tag | slugify }}">{{ tag }}</a> &nbsp;
+  {% assign first = tag | slice: 0 | upcase %}
+  {% if grouped[first] %}
+    {% assign grouped = grouped | merge: { first: grouped[first] | push: tag } %}
+  {% else %}
+    {% assign grouped = grouped | merge: { first: [tag] } %}
+  {% endif %}
 {% endfor %}
 
-<!-- Displaying posts related to each tag -->
+<br/>
+
+<!-- ✅ Mostrar por bloques de letra -->
+{% assign keys = grouped | keys | sort %}
+{% for letter in keys %}
+  <details style="margin-bottom: 1em;">
+    <summary><strong>{{ letter }}</strong> ({{ grouped[letter].size }})</summary>
+    {% for tag in grouped[letter] | sort %}
+      <a class="label label-success tag-link" href="#" data-tag="{{ tag | slugify }}">{{ tag }}</a> &nbsp;
+    {% endfor %}
+  </details>
+{% endfor %}
+
+<!-- ✅ Mantén el mismo bloque de posts por etiqueta -->
 {% for tag in sorted_tags %}
   <div id="{{ tag | slugify }}" class="related-posts" style="display: none;">
     <h4>{{ tag }}</h4>
@@ -41,14 +60,12 @@ Here we generate all the tags and sort them alphabetically.
   </div>
 {% endfor %}
 
-<br>
-<br>
-<br>
+<br><br><br>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   var tagLinks = document.querySelectorAll('.tag-link');
-  
+
   tagLinks.forEach(function(tagLink) {
     tagLink.addEventListener('click', function(e) {
       e.preventDefault();
