@@ -7,11 +7,7 @@
 
     {% include header.html %}
 
-    <!-- Estado del login -->
-    <div style="position: absolute; top: 10px; right: 20px; z-index: 1000; font-weight: bold;">
-      <span id="estado-login" style="color: #f0c040;">Conectando...</span>
-    </div>
-
+ 
     <div class="container">
 
       {% if page.id %}
@@ -58,9 +54,13 @@
         </ul>
       {% endif %}
 
-      {% include disqus.html %}
+     
     </div>
-
+ <!-- ✅ DISQUS SIEMPRE FUERA DEL CONTENEDOR -->
+    {% if page.id %}
+      {% include disqus.html %}
+    {% endif %}
+    
     {% include footer.html %}
     {% include analytics.html %}
   </body>
