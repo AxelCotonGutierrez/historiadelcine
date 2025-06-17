@@ -176,5 +176,30 @@
       "Francia"
     ],
     "observaciones": "Animación número 10 de la segunda serie para praxinoscopio, exhibida en la Exposición Universal de París de 1878. Ejemplo de animación narrativa con entorno interactivo."
+  },
+  {
+    "id": "el-equilibrista-l-equilibriste-1878",
+    "titulo": "El equilibrista",
+    "titulo_original": "L'Équilibriste",
+    "año": 1878,
+    "duracion": "15 seg",
+    "resumen_breve": "Animación de Reynaud donde un acróbata de circo realiza un ejercicio de equilibrio girando un cilindro sobre sus pies con precisión y ritmo.",
+    "imagen": "/historiadelcine/assets/images/posts/el-equilibrista-l-equilibriste-1878/el-equilibrista.jpg",
+    "post": "/historiadelcine/posts/el-equilibrista-l-equilibriste-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Tercera animación de la primera serie para praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. Representa habilidad circense con notable realismo anatómico y repetición cíclica."
   }
 ]
