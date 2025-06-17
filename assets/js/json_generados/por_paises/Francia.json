@@ -98,5 +98,30 @@
       "Francia"
     ],
     "observaciones": "Animación número 7 de la serie para praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. La mayor parte de las tiras originales se perdieron por destrucción del autor."
+  },
+  {
+    "id": "el-columpio-la-balancoire-1878",
+    "titulo": "El columpio",
+    "titulo_original": "La Balançoire",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a dos niños jugando en un balancín, capturando la inocencia infantil con un vaivén hipnótico.",
+    "imagen": "/historiadelcine/assets/images/posts/el-columpio-la-balancoire-1878/el-columpio.jpg",
+    "post": "/historiadelcine/posts/el-columpio-la-balancoire-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación de la primera serie de praxinoscopio (1877–1879). Destaca por su sencillez, su vaivén hipnótico y su eficacia demostrativa en exhibiciones públicas."
   }
 ]
