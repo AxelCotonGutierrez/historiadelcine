@@ -26,5 +26,29 @@
       "Estados Unidos de América"
     ],
     "observaciones": "No se conserva como película convencional; es una secuencia fotográfica reproducida mediante zoopraxiscopio. Registrada en el National Film Registry de EE.UU. por su valor patrimonial."
+  },
+  {
+    "id": "caballo-retrocediendo-horses-backing-1881",
+    "titulo": "Caballo retrocediendo",
+    "titulo_original": "Horses. Backing",
+    "año": 1881,
+    "duracion": "5 seg",
+    "resumen_breve": "Secuencia fotográfica de Muybridge que muestra a un caballo retrocediendo, parte de sus estudios pioneros sobre movimiento animal.",
+    "imagen": "/historiadelcine/assets/images/posts/caballo-retrocediendo-horses-backing-1881/caballo-retrocediendo.jpg",
+    "post": "/historiadelcine/posts/caballo-retrocediendo-horses-backing-1881/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Parte de la serie de cronofotografías de Muybridge que descompusieron científicamente movimientos animales, contribuyendo al desarrollo del cine analítico."
   }
 ]
