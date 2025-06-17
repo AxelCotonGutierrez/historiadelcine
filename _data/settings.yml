@@ -1,10 +1,10 @@
 # Change 'comments' to true for Disqus comments
 disqus:
   comments: true
-  disqus_shortname: 'historia-del-cine'
+  disqus_shortname: 'historiadelcine'
 
 # If you are not using Google Analytics, please change 'google-ID' to an empty string
-google-ID: 'G-K1CHGHX488'
+google-ID: 'G-XMMQ0JWLPC'
 
 menu:
   - name: Inicio
