@@ -201,5 +201,30 @@
       "Francia"
     ],
     "observaciones": "Tercera animación de la primera serie para praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. Representa habilidad circense con notable realismo anatómico y repetición cíclica."
+  },
+  {
+    "id": "el-forzudo-l-hercule-1878",
+    "titulo": "El forzudo",
+    "titulo_original": "L'Hercule",
+    "año": 1878,
+    "duracion": "15 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a un forzudo levantando un gran bloque cúbico, destacando la fuerza bruta y el control corporal en una escena repetitiva.",
+    "imagen": "/historiadelcine/assets/images/posts/el-forzudo-l-hercule-1878/el-forzudo.jpg",
+    "post": "/historiadelcine/posts/el-forzudo-l-hercule-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Perteneciente a la tercera serie para praxinoscopio de Reynaud (1877–1878). Centrada en la fuerza estática y el gesto minimalista, fue presentada en la Exposición Universal de París."
   }
 ]
