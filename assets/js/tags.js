@@ -1,24 +1,21 @@
-// ✅ HACER GLOBAL la redirección para usarla en onclick
-window.redirectToTagPage = function(tag) {
+// ✅ Función global para redirigir a la página de etiquetas
+function redirectToTagPage(tag) {
   localStorage.setItem('selectedTag', tag);
   window.location.href = '/historiadelcine/tags/';
-};
+}
 
-// ✅ SLUGIFY si quieres normalizar (opcional, usado para coincidencia estricta)
-window.slugify = function(text) {
-  return text.toString().toLowerCase()
-    .trim()
-    .replace(/\s+/g, '-')           // Espacios → guiones
-    .replace(/[^\w\-áéíóúñü]/g, '') // Solo letras, números, guiones
-    .replace(/\-\-+/g, '-')         // Varios guiones → uno solo
-    .replace(/^-+/, '')             // Sin guión al inicio
-    .replace(/-+$/, '');            // Sin guión al final
-};
+// ✅ Función de normalización para comparar robusto
+function normalizeTag(str) {
+  return str
+    .toLowerCase()
+    .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // quitar tildes
+    .replace(/[\s\-]+/g, " ") // guiones y espacios como un solo espacio
+    .trim();
+}
 
+// ✅ Main: después de cargar el DOM
 document.addEventListener('DOMContentLoaded', function() {
   const container = document.querySelector('.tag-search-container');
-  if (!container) return; // seguridad
-
   const tags = JSON.parse(container.dataset.tags);
   const posts = JSON.parse(container.dataset.posts);
 
@@ -26,32 +23,28 @@ document.addEventListener('DOMContentLoaded', function() {
   const suggestions = document.getElementById('suggestions');
   const related = document.getElementById('related');
 
-  // ✅ Si viene de localStorage, mostrar
-  const selectedTagLocalStorage = localStorage.getItem('selectedTag');
-  if (selectedTagLocalStorage) {
-    showTagContent(selectedTagLocalStorage);
+  // ⚡ Si viene de localStorage (clic en otra página)
+  const selected = localStorage.getItem('selectedTag');
+  if (selected) {
+    showTagContent(selected);
     localStorage.removeItem('selectedTag');
   }
 
-  // ✅ Si viene de ?tag=... (opcional, por robustez)
-  const urlParams = new URLSearchParams(window.location.search);
-  const tagParam = urlParams.get('tag');
-  if (tagParam) {
-    showTagContent(tagParam);
+  // ⚡ Si viene con ?tag= (por si usas URL params en el futuro)
+  const param = new URLSearchParams(window.location.search).get('tag');
+  if (param) {
+    showTagContent(param);
   }
 
-  // ✅ Buscar mientras escribes
+  // ✅ Filtro dinámico en el input
   tagInput.addEventListener('input', function() {
-    const query = this.value.trim().toLowerCase();
+    const query = normalizeTag(this.value);
     suggestions.innerHTML = '';
     related.innerHTML = '';
 
     if (query.length === 0) return;
 
-    const filtered = tags.filter(tag =>
-      tag.toLowerCase().includes(query)
-    );
-
+    const filtered = tags.filter(tag => normalizeTag(tag).includes(query));
     filtered.forEach(tag => {
       const div = document.createElement('div');
       div.className = 'suggestion-item';
@@ -61,13 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // ✅ Mostrar entradas para una etiqueta
-  function showTagContent(tag) {
+  // ✅ Mostrar entradas para la etiqueta elegida
+  function showTagContent(selectedTag) {
     suggestions.innerHTML = '';
-    related.innerHTML = `<h3>Entradas con etiqueta: ${tag}</h3>`;
+    related.innerHTML = `<h3>Entradas con etiqueta: ${selectedTag}</h3>`;
 
-    const matching = posts.filter(p =>
-      p.tags.some(t => t.toLowerCase() === tag.toLowerCase())
+    // Filtrar posts usando normalización
+    const matching = posts.filter(p => 
+      (p.tags || []).some(t => normalizeTag(t) === normalizeTag(selectedTag))
     );
 
     if (matching.length === 0) {
