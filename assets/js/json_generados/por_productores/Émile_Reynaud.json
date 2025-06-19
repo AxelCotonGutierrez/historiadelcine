@@ -223,5 +223,30 @@
       "Francia"
     ],
     "observaciones": "Parte de la primera serie de animaciones para praxinoscopio (1877–1879). Destaca por la fluidez del humo animado y la presencia de un perro como personaje recurrente."
+  },
+  {
+    "id": "el-juego-de-las-gracias-le-jeu-de-graces-1878",
+    "titulo": "El juego de las gracias",
+    "titulo_original": "Le Jeu de Grâces",
+    "año": 1878,
+    "duracion": "12 seg",
+    "resumen_breve": "Animación de Reynaud donde dos niñas juegan a lanzarse aros con varas, destacando la elegancia y coordinación del tradicional juego decimonónico.",
+    "imagen": "/historiadelcine/assets/images/posts/el-juego-de-las-gracias-le-jeu-de-graces-1878/el-juego-de-las-gracias.jpg",
+    "post": "/historiadelcine/posts/el-juego-de-las-gracias-le-jeu-de-graces-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Forma parte de la tercera serie para praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. Una de las animaciones más refinadas en sincronización e interacción entre dos personajes."
   }
 ]
