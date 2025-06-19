@@ -54,10 +54,14 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  // ✅ Mostrar entradas para la etiqueta elegida
+  // ✅ Mostrar entradas para la etiqueta elegida con nombre original
   function showTagContent(selectedTag) {
     suggestions.innerHTML = '';
-    related.innerHTML = `<h3>Entradas con etiqueta: ${selectedTag}</h3>`;
+
+    // 🗝️ Encontrar el nombre ORIGINAL de la etiqueta desde la lista real
+    const originalTag = tags.find(t => normalizeTag(t) === normalizeTag(selectedTag)) || selectedTag;
+
+    related.innerHTML = `<h3>Entradas con etiqueta: ${originalTag}</h3>`;
 
     // Filtrar posts usando normalización
     const matching = posts.filter(p => 
