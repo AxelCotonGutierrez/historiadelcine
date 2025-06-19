@@ -74,5 +74,29 @@
       "Estados Unidos de América"
     ],
     "observaciones": "Forma parte de la famosa serie de cronofotografías de Muybridge sobre caballos en movimiento, contribuyendo al estudio científico y al desarrollo temprano del cine analítico."
+  },
+  {
+    "id": "caballos-caminando-horses-walking-1881",
+    "titulo": "Caballos caminando",
+    "titulo_original": "Horses. Walking",
+    "año": 1881,
+    "duracion": "22 seg",
+    "resumen_breve": "Secuencia fotográfica de Muybridge que documenta la marcha regular de un caballo, parte de su famoso estudio sobre animales en movimiento.",
+    "imagen": "/historiadelcine/assets/images/posts/caballos-caminando-horses-walking-1881/caballo-caminando.jpg",
+    "post": "/historiadelcine/posts/caballos-caminando-horses-walking-1881/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Forma parte de la serie 'The attitudes of animals in motion' (no. 123–124) realizada en Palo Alto, California, en 1878–1879 y publicada en 1881. Fuente: Library of Congress (https://www.loc.gov/resource/cph.3g13822/)."
   }
 ]
