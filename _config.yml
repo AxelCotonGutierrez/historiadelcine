@@ -34,6 +34,8 @@ exclude:
   - Gemfile
   - Gemfile.lock
 include: ["_pages"]
+include:
+  - google5ae5ca1cb9ab00ce.html
 permalink: /posts/:title/
 excerpt_separator: <!--more-->
 author: Axel
