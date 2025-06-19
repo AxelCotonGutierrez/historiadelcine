@@ -198,5 +198,30 @@
       "Francia"
     ],
     "observaciones": "Perteneciente a la tercera serie para praxinoscopio de Reynaud (1877–1878). Centrada en la fuerza estática y el gesto minimalista, fue presentada en la Exposición Universal de París."
+  },
+  {
+    "id": "el-fumador-le-fumeur-1878",
+    "titulo": "El fumador",
+    "titulo_original": "Le Fumeur",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a un hombre fumando mientras un perro salta a su alrededor, contrastando calma y dinamismo en una escena cotidiana.",
+    "imagen": "/historiadelcine/assets/images/posts/el-fumador-le-fumeur-1878/el-fumador.jpg",
+    "post": "/historiadelcine/posts/el-fumador-le-fumeur-1878/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Parte de la primera serie de animaciones para praxinoscopio (1877–1879). Destaca por la fluidez del humo animado y la presencia de un perro como personaje recurrente."
   }
 ]
