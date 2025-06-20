@@ -1,71 +1,23 @@
 [
   {
-    "id": "waltzing-couple-heyl",
-    "titulo": "Pareja bailando vals",
-    "titulo_original": "Waltzing Couple",
-    "año": 1870,
-    "duracion": "5 seg",
-    "resumen_breve": "Animación fotográfica proyectada con acompañamiento musical, mostrando a una pareja en movimiento de vals.",
-    "imagen": "/historiadelcine/assets/images/posts/henry-renno-heyl/Nodisponible.jpg",
-    "post": "/historiadelcine/posts/henry-renno-heyl/",
+    "id": "caballos-al-medio-galope-horses-cantering-1881",
+    "titulo": "Caballos al medio galope",
+    "titulo_original": "Horses. Cantering",
+    "año": 1881,
+    "duracion": "21 seg",
+    "resumen_breve": "Secuencia de Muybridge que muestra un caballo en medio galope, clave para estudiar la biomecánica equina y la animación científica.",
+    "imagen": "/historiadelcine/assets/images/posts/caballos-al-medio-galope-horses-cantering-1881/caballos-a-medio-galope.jpg",
+    "post": "/historiadelcine/posts/caballos-al-medio-galope-horses-cantering-1881/",
     "directores": [
-      "Henry Renno Heyl"
+      "Eadweard Muybridge"
     ],
-    "productores": [
-      "Henry Renno Heyl"
-    ],
+    "productores": [],
     "guionistas": [],
     "actores": [],
     "estudio": [],
     "paises": [
       "Estados Unidos"
     ],
-    "observaciones": "No se conserva el disco completo ni los negativos originales. Solo se han recuperado cuatro imágenes fotográficas sueltas. La película no puede visualizarse."
-  },
-  {
-    "id": "brother-jonathan-heyl",
-    "titulo": "El Tío Sam dando un discurso",
-    "titulo_original": "Brother Jonathan Addressing the Audience",
-    "año": 1870,
-    "duracion": "5 seg",
-    "resumen_breve": "Animación simbólica de un personaje estadounidense hablando al público, con voz sincronizada en directo.",
-    "imagen": "/historiadelcine/assets/images/posts/henry-renno-heyl/Nodisponible.jpg",
-    "post": "/historiadelcine/posts/henry-renno-heyl/",
-    "directores": [
-      "Henry Renno Heyl"
-    ],
-    "productores": [
-      "Henry Renno Heyl"
-    ],
-    "guionistas": [],
-    "actores": [],
-    "estudio": [],
-    "paises": [
-      "Estados Unidos"
-    ],
-    "observaciones": "No se conservan los negativos ni el disco original. La película no puede visualizarse y solo se conoce por fuentes escritas contemporáneas."
-  },
-  {
-    "id": "little-all-right-heyl",
-    "titulo": "Pequeño acróbata japonés",
-    "titulo_original": "Little All Right, the Japanese Acrobat",
-    "año": 1870,
-    "duracion": "5 seg",
-    "resumen_breve": "Breve animación fotográfica que representa un truco acrobático con poses cuidadosamente ensayadas.",
-    "imagen": "/historiadelcine/assets/images/posts/henry-renno-heyl/Nodisponible.jpg",
-    "post": "/historiadelcine/posts/henry-renno-heyl/",
-    "directores": [
-      "Henry Renno Heyl"
-    ],
-    "productores": [
-      "Henry Renno Heyl"
-    ],
-    "guionistas": [],
-    "actores": [],
-    "estudio": [],
-    "paises": [
-      "Estados Unidos"
-    ],
-    "observaciones": "No se conservan los negativos ni el disco original. La película no puede visualizarse y solo se conoce por descripciones documentadas de la época."
+    "observaciones": "Fotografías tomadas en Palo Alto (1878–1879) bajo patrocinio de Leland Stanford, publicadas como parte de 'The attitudes of animals in motion' (no. 125–126). Ver Library of Congress: https://www.loc.gov/item/2009630534/"
   }
 ]
