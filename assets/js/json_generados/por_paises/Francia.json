@@ -273,5 +273,30 @@
       "Francia"
     ],
     "observaciones": "Forma parte de la tercera serie para praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. Una de las animaciones más refinadas en sincronización e interacción entre dos personajes."
+  },
+  {
+    "id": "1878-el-juego-del-volante-le-jeu-du-volant",
+    "titulo": "El juego del volante",
+    "titulo_original": "Le Jeu du Volant",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a una niña jugando con un volante, capturando la gracia y el ritmo de un juego infantil popular en Europa.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-el-juego-del-volante-le-jeu-du-volant/el-juego-del-volante.jpg",
+    "post": "/historiadelcine/posts/1878-el-juego-del-volante-le-jeu-du-volant/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación de praxinoscopio (1877–1879). Representa un juego tradicional precursor del bádminton, pintado a mano y exhibido con acompañamiento en vivo."
   }
 ]
