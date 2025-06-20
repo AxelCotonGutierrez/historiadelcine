@@ -273,5 +273,30 @@
       "Francia"
     ],
     "observaciones": "Animación de praxinoscopio (1877–1879). Representa un juego tradicional precursor del bádminton, pintado a mano y exhibido con acompañamiento en vivo."
+  },
+  {
+    "id": "1878-el-malabarista-le-jongleur",
+    "titulo": "El malabarista",
+    "titulo_original": "Le Jongleur",
+    "año": 1878,
+    "duracion": "15 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a un artista circense realizando malabares y equilibrios con precisión, anticipando técnicas de la animación tradicional.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-el-malabarista-le-jongleur/el-malabarista.jpg",
+    "post": "/historiadelcine/posts/1878-el-malabarista-le-jongleur/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Pertenece a la primera serie de 10 animaciones para praxinoscopio, presentada en la Exposición Universal de París de 1878. Destaca por su complejidad técnica y sincronización de múltiples elementos en movimiento."
   }
 ]
