@@ -298,5 +298,30 @@
       "Francia"
     ],
     "observaciones": "Pertenece a la primera serie de 10 animaciones para praxinoscopio, presentada en la Exposición Universal de París de 1878. Destaca por su complejidad técnica y sincronización de múltiples elementos en movimiento."
+  },
+  {
+    "id": "1878-el-molino-de-agua-le-moulin-a-eau",
+    "titulo": "El molino de agua",
+    "titulo_original": "Le Moulin à Eau",
+    "año": 1878,
+    "duracion": "6 seg",
+    "resumen_breve": "Animación de Reynaud que muestra un joven accionando un molino de agua, destacando la fascinación decimonónica por la mecánica y el movimiento funcional.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-el-molino-de-agua-le-moulin-a-eau/el-molino-de-agua.jpg",
+    "post": "/historiadelcine/posts/1878-el-molino-de-agua-le-moulin-a-eau/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Pieza de la segunda serie de animaciones para praxinoscopio, presentada en la Exposición Universal de París de 1878. Destaca por ilustrar el funcionamiento rítmico de maquinaria simple, anticipando la animación técnica y educativa."
   }
 ]
