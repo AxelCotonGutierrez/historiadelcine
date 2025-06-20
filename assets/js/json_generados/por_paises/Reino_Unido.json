@@ -1,5 +1,34 @@
 [
   {
+    "id": "sallie-gardner-at-a-gallop",
+    "titulo": "Sallie Gardner al galope",
+    "titulo_original": "Sallie Gardner at a Gallop",
+    "año": 1878,
+    "duracion": "15 seg",
+    "resumen_breve": "Secuencia pionera de 24 fotografías de Muybridge que demuestra científicamente el galope de un caballo, considerada una de las semillas del cine moderno.",
+    "imagen": "/historiadelcine/assets/images/posts/sallie-gardner-at-a-gallop/sallie-gardner-al-galope.jpg",
+    "post": "/historiadelcine/posts/sallie-gardner-at-a-gallop/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Leland Stanford"
+    ],
+    "guionistas": [],
+    "actores": [
+      "Gilbert Domm",
+      "Sallie Gardner"
+    ],
+    "estudio": [
+      "Palo Alto Stock Farm"
+    ],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "No se conserva como película convencional; es una secuencia fotográfica reproducida mediante zoopraxiscopio. Registrada en el National Film Registry de EE.UU. por su valor patrimonial."
+  },
+  {
     "id": "caballo-retrocediendo-horses-backing-1881",
     "titulo": "Caballo retrocediendo",
     "titulo_original": "Horses. Backing",
@@ -70,5 +99,27 @@
       "Reino Unido"
     ],
     "observaciones": "Forma parte de la serie 'The attitudes of animals in motion' (no. 123–124) realizada en Palo Alto, California, en 1878–1879 y publicada en 1881. Fuente: Library of Congress (https://www.loc.gov/resource/cph.3g13822/)."
+  },
+  {
+    "id": "caballos-al-medio-galope-horses-cantering-1881",
+    "titulo": "Caballos al medio galope",
+    "titulo_original": "Horses. Cantering",
+    "año": 1881,
+    "duracion": "21 seg",
+    "resumen_breve": "Secuencia de Muybridge que muestra un caballo en medio galope, clave para estudiar la biomecánica equina y la animación científica.",
+    "imagen": "/historiadelcine/assets/images/posts/caballos-al-medio-galope-horses-cantering-1881/caballos-a-medio-galope.jpg",
+    "post": "/historiadelcine/posts/caballos-al-medio-galope-horses-cantering-1881/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Fotografías tomadas en Palo Alto (1878–1879) bajo patrocinio de Leland Stanford, publicadas como parte de 'The attitudes of animals in motion' (no. 125–126). Ver Library of Congress: https://www.loc.gov/item/2009630534/"
   }
 ]

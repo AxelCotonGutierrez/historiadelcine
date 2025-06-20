@@ -23,7 +23,8 @@
       "Palo Alto Stock Farm"
     ],
     "paises": [
-      "Estados Unidos de América"
+      "Estados Unidos de América",
+      "Reino Unido"
     ],
     "observaciones": "No se conserva como película convencional; es una secuencia fotográfica reproducida mediante zoopraxiscopio. Registrada en el National Film Registry de EE.UU. por su valor patrimonial."
   },
@@ -351,5 +352,28 @@
       "Francia"
     ],
     "observaciones": "Pieza de la segunda serie de animaciones para praxinoscopio, presentada en la Exposición Universal de París de 1878. Destaca por ilustrar el funcionamiento rítmico de maquinaria simple, anticipando la animación técnica y educativa."
+  },
+  {
+    "id": "1878-el-mono-musico-le-singe-musicien",
+    "titulo": "El mono músico",
+    "titulo_original": "Le singe musicien",
+    "año": 1878,
+    "duracion": "8 seg",
+    "resumen_breve": "Animación de Reynaud donde un mono antropomórfico toca un violonchelo, mostrando la fluidez y el ingenio del praxinoscopio como precursor del cine.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-el-mono-musico-le-singe-musicien/el-mono-m-sico.jpg",
+    "post": "/historiadelcine/posts/1878-el-mono-musico-le-singe-musicien/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Una de las primeras animaciones de Reynaud para su praxinoscopio, pintada a mano y exhibida en bucle. Refleja el uso de animales antropomorfizados para explorar gestos humanos en el arte animado."
   }
 ]
