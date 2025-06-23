@@ -396,5 +396,30 @@
       "Francia"
     ],
     "observaciones": "Animación número 7 de la segunda serie de praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. Representa la fascinación por el cuerpo humano en movimiento en el contexto circense de la Belle Époque."
+  },
+  {
+    "id": "1878-la-carrera-de-obstaculos-le-steeple-chase",
+    "titulo": "La carrera de obstáculos",
+    "titulo_original": "Le Steeple-Chase",
+    "año": 1878,
+    "duracion": "9 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a un jinete montando un caballo al trote, evocando el dinamismo de las competiciones ecuestres populares en el siglo XIX.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-la-carrera-de-obstaculos-le-steeple-chase/la-carrera-de-obst-culos.jpg",
+    "post": "/historiadelcine/posts/1878-la-carrera-de-obstaculos-le-steeple-chase/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Octava animación de la tercera serie de praxinoscopio, presentada en la Exposición Universal de París en 1878. Destaca por su fluidez y por anticipar principios fundamentales de la animación de locomoción animal."
   }
 ]
