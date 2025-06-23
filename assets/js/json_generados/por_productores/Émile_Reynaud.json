@@ -323,5 +323,30 @@
       "Francia"
     ],
     "observaciones": "Pieza de la segunda serie de animaciones para praxinoscopio, presentada en la Exposición Universal de París de 1878. Destaca por ilustrar el funcionamiento rítmico de maquinaria simple, anticipando la animación técnica y educativa."
+  },
+  {
+    "id": "1878-el-trapecista-le-trapeze",
+    "titulo": "El trapecista",
+    "titulo_original": "Le Trapèze",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a un joven trapecista balanceándose en el aire, resaltando el movimiento pendular y la destreza acrobática.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-el-trapecista-le-trapeze/el-trapecista.jpg",
+    "post": "/historiadelcine/posts/1878-el-trapecista-le-trapeze/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación número 7 de la segunda serie de praxinoscopio de Reynaud, presentada en la Exposición Universal de París de 1878. Representa la fascinación por el cuerpo humano en movimiento en el contexto circense de la Belle Époque."
   }
 ]
