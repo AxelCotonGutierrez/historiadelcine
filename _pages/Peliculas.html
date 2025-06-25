@@ -20,7 +20,11 @@ comments: true
     <tbody></tbody>
   </table>
 </div>
-<div id="paginacion" style="text-align: center; margin-top: 20px;"></div>
+<div id="paginacion" style="text-align: center; margin-top: 20px;">
+  <button id="btn-prev">⬅️ Anterior</button>
+  <span id="num-pagina">Página 1 de 1</span>
+  <button id="btn-next">Siguiente ➡️</button>
+</div>
 
 
 <br>
@@ -49,7 +53,6 @@ fetch(BASE_URL + "por_año/index.json")
       peliculas = resultados.flat();
       peliculas.sort((a, b) => (a.año || 0) - (b.año || 0));
       mostrarPagina(1);
-      crearPaginacion();
     });
   })
   .catch(err => console.error("No se pudo cargar index.json:", err));
@@ -84,31 +87,26 @@ function mostrarPagina(num) {
   actualizarPaginacion();
 }
 
-// 3️⃣ Crear estructura de paginación
-function crearPaginacion() {
-  const totalPaginas = Math.ceil(peliculas.length / porPagina);
-  contenedorPaginacion.innerHTML = `
-    <button id="btn-prev">⬅️ Anterior</button>
-    <span id="num-pagina">Página ${paginaActual} de ${totalPaginas}</span>
-    <button id="btn-next">Siguiente ➡️</button>
-  `;
-
-  document.getElementById("btn-prev").addEventListener("click", () => {
-    if (paginaActual > 1) mostrarPagina(paginaActual - 1);
-  });
-
-  document.getElementById("btn-next").addEventListener("click", () => {
-    if (paginaActual < totalPaginas) mostrarPagina(paginaActual + 1);
-  });
-}
-
-// 4️⃣ Actualizar texto de número de página
+// 3️⃣ Actualizar texto de número de página
 function actualizarPaginacion() {
   const totalPaginas = Math.ceil(peliculas.length / porPagina);
-  document.getElementById("num-pagina").textContent = `Página ${paginaActual} de ${totalPaginas}`;
+  const span = document.getElementById("num-pagina");
+  if (span) {
+    span.textContent = `Página ${paginaActual} de ${totalPaginas}`;
+  }
 }
 
-// 5️⃣ Ficha (idéntica)
+// 4️⃣ Paginación: botones fijo en HTML
+document.getElementById("btn-prev").addEventListener("click", () => {
+  if (paginaActual > 1) mostrarPagina(paginaActual - 1);
+});
+
+document.getElementById("btn-next").addEventListener("click", () => {
+  const totalPaginas = Math.ceil(peliculas.length / porPagina);
+  if (paginaActual < totalPaginas) mostrarPagina(paginaActual + 1);
+});
+
+// 5️⃣ Ficha detallada
 window.buscarDirecto = function(carpeta, nombre) {
   const archivo = nombre.replace(/ /g, "_") + ".json";
   const ruta = `${BASE_URL}${carpeta}/${archivo}`;
@@ -121,7 +119,7 @@ window.buscarDirecto = function(carpeta, nombre) {
     .catch(() => {
       contenedorFicha.innerHTML = "<p>No se encontró información.</p>";
     });
-}
+};
 
 window.mostrarFicha = function(peliculas) {
   let html = `
@@ -154,7 +152,7 @@ window.mostrarFicha = function(peliculas) {
       <tr><td colspan="2"><strong>Actores:</strong> ${crearEnlaces(p.actores, "por_actores")}</td></tr>
       <tr><td colspan="2"><strong>Estudio:</strong> ${crearEnlaces(p.estudio, "por_estudio")} &nbsp; | &nbsp;
       <strong>Países:</strong> ${crearEnlaces(p.paises, "por_paises")}</td></tr>
-               <tr><td colspan="2"><strong>Resumen Breve:</strong> ${p.resumen_breve || "—"}</td></tr>
+      <tr><td colspan="2"><strong>Resumen Breve:</strong> ${p.resumen_breve || "—"}</td></tr>
       <tr><td colspan="2"><strong>Observaciones:</strong> ${p.observaciones || "—"}</td></tr>
       <tr><td colspan="2" class="separador"></td></tr>
     `;
@@ -168,6 +166,7 @@ window.mostrarFicha = function(peliculas) {
   contenedorFicha.innerHTML = html;
 };
 </script>
+
 
 
 
