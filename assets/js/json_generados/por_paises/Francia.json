@@ -496,5 +496,30 @@
       "Francia"
     ],
     "observaciones": "Séptima animación de la primera serie para praxinoscopio de Reynaud. Pintada a mano sobre cartulina negra, destaca por su colorido expresivo y su representación rítmica del equilibrio escénico."
+  },
+  {
+    "id": "1878-la-encantadora-la-charmeuse",
+    "titulo": "La encantadora",
+    "titulo_original": "La Charmeuse",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación de Reynaud donde una joven atrae aves con movimientos armónicos, en una escena poética que evoca la conexión con la naturaleza.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-la-encantadora-la-charmeuse/la-encantadora.jpg",
+    "post": "/historiadelcine/posts/1878-la-encantadora-la-charmeuse/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Parte de la primera serie de animaciones para praxinoscopio (1877–1879). Pintada a mano sobre fondo negro, destaca por su estética refinada y su valor expresivo como obra artística y pedagógica."
   }
 ]
