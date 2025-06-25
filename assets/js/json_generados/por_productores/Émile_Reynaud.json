@@ -423,5 +423,30 @@
       "Francia"
     ],
     "observaciones": "Cuarta animación de la primera serie de Reynaud para praxinoscopio, exhibida en la Exposición Universal de París en 1878. Enfocada en la vida cotidiana rural y la interacción entre humanos y animales domésticos."
+  },
+  {
+    "id": "1878-la-danza-en-la-cuerda-floja-la-danse-sur-la-corde",
+    "titulo": "La danza en la cuerda floja",
+    "titulo_original": "La danse sur la corde",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación de Reynaud donde una acróbata avanza sobre una cuerda floja, reflejando el equilibrio y la elegancia de los espectáculos de variedades del siglo XIX.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-la-danza-en-la-cuerda-floja-la-danse-sur-la-corde/la-danza-en-la-cuerda-floja.jpg",
+    "post": "/historiadelcine/posts/1878-la-danza-en-la-cuerda-floja-la-danse-sur-la-corde/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Séptima animación de la primera serie para praxinoscopio de Reynaud. Pintada a mano sobre cartulina negra, destaca por su colorido expresivo y su representación rítmica del equilibrio escénico."
   }
 ]
