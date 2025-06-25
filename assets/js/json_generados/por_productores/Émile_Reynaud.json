@@ -473,5 +473,30 @@
       "Francia"
     ],
     "observaciones": "Parte de la primera serie de animaciones para praxinoscopio (1877–1879). Pintada a mano sobre fondo negro, destaca por su estética refinada y su valor expresivo como obra artística y pedagógica."
+  },
+  {
+    "id": "1878-la-nadadora-la-nageuse",
+    "titulo": "La nadadora",
+    "titulo_original": "La Nageuse",
+    "año": 1878,
+    "duracion": "15 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a una joven nadando con soltura y energía, destacando por su protagonismo femenino activo y deportivo.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-la-nadadora-la-nageuse/la-nadadora.jpg",
+    "post": "/historiadelcine/posts/1878-la-nadadora-la-nageuse/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Octava animación de la segunda serie para praxinoscopio. Representa con detalle el movimiento acuático y a una mujer en actividad física, anticipando el cine deportivo y las representaciones femeninas activas."
   }
 ]
