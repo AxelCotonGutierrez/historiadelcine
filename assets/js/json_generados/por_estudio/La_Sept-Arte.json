@@ -396,5 +396,30 @@
       "Francia"
     ],
     "observaciones": "Octava animación de la tercera serie de praxinoscopio, presentada en la Exposición Universal de París en 1878. Destaca por su fluidez y por anticipar principios fundamentales de la animación de locomoción animal."
+  },
+  {
+    "id": "1878-la-comba-le-jeu-de-corde",
+    "titulo": "La comba",
+    "titulo_original": "Le jeu de corde",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación de Reynaud que muestra a una niña saltando la cuerda, capturando con fluidez un juego infantil cotidiano del siglo XIX.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-la-comba-le-jeu-de-corde/la-comba.jpg",
+    "post": "/historiadelcine/posts/1878-la-comba-le-jeu-de-corde/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Novena animación de la primera serie de praxinoscopio de Reynaud (1877–1879). Representa el salto de cuerda con notable fluidez técnica y un fuerte componente emocional ligado a la infancia."
   }
 ]
