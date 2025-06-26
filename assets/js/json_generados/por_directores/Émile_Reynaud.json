@@ -521,5 +521,26 @@
       "Francia"
     ],
     "observaciones": "Octava animación de la segunda serie para praxinoscopio. Representa con detalle el movimiento acuático y a una mujer en actividad física, anticipando el cine deportivo y las representaciones femeninas activas."
+  },
+  {
+    "id": "1878-la-roseta-magica-la-rosace-magique",
+    "titulo": "La roseta mágica",
+    "titulo_original": "La Rosace Magique",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Animación abstracta de Reynaud con una figura geométrica en rotación continua, que explora la estética del movimiento, el ritmo y la simetría visual.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-la-roseta-magica-la-rosace-magique/la-roseta-m-gica.jpg",
+    "post": "/historiadelcine/posts/1878-la-roseta-magica-la-rosace-magique/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Una de las pocas animaciones abstractas precinematográficas. Parte de la primera serie del praxinoscopio de Reynaud, destacada por su diseño simétrico, colorido manual y ausencia de narrativa."
   }
 ]
