@@ -521,5 +521,30 @@
       "Francia"
     ],
     "observaciones": "Octava animación de la segunda serie para praxinoscopio. Representa con detalle el movimiento acuático y a una mujer en actividad física, anticipando el cine deportivo y las representaciones femeninas activas."
+  },
+  {
+    "id": "1878-las-dos-traviesas-les-deux-espiegles",
+    "titulo": "Las dos traviesas",
+    "titulo_original": "Les Deux Espiègles",
+    "año": 1878,
+    "duracion": "10 seg",
+    "resumen_breve": "Dos niñas giran tomadas de las manos en una animación entrañable que captura la esencia del juego infantil y la alegría del movimiento espontáneo.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-las-dos-traviesas-les-deux-espiegles/las-dos-traviesas.jpg",
+    "post": "/historiadelcine/posts/1878-las-dos-traviesas-les-deux-espiegles/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación de la tercera serie del praxinoscopio de Reynaud. Presentada en la Exposición Universal de París (1878), destaca por su expresividad y ritmo circular."
   }
 ]
