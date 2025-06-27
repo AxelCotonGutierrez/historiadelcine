@@ -617,5 +617,30 @@
       "Francia"
     ],
     "observaciones": "Presentada en la Exposición Universal de París (1878), esta animación destaca por su lirismo y el uso visual de la burbuja como símbolo de fragilidad y contemplación."
+  },
+  {
+    "id": "1878-los-payasos-les-clowns",
+    "titulo": "Los payasos",
+    "titulo_original": "Les Clowns",
+    "año": 1878,
+    "duracion": "10 seg",
+    "resumen_breve": "Varios payasos realizan acrobacias en torno a un caballo en una animación circense llena de dinamismo y simpatía.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-los-payasos-les-clowns/los-payasos.jpg",
+    "post": "/historiadelcine/posts/1878-los-payasos-les-clowns/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación de la tercera serie del praxinoscopio. Presentada en la Exposición Universal de París (1878), destaca por su temática circense y coreografía compleja entre personajes."
   }
 ]
