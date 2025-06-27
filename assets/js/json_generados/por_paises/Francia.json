@@ -592,5 +592,30 @@
       "Francia"
     ],
     "observaciones": "Animación de la tercera serie del praxinoscopio de Reynaud. Presentada en la Exposición Universal de París (1878), destaca por su expresividad y ritmo circular."
+  },
+  {
+    "id": "1878-las-mariposas-les-papillons",
+    "titulo": "Las mariposas",
+    "titulo_original": "Les Papillons",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Dos mariposas revolotean sobre flores abiertas en una animación poética que transmite armonía y contemplación natural.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-las-mariposas-les-papillons/las-mariposas.jpg",
+    "post": "/historiadelcine/posts/1878-las-mariposas-les-papillons/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación de la segunda serie del praxinoscopio. Presentada en la Exposición Universal de París (1878), destaca por su lirismo y delicadeza visual."
   }
 ]
