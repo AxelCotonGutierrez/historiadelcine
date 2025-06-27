@@ -617,5 +617,30 @@
       "Francia"
     ],
     "observaciones": "Animación de la segunda serie del praxinoscopio. Presentada en la Exposición Universal de París (1878), destaca por su lirismo y delicadeza visual."
+  },
+  {
+    "id": "1878-las-pompas-de-jabon-les-bulles-de-savon",
+    "titulo": "Las pompas de jabón",
+    "titulo_original": "Les Bulles de Savon",
+    "año": 1878,
+    "duracion": "15 segundos",
+    "resumen_breve": "Una niña sopla burbujas de jabón en una escena doméstica delicada que evoca calma, juego y fugacidad.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-las-pompas-de-jabon-les-bulles-de-savon/las-pompas-de-jab-n.jpg",
+    "post": "/historiadelcine/posts/1878-las-pompas-de-jabon-les-bulles-de-savon/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Presentada en la Exposición Universal de París (1878), esta animación destaca por su lirismo y el uso visual de la burbuja como símbolo de fragilidad y contemplación."
   }
 ]
