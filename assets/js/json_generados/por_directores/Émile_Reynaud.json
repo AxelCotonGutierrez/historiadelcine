@@ -667,5 +667,30 @@
       "Francia"
     ],
     "observaciones": "Animación de la tercera serie del praxinoscopio. Presentada en la Exposición Universal de París (1878), destaca por su estética poética y delicada representación de la infancia en movimiento."
+  },
+  {
+    "id": "1878-los-perros-sabios-les-chiens-savants",
+    "titulo": "Los perros sabios",
+    "titulo_original": "Les Chiens Savants",
+    "año": 1878,
+    "duracion": "1 min",
+    "resumen_breve": "Un niño entrenador guía a dos perros amaestrados a través de un aro en esta animación circense del praxinoscopio.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-los-perros-sabios-les-chiens-savants/los-perros-sabios.jpg",
+    "post": "/historiadelcine/posts/1878-los-perros-sabios-les-chiens-savants/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación número 8 de la primera serie del praxinoscopio. Representa una rutina de espectáculo ambulante con animales amaestrados, pintada a mano por Reynaud."
   }
 ]
