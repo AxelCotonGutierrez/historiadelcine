@@ -621,5 +621,30 @@
       "Francia"
     ],
     "observaciones": "Animación de la tercera serie del praxinoscopio. Presentada en la Exposición Universal de París (1878), destaca por su temática circense y coreografía compleja entre personajes."
+  },
+  {
+    "id": "1878-los-pequenos-valsistas-les-petits-valseurs",
+    "titulo": "Los pequeños valsistas",
+    "titulo_original": "Les Petits Valseurs",
+    "año": 1878,
+    "duracion": "1 min",
+    "resumen_breve": "Tres parejas de niños giran armoniosamente al ritmo de un vals imaginario en esta tierna animación del praxinoscopio.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-los-pequenos-valsistas-les-petits-valseurs/los-peque-os-valsistas.jpg",
+    "post": "/historiadelcine/posts/1878-los-pequenos-valsistas-les-petits-valseurs/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación de la tercera serie del praxinoscopio. Presentada en la Exposición Universal de París (1878), destaca por su estética poética y delicada representación de la infancia en movimiento."
   }
 ]
