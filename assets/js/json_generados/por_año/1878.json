@@ -627,7 +627,7 @@
     "titulo": "Las pompas de jabón",
     "titulo_original": "Les Bulles de Savon",
     "año": 1878,
-    "duracion": "15 segundos",
+    "duracion": "15 seg",
     "resumen_breve": "Una niña sopla burbujas de jabón en una escena doméstica delicada que evoca calma, juego y fugacidad.",
     "imagen": "/historiadelcine/assets/images/posts/1878-las-pompas-de-jabon-les-bulles-de-savon/las-pompas-de-jab-n.jpg",
     "post": "/historiadelcine/posts/1878-las-pompas-de-jabon-les-bulles-de-savon/",
@@ -677,7 +677,7 @@
     "titulo": "Los pequeños valsistas",
     "titulo_original": "Les Petits Valseurs",
     "año": 1878,
-    "duracion": "1 min",
+    "duracion": "10 seg",
     "resumen_breve": "Tres parejas de niños giran armoniosamente al ritmo de un vals imaginario en esta tierna animación del praxinoscopio.",
     "imagen": "/historiadelcine/assets/images/posts/1878-los-pequenos-valsistas-les-petits-valseurs/los-peque-os-valsistas.jpg",
     "post": "/historiadelcine/posts/1878-los-pequenos-valsistas-les-petits-valseurs/",
@@ -702,7 +702,7 @@
     "titulo": "Los perros sabios",
     "titulo_original": "Les Chiens Savants",
     "año": 1878,
-    "duracion": "1 min",
+    "duracion": "10 seg",
     "resumen_breve": "Un niño entrenador guía a dos perros amaestrados a través de un aro en esta animación circense del praxinoscopio.",
     "imagen": "/historiadelcine/assets/images/posts/1878-los-perros-sabios-les-chiens-savants/los-perros-sabios.jpg",
     "post": "/historiadelcine/posts/1878-los-perros-sabios-les-chiens-savants/",
@@ -721,5 +721,30 @@
       "Francia"
     ],
     "observaciones": "Animación número 8 de la primera serie del praxinoscopio. Representa una rutina de espectáculo ambulante con animales amaestrados, pintada a mano por Reynaud."
+  },
+  {
+    "id": "1878-los-serradores-de-troncos-les-scieurs-de-long",
+    "titulo": "Los serradores de troncos",
+    "titulo_original": "Les Scieurs de Long",
+    "año": 1878,
+    "duracion": "15 seg",
+    "resumen_breve": "Dos obreros cortan un tronco con una sierra de doble mango, mostrando un trabajo manual rítmico y coordinado del siglo XIX.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-los-serradores-de-troncos-les-scieurs-de-long/los-serradores-de-troncos.jpg",
+    "post": "/historiadelcine/posts/1878-los-serradores-de-troncos-les-scieurs-de-long/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Animación inaugural de la segunda serie del praxinoscopio. Presenta con realismo el trabajo colaborativo de los obreros, ideal para el bucle óptico."
   }
 ]
