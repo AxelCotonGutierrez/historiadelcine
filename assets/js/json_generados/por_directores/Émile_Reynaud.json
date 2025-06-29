@@ -717,5 +717,30 @@
       "Francia"
     ],
     "observaciones": "Animación inaugural de la segunda serie del praxinoscopio. Presenta con realismo el trabajo colaborativo de los obreros, ideal para el bucle óptico."
+  },
+  {
+    "id": "1878-zimm-boum-boum-zim-boum-boum",
+    "titulo": "¡Zimm. Boum. Boum!",
+    "titulo_original": "Zim, Boum, Boum",
+    "año": 1878,
+    "duracion": "5 seg",
+    "resumen_breve": "Un hombre orquesta caricaturesco toca percusiones en bucle, generando ritmo visual y humor sonoro con el praxinoscopio.",
+    "imagen": "/historiadelcine/assets/images/posts/1878-zimm-boum-boum-zim-boum-boum/zimm-boum-boum.jpg",
+    "post": "/historiadelcine/posts/1878-zimm-boum-boum-zim-boum-boum/",
+    "directores": [
+      "Émile Reynaud"
+    ],
+    "productores": [
+      "Émile Reynaud"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "La Sept-Arte"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Última animación de la primera serie del praxinoscopio. Representa a un músico multipercusivo con ritmo frenético y humor visual."
   }
 ]
