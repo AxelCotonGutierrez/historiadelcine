@@ -209,5 +209,29 @@
       "Reino Unido"
     ],
     "observaciones": "Forma parte del volumen *The attitudes of animals in motion*. Fotografías tomadas en Palo Alto con cámaras alineadas y disparadores eléctricos. Referencia LOC: no. 135–136. [https://www.loc.gov/resource/cph.3g13828/]"
+  },
+  {
+    "id": "1881-caballo-trotando-horse-trotting",
+    "titulo": "Caballo trotando",
+    "titulo_original": "Horse Trotting",
+    "año": 1881,
+    "duracion": "5 seg",
+    "resumen_breve": "Secuencia fotográfica del trote de un caballo con sulky, capturada por Muybridge en sus estudios sobre locomoción animal en la Universidad de Pensilvania.",
+    "imagen": "/historiadelcine/assets/images/posts/1881-caballo-trotando-horse-trotting/caballo-trotando.jpg",
+    "post": "/historiadelcine/posts/1881-caballo-trotando-horse-trotting/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Fotografías realizadas en la Universidad de Pensilvania como parte del estudio 'Animal Locomotion'. Imagen registrada en Library of Congress (no. 28) como parte de 'The attitudes of animals in motion'."
   }
 ]
