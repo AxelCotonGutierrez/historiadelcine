@@ -44,8 +44,11 @@
   </nav>
 
   {% unless page.noimage %}
-    <img alt="{{ page.title }}" src="{{ '/assets/images/' | relative_url }}{{ page.id }}/top.jpg" class="img-responsive">
-  {% endunless %}
+  <img alt="{{ page.title }}"
+       src="{{ '/assets/images/posts/' | relative_url }}{{ page.año }}/{{ page.id }}/top.jpg"
+       class="img-responsive">
+{% endunless %}
+
 
   <div class="jumbotron clearfix">
     <h1 class="text-center">{{ page.title }}</h1>
