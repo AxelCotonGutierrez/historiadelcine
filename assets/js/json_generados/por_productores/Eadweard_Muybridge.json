@@ -310,5 +310,29 @@
       "Reino Unido"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 93. Enlace oficial: https://www.loc.gov/item/2009630510/"
+  },
+  {
+    "id": "1881-jabali-trotando",
+    "titulo": "Jabalí trotando",
+    "titulo_original": "Boar Trotting",
+    "año": 1881,
+    "duracion": "6 seg",
+    "resumen_breve": "Estudio cronofotográfico del trote de un jabalí guiado por un asistente, parte del proyecto Animal Locomotion de Muybridge.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/jabali-trotando/jabali-trotando.jpg",
+    "post": "/historiadelcine/posts/1881-jabali-trotando/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Reino Unido",
+      "Estados Unidos de América"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 91. Enlace oficial: https://www.loc.gov/item/2009630511/"
   }
 ]
