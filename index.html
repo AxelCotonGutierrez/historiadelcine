@@ -45,11 +45,12 @@ comments: true
       {% endfor %}
 
       <!-- Imagen si existe -->
-  {% unless post.noimage %}
+{% unless post.noimage %}
   <img alt="{{ post.title }}"
-       src="{{ '/assets/images/posts/' | relative_url }}{{ post.año }}/{{ post.id }}/top.jpg"
+       src="{{ '/assets/images/posts/' | relative_url }}{{ post.ruta_imagen }}/top.jpg"
        class="img-responsive">
 {% endunless %}
+
 
 
       <!-- Resumen -->

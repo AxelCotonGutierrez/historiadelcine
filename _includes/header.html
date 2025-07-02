@@ -43,11 +43,12 @@
     </div>
   </nav>
 
-  {% unless page.noimage %}
+ {% unless page.noimage %}
   <img alt="{{ page.title }}"
-       src="{{ '/assets/images/posts/' | relative_url }}{{ page.año }}/{{ page.id }}/top.jpg"
+       src="{{ '/assets/images/posts/' | relative_url }}{{ page.ruta_imagen }}/top.jpg"
        class="img-responsive">
 {% endunless %}
+
 
 
   <div class="jumbotron clearfix">
