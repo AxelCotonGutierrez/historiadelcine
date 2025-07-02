@@ -93,6 +93,30 @@
       "Estados Unidos de América",
       "Reino Unido"
     ],
-    "observaciones": "Fotografías realizadas en la Universidad de Pensilvania como parte del estudio 'Animal Locomotion'. Imagen registrada en Library of Congress (no. 28) como parte de 'The attitudes of animals in motion'."
+    "observaciones": "Fotografías realizadas en la Universidad de Pensilvania como parte del estudio 'Animal Locomotion'. Imagen registrada en Library of Congress (no. 28) como parte de 'The attitudes of animals in motion'. [https://www.loc.gov/item/2008680843/]"
+  },
+  {
+    "id": "1881-ciervo-trotando-deer-trotting-12-stride",
+    "titulo": "Ciervo trotando (medio paso)",
+    "titulo_original": "Deer, trotting 1/2 stride",
+    "año": 1881,
+    "duracion": "5 seg",
+    "resumen_breve": "Secuencia de cronofotografías que muestran media zancada del trote de un ciervo, capturada por Muybridge para su estudio Animal Locomotion.",
+    "imagen": "/historiadelcine/assets/images/posts/1881-ciervo-trotando-deer-trotting-12-stride/ciervo-trotando-medio-paso.jpg",
+    "post": "/historiadelcine/posts/1881-ciervo-trotando-deer-trotting-12-stride/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Reino Unido",
+      "Estados Unidos de América"
+    ],
+    "observaciones": "Fotografía incluida en el estudio 'Animal Locomotion' (no. 84), registrada en Library of Congress. Destaca por mostrar el movimiento de un ciervo salvaje en media zancada con precisión científica. [https://www.loc.gov/item/2009630500/]"
   }
 ]
