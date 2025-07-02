@@ -446,5 +446,29 @@
       "Reino Unido"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 90. Enlace oficial: https://www.loc.gov/item/2009630506/"
+  },
+  {
+    "id": "1881-cabra-corriendo-1",
+    "titulo": "Cabra corriendo 1",
+    "titulo_original": "Goat Running 1",
+    "año": 1881,
+    "duracion": "6 seg",
+    "resumen_breve": "Secuencia cronofotográfica que documenta con precisión la carrera de una cabra, parte del proyecto Animal Locomotion de Muybridge.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/cabra-corriendo-1/cabra-corriendo-1.jpg",
+    "post": "/historiadelcine/posts/1881-cabra-corriendo-1/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 89. Enlace oficial: https://www.loc.gov/item/2009630507/"
   }
 ]
