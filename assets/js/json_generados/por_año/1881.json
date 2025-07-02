@@ -324,5 +324,29 @@
       "Reino Unido"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 92. Enlace oficial: https://www.loc.gov/item/2009630505/"
+  },
+  {
+    "id": "1881-jabali-caminando",
+    "titulo": "Jabalí caminando",
+    "titulo_original": "Boar Walking",
+    "año": 1881,
+    "duracion": "6 seg",
+    "resumen_breve": "Secuencia cronofotográfica que documenta el desplazamiento de un jabalí guiado por un cuidador, parte del proyecto Animal Locomotion.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/jabali-caminando/jabali-caminando.jpg",
+    "post": "/historiadelcine/posts/1881-jabali-caminando/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 90. Enlace oficial: https://www.loc.gov/item/2009630506/"
   }
 ]
