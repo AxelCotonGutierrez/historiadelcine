@@ -425,5 +425,29 @@
       "Reino Unido"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 88. Enlace oficial: https://www.loc.gov/item/2009630508/"
+  },
+  {
+    "id": "1881-atleta-caminando-2",
+    "titulo": "Atleta caminando 2",
+    "titulo_original": "Athlete Walking 2",
+    "año": 1881,
+    "duracion": "20 seg",
+    "resumen_breve": "Secuencia cronofotográfica de un hombre caminando rápido, que muestra la transición biomecánica entre marcha normal y trote.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/atleta-caminando-2/atleta-caminando-2.jpg",
+    "post": "/historiadelcine/posts/1881-atleta-caminando-2/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 93. Enlace oficial: https://www.loc.gov/item/2009630510/"
   }
 ]
