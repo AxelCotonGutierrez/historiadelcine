@@ -329,5 +329,29 @@
       "Estados Unidos de América"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 87. Enlace oficial: https://www.loc.gov/item/2009630504/"
+  },
+  {
+    "id": "1881-atleta-caminando-1",
+    "titulo": "Atleta caminando 1",
+    "titulo_original": "Athlete Walking 1",
+    "año": 1881,
+    "duracion": "16 seg",
+    "resumen_breve": "Estudio biomecánico del caminar masculino realizado por Muybridge como parte del proyecto 'Animal Locomotion'.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/atleta-caminando-1/atleta-caminando-1.jpg",
+    "post": "/historiadelcine/posts/1881-atleta-caminando-1/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 92. Enlace oficial: https://www.loc.gov/item/2009630505/"
   }
 ]
