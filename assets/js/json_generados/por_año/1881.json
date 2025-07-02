@@ -228,5 +228,29 @@
       "Estados Unidos de América"
     ],
     "observaciones": "Fotografía incluida en el estudio 'Animal Locomotion' (no. 84), registrada en Library of Congress. Destaca por mostrar el movimiento de un ciervo salvaje en media zancada con precisión científica. [https://www.loc.gov/item/2009630500/]"
+  },
+  {
+    "id": "1881-ciervo-corriendo-1-deer-running-1",
+    "titulo": "Ciervo corriendo 1",
+    "titulo_original": "Deer Running 1",
+    "año": 1881,
+    "duracion": "8 seg",
+    "resumen_breve": "Secuencia cronofotográfica del ciervo en carrera, capturada por Muybridge para su obra 'Animal Locomotion', mostrando con precisión científica el movimiento completo.",
+    "imagen": "/historiadelcine/assets/images/posts/1881-ciervo-corriendo-1-deer-running-1/ciervo-corriendo-1.jpg",
+    "post": "/historiadelcine/posts/1881-ciervo-corriendo-1-deer-running-1/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Reino Unido",
+      "Estados Unidos de América"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 85. Enlace oficial: https://www.loc.gov/item/2009630502/"
   }
 ]
