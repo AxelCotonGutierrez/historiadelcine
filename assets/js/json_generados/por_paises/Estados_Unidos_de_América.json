@@ -590,5 +590,29 @@
       "Reino Unido"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 95. Enlace oficial: https://www.loc.gov/item/2009630513/"
+  },
+  {
+    "id": "1881-caballos-irregular-1",
+    "titulo": "Caballos. Irregular 1",
+    "titulo_original": "Horses. Irregular 1",
+    "año": 1881,
+    "duracion": "5 seg",
+    "resumen_breve": "Caballo de tiro enganchado a un sulky avanzando con paso irregular, capturado por Muybridge para su serie de estudios biomecánicos.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/caballos-irregular-1/caballos-irregular-1.jpg",
+    "post": "/historiadelcine/posts/1881-caballos-irregular-1/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 68. Enlace oficial: https://www.loc.gov/item/2008681170/"
   }
 ]
