@@ -638,5 +638,29 @@
       "Estados Unidos de América"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 68. Enlace oficial: https://www.loc.gov/item/2008681171/"
+  },
+  {
+    "id": "1881-caballos-irregular-3",
+    "titulo": "Caballos. Irregular 3",
+    "titulo_original": "Horses Irregular 3",
+    "año": 1881,
+    "duracion": "10 seg",
+    "resumen_breve": "Jinete sobre caballo al paso irregular, documentado por Muybridge para estudiar biomecánica ecuestre bajo carga.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/caballos-irregular-3/caballos-irregular-3.jpg",
+    "post": "/historiadelcine/posts/1881-caballos-irregular-3/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Reino Unido",
+      "Estados Unidos de América"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: cph.3g13766. Enlace oficial: https://www.loc.gov/item/2008681172/"
   }
 ]
