@@ -614,5 +614,29 @@
       "Reino Unido"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 68. Enlace oficial: https://www.loc.gov/item/2008681170/"
+  },
+  {
+    "id": "1881-caballos-irregular-2",
+    "titulo": "Caballos. Irregular 2",
+    "titulo_original": "Horses Irregular 2",
+    "año": 1881,
+    "duracion": "6 seg",
+    "resumen_breve": "Segunda toma de un caballo con sulky en desplazamiento irregular, capturado por Muybridge para estudios comparativos de biomecánica animal.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/caballos-irregular-2/caballos-irregular-2.jpg",
+    "post": "/historiadelcine/posts/1881-caballos-irregular-2/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Reino Unido",
+      "Estados Unidos de América"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 68. Enlace oficial: https://www.loc.gov/item/2008681171/"
   }
 ]
