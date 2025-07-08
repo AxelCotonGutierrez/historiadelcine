@@ -806,5 +806,29 @@
       "Reino Unido"
     ],
     "observaciones": "Parte de la serie 'Animal Locomotion'. Referencia: no. 110. Enlace oficial: https://www.loc.gov/item/2009630545/"
+  },
+  {
+    "id": "1881-buey-corriendo-irregular",
+    "titulo": "Buey corriendo (irregular)",
+    "titulo_original": "Ox, Running, Irregular",
+    "año": 1881,
+    "duracion": "8 seg",
+    "resumen_breve": "Un buey corre de forma irregular junto a un hombre, en una secuencia que permite comparar la locomoción animal y humana en paralelo.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/buey-corriendo-irregular/buey-corriendo-irregular.jpg",
+    "post": "/historiadelcine/posts/1881-buey-corriendo-irregular/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Reino Unido",
+      "Estados Unidos de América"
+    ],
+    "observaciones": "Secuencia mixta de humano y animal. Referencia: no. 81. Enlace oficial: https://www.loc.gov/item/2008681186/"
   }
 ]
