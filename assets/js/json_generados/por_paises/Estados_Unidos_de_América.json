@@ -734,5 +734,29 @@
       "Estados Unidos de América"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: cph.3g13786. Enlace oficial: https://www.loc.gov/item/2009630537/"
+  },
+  {
+    "id": "1881-atleta-flip-flap",
+    "titulo": "Atleta Flip Flap",
+    "titulo_original": "Athlete Flip Flap",
+    "año": 1881,
+    "duracion": "20 seg",
+    "resumen_breve": "Un joven ejecuta un flic flac captado en múltiples fases por Muybridge, revelando biomecánica y control extremo del cuerpo humano en el aire.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/atleta-flip-flap/atleta-flip-flap.jpg",
+    "post": "/historiadelcine/posts/1881-atleta-flip-flap/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: no. 109. Enlace oficial: https://www.loc.gov/item/2009630540/"
   }
 ]
