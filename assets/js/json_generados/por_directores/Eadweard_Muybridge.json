@@ -689,5 +689,29 @@
       "Reino Unido"
     ],
     "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: no. 109. Enlace oficial: https://www.loc.gov/item/2009630540/"
+  },
+  {
+    "id": "1881-posando",
+    "titulo": "Posando",
+    "titulo_original": "Posturing",
+    "año": 1881,
+    "duracion": "40 seg",
+    "resumen_breve": "Un hombre ejecuta poses controladas que muestran tensión muscular y equilibrio, capturadas por Muybridge para estudios anatómicos y artísticos.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/posando/posando.jpg",
+    "post": "/historiadelcine/posts/1881-posando/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: no. 114. Enlace oficial: https://www.loc.gov/item/2009630541/"
   }
 ]
