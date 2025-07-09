@@ -732,5 +732,29 @@
       "Estados Unidos de América"
     ],
     "observaciones": "Secuencia mixta de humano y animal. Referencia: no. 81. Enlace oficial: https://www.loc.gov/item/2008681186/"
+  },
+  {
+    "id": "1881-buey-corriendo",
+    "titulo": "Buey corriendo",
+    "titulo_original": "Ox, Running",
+    "año": 1881,
+    "duracion": "10 segundos",
+    "resumen_breve": "Una serie de quince exposiciones consecutivas que capturan el trote de un buey, revelando las fases precisas de la locomoción de animales de carga.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/buey-corriendo/buey-corriendo.jpg",
+    "post": "/historiadelcine/posts/1881-buey-corriendo/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Reino Unido",
+      "Estados Unidos de América"
+    ],
+    "observaciones": "Fotografías originales entre 1878–1879. Placa no. 80. Enlace oficial: https://www.loc.gov/item/2008681187/"
   }
 ]
