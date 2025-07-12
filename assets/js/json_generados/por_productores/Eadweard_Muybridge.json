@@ -670,5 +670,29 @@
       "Reino Unido"
     ],
     "observaciones": "Serie número 79 del compendio The Attitudes of Animals in Motion. Enlace oficial: https://www.loc.gov/item/2008681188/"
+  },
+  {
+    "id": "1881-vaca-en-movimiento-irregular",
+    "titulo": "Vaca en movimiento irregular",
+    "titulo_original": "Cow, Irregular",
+    "año": 1881,
+    "duracion": "8 segundos",
+    "resumen_breve": "Secuencia que muestra a una vaca avanzando con paso irregular, permitiendo analizar patrones no estandarizados de locomoción bovina.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/vaca-irregular/vaca1.jpg",
+    "post": "/historiadelcine/posts/1881-vaca-en-movimiento-irregular/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Serie número 83 del compendio The Attitudes of Animals in Motion. Enlace oficial: https://www.loc.gov/resource/cph.3g13784/"
   }
 ]
