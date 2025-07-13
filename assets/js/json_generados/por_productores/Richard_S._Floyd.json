@@ -1,13 +1,13 @@
 [
   {
-    "id": "1882-transito-venus",
+    "id": "transito-venus",
     "titulo": "El tránsito de Venus de 1882",
     "titulo_original": "The 1882 Transit of Venus",
     "año": 1882,
     "duracion": "1 min",
     "resumen_breve": "Documental astronómico que muestra el paso de Venus frente al Sol, capturado con placas fotográficas en una de las primeras cronofotografías científicas del cielo.",
-    "imagen": "/historiadelcine/assets/images/posts/1882-transito-venus/el-tr-nsito-de-venus-de-1882.jpg",
-    "post": "/historiadelcine/posts/1882-transito-venus/",
+    "imagen": "/historiadelcine/assets/images/posts/1882/transito-venus/el-tr-nsito-de-venus-de-1882.jpg",
+    "post": "/historiadelcine/posts/transito-venus/",
     "directores": [
       "David Peck Todd"
     ],

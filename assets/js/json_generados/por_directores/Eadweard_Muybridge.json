@@ -331,14 +331,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 87. Enlace oficial: https://www.loc.gov/item/2009630504/"
   },
   {
-    "id": "1881-atleta-caminando-1",
+    "id": "atleta-caminando-1",
     "titulo": "Atleta caminando 1",
     "titulo_original": "Athlete Walking 1",
     "año": 1881,
     "duracion": "16 seg",
     "resumen_breve": "Estudio biomecánico del caminar masculino realizado por Muybridge como parte del proyecto 'Animal Locomotion'.",
     "imagen": "/historiadelcine/assets/images/posts/1881/atleta-caminando-1/atleta-caminando-1.jpg",
-    "post": "/historiadelcine/posts/1881-atleta-caminando-1/",
+    "post": "/historiadelcine/posts/atleta-caminando-1/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -355,14 +355,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 92. Enlace oficial: https://www.loc.gov/item/2009630505/"
   },
   {
-    "id": "1881-jabali-caminando",
+    "id": "jabali-caminando",
     "titulo": "Jabalí caminando",
     "titulo_original": "Boar Walking",
     "año": 1881,
     "duracion": "6 seg",
     "resumen_breve": "Secuencia cronofotográfica que documenta el desplazamiento de un jabalí guiado por un cuidador, parte del proyecto Animal Locomotion.",
     "imagen": "/historiadelcine/assets/images/posts/1881/jabali-caminando/jabali-caminando.jpg",
-    "post": "/historiadelcine/posts/1881-jabali-caminando/",
+    "post": "/historiadelcine/posts/jabali-caminando/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -379,14 +379,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 90. Enlace oficial: https://www.loc.gov/item/2009630506/"
   },
   {
-    "id": "1881-cabra-corriendo-1",
+    "id": "cabra-corriendo-1",
     "titulo": "Cabra corriendo 1",
     "titulo_original": "Goat Running 1",
     "año": 1881,
     "duracion": "6 seg",
     "resumen_breve": "Secuencia cronofotográfica que documenta con precisión la carrera de una cabra, parte del proyecto Animal Locomotion de Muybridge.",
     "imagen": "/historiadelcine/assets/images/posts/1881/cabra-corriendo-1/cabra-corriendo-1.jpg",
-    "post": "/historiadelcine/posts/1881-cabra-corriendo-1/",
+    "post": "/historiadelcine/posts/cabra-corriendo-1/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -403,14 +403,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 89. Enlace oficial: https://www.loc.gov/item/2009630507/"
   },
   {
-    "id": "1881-cabra-corriendo-2",
+    "id": "cabra-corriendo-2",
     "titulo": "Cabra corriendo 2",
     "titulo_original": "Goat Running 2",
     "año": 1881,
     "duracion": "7 seg",
     "resumen_breve": "Segunda secuencia cronofotográfica que documenta la carrera de una cabra guiada por un asistente, como parte del proyecto Animal Locomotion de Muybridge.",
     "imagen": "/historiadelcine/assets/images/posts/1881/cabra-corriendo-2/cabra-corriendo-2.jpg",
-    "post": "/historiadelcine/posts/1881-cabra-corriendo-2/",
+    "post": "/historiadelcine/posts/cabra-corriendo-2/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -427,14 +427,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 88. Enlace oficial: https://www.loc.gov/item/2009630508/"
   },
   {
-    "id": "1881-atleta-caminando-2",
+    "id": "atleta-caminando-2",
     "titulo": "Atleta caminando 2",
     "titulo_original": "Athlete Walking 2",
     "año": 1881,
     "duracion": "20 seg",
     "resumen_breve": "Secuencia cronofotográfica de un hombre caminando rápido, que muestra la transición biomecánica entre marcha normal y trote.",
     "imagen": "/historiadelcine/assets/images/posts/1881/atleta-caminando-2/atleta-caminando-2.jpg",
-    "post": "/historiadelcine/posts/1881-atleta-caminando-2/",
+    "post": "/historiadelcine/posts/atleta-caminando-2/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -451,14 +451,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 93. Enlace oficial: https://www.loc.gov/item/2009630510/"
   },
   {
-    "id": "1881-jabali-trotando",
+    "id": "jabali-trotando",
     "titulo": "Jabalí trotando",
     "titulo_original": "Boar Trotting",
     "año": 1881,
     "duracion": "6 seg",
     "resumen_breve": "Estudio cronofotográfico del trote de un jabalí guiado por un asistente, parte del proyecto Animal Locomotion de Muybridge.",
     "imagen": "/historiadelcine/assets/images/posts/1881/jabali-trotando/jabali-trotando.jpg",
-    "post": "/historiadelcine/posts/1881-jabali-trotando/",
+    "post": "/historiadelcine/posts/jabali-trotando/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -475,14 +475,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 91. Enlace oficial: https://www.loc.gov/item/2009630511/"
   },
   {
-    "id": "1881-atleta-corriendo-1",
+    "id": "atleta-corriendo-1",
     "titulo": "Atleta corriendo 1",
     "titulo_original": "Athlete Running 1",
     "año": 1881,
     "duracion": "15 seg",
     "resumen_breve": "Secuencia cronofotográfica que analiza la carrera humana en distintas fases, parte del proyecto Animal Locomotion de Muybridge.",
     "imagen": "/historiadelcine/assets/images/posts/1881/atleta-corriendo-1/atleta-corriendo-1.jpg",
-    "post": "/historiadelcine/posts/1881-atleta-corriendo-1/",
+    "post": "/historiadelcine/posts/atleta-corriendo-1/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -499,14 +499,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 94. Enlace oficial: https://www.loc.gov/item/2009630512/"
   },
   {
-    "id": "1881-atleta-corriendo-2",
+    "id": "atleta-corriendo-2",
     "titulo": "Atleta corriendo 2",
     "titulo_original": "Athlete Running 2",
     "año": 1881,
     "duracion": "16 seg",
     "resumen_breve": "Segunda secuencia de carrera humana capturada por Muybridge, con foco en la zancada extendida y las fases de impulso y vuelo.",
     "imagen": "/historiadelcine/assets/images/posts/1881/atleta-corriendo-2/atleta-corriendo-2.jpg",
-    "post": "/historiadelcine/posts/1881-atleta-corriendo-2/",
+    "post": "/historiadelcine/posts/atleta-corriendo-2/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -523,14 +523,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 95. Enlace oficial: https://www.loc.gov/item/2009630513/"
   },
   {
-    "id": "1881-caballos-irregular-1",
+    "id": "caballos-irregular-1",
     "titulo": "Caballos. Irregular 1",
     "titulo_original": "Horses. Irregular 1",
     "año": 1881,
     "duracion": "5 seg",
     "resumen_breve": "Caballo de tiro enganchado a un sulky avanzando con paso irregular, capturado por Muybridge para su serie de estudios biomecánicos.",
     "imagen": "/historiadelcine/assets/images/posts/1881/caballos-irregular-1/caballos-irregular-1.jpg",
-    "post": "/historiadelcine/posts/1881-caballos-irregular-1/",
+    "post": "/historiadelcine/posts/caballos-irregular-1/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -547,14 +547,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 68. Enlace oficial: https://www.loc.gov/item/2008681170/"
   },
   {
-    "id": "1881-caballos-irregular-2",
+    "id": "caballos-irregular-2",
     "titulo": "Caballos. Irregular 2",
     "titulo_original": "Horses Irregular 2",
     "año": 1881,
     "duracion": "6 seg",
     "resumen_breve": "Segunda toma de un caballo con sulky en desplazamiento irregular, capturado por Muybridge para estudios comparativos de biomecánica animal.",
     "imagen": "/historiadelcine/assets/images/posts/1881/caballos-irregular-2/caballos-irregular-2.jpg",
-    "post": "/historiadelcine/posts/1881-caballos-irregular-2/",
+    "post": "/historiadelcine/posts/caballos-irregular-2/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -571,14 +571,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion', referencia Library of Congress no. 68. Enlace oficial: https://www.loc.gov/item/2008681171/"
   },
   {
-    "id": "1881-caballos-irregular-3",
+    "id": "caballos-irregular-3",
     "titulo": "Caballos. Irregular 3",
     "titulo_original": "Horses Irregular 3",
     "año": 1881,
     "duracion": "10 seg",
     "resumen_breve": "Jinete sobre caballo al paso irregular, documentado por Muybridge para estudiar biomecánica ecuestre bajo carga.",
     "imagen": "/historiadelcine/assets/images/posts/1881/caballos-irregular-3/caballos-irregular-3.jpg",
-    "post": "/historiadelcine/posts/1881-caballos-irregular-3/",
+    "post": "/historiadelcine/posts/caballos-irregular-3/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -595,14 +595,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: cph.3g13766. Enlace oficial: https://www.loc.gov/item/2008681172/"
   },
   {
-    "id": "1881-atleta-con-mazas",
+    "id": "atleta-con-mazas",
     "titulo": "Atleta con mazas",
     "titulo_original": "Athlete Swinging Clubs",
     "año": 1881,
     "duracion": "6 seg",
     "resumen_breve": "Ejercicio gimnástico con mazas realizado por un atleta, registrado frontalmente por Muybridge como parte del estudio sobre biomecánica humana.",
     "imagen": "/historiadelcine/assets/images/posts/1881/atleta-con-mazas/atleta-con-mazas.jpg",
-    "post": "/historiadelcine/posts/1881-atleta-con-mazas/",
+    "post": "/historiadelcine/posts/atleta-con-mazas/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -619,14 +619,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: cph.3g13786. Enlace oficial: https://www.loc.gov/item/2009630535/"
   },
   {
-    "id": "1881-atletas-luchando",
+    "id": "atletas-luchando",
     "titulo": "Atletas luchando",
     "titulo_original": "Athletes Wrestling",
     "año": 1881,
     "duracion": "19 seg",
     "resumen_breve": "Dos hombres luchan cuerpo a cuerpo en una secuencia lateral que analiza el equilibrio, la fuerza y la interacción física registrada por Muybridge.",
     "imagen": "/historiadelcine/assets/images/posts/1881/atletas-luchando/atletas-luchando.jpg",
-    "post": "/historiadelcine/posts/1881-atletas-luchando/",
+    "post": "/historiadelcine/posts/atletas-luchando/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -643,14 +643,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: cph.3g13786. Enlace oficial: https://www.loc.gov/item/2009630536/"
   },
   {
-    "id": "1881-irregular-2",
+    "id": "irregular-2",
     "titulo": "Irregular 2",
     "titulo_original": "Irregular 2",
     "año": 1881,
     "duracion": "16 seg",
     "resumen_breve": "Un atleta ejecuta una figura invertida mediante impulso de piernas, capturado por Muybridge para analizar biomecánica extrema y equilibrio invertido.",
     "imagen": "/historiadelcine/assets/images/posts/1881/irregular-2/irregular-2.jpg",
-    "post": "/historiadelcine/posts/1881-irregular-2/",
+    "post": "/historiadelcine/posts/irregular-2/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -667,14 +667,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: cph.3g13786. Enlace oficial: https://www.loc.gov/item/2009630537/"
   },
   {
-    "id": "1881-atleta-flip-flap",
+    "id": "atleta-flip-flap",
     "titulo": "Atleta Flip Flap",
     "titulo_original": "Athlete Flip Flap",
     "año": 1881,
     "duracion": "20 seg",
     "resumen_breve": "Un joven ejecuta un flic flac captado en múltiples fases por Muybridge, revelando biomecánica y control extremo del cuerpo humano en el aire.",
     "imagen": "/historiadelcine/assets/images/posts/1881/atleta-flip-flap/atleta-flip-flap.jpg",
-    "post": "/historiadelcine/posts/1881-atleta-flip-flap/",
+    "post": "/historiadelcine/posts/atleta-flip-flap/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -691,14 +691,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: no. 109. Enlace oficial: https://www.loc.gov/item/2009630540/"
   },
   {
-    "id": "1881-posando",
+    "id": "posando",
     "titulo": "Posando",
     "titulo_original": "Posturing",
     "año": 1881,
     "duracion": "40 seg",
     "resumen_breve": "Un hombre ejecuta poses controladas que muestran tensión muscular y equilibrio, capturadas por Muybridge para estudios anatómicos y artísticos.",
     "imagen": "/historiadelcine/assets/images/posts/1881/posando/posando.jpg",
-    "post": "/historiadelcine/posts/1881-posando/",
+    "post": "/historiadelcine/posts/posando/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -715,14 +715,14 @@
     "observaciones": "Incluida en la serie 'Animal Locomotion'. Referencia Library of Congress: no. 114. Enlace oficial: https://www.loc.gov/item/2009630541/"
   },
   {
-    "id": "1881-atleta-con-un-pico",
+    "id": "atleta-con-un-pico",
     "titulo": "Atleta con un pico",
     "titulo_original": "Athlete Swinging a Pick",
     "año": 1881,
     "duracion": "23 seg",
     "resumen_breve": "Un atleta aparece balanceando un pico, en una secuencia que estudia el esfuerzo físico humano y el gesto laboral con fines científicos y artísticos.",
     "imagen": "/historiadelcine/assets/images/posts/1881/atleta-con-un-pico/atleta-con-un-pico.jpg",
-    "post": "/historiadelcine/posts/1881-atleta-con-un-pico/",
+    "post": "/historiadelcine/posts/atleta-con-un-pico/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -739,14 +739,14 @@
     "observaciones": "Parte de la serie 'Animal Locomotion'. Referencia: no. 110. Enlace oficial: https://www.loc.gov/item/2009630545/"
   },
   {
-    "id": "1881-buey-corriendo-irregular",
+    "id": "buey-corriendo-irregular",
     "titulo": "Buey corriendo (irregular)",
     "titulo_original": "Ox, Running, Irregular",
     "año": 1881,
     "duracion": "8 seg",
     "resumen_breve": "Un buey corre de forma irregular junto a un hombre, en una secuencia que permite comparar la locomoción animal y humana en paralelo.",
     "imagen": "/historiadelcine/assets/images/posts/1881/buey-corriendo-irregular/buey-corriendo-irregular.jpg",
-    "post": "/historiadelcine/posts/1881-buey-corriendo-irregular/",
+    "post": "/historiadelcine/posts/buey-corriendo-irregular/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -763,14 +763,14 @@
     "observaciones": "Secuencia mixta de humano y animal. Referencia: no. 81. Enlace oficial: https://www.loc.gov/item/2008681186/"
   },
   {
-    "id": "1881-buey-corriendo",
+    "id": "buey-corriendo",
     "titulo": "Buey corriendo",
     "titulo_original": "Ox, Running",
     "año": 1881,
     "duracion": "10 segundos",
     "resumen_breve": "Una serie de quince exposiciones consecutivas que capturan el trote de un buey, revelando las fases precisas de la locomoción de animales de carga.",
     "imagen": "/historiadelcine/assets/images/posts/1881/buey-corriendo/buey-corriendo.jpg",
-    "post": "/historiadelcine/posts/1881-buey-corriendo/",
+    "post": "/historiadelcine/posts/buey-corriendo/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -787,14 +787,14 @@
     "observaciones": "Fotografías originales entre 1878–1879. Placa no. 80. Enlace oficial: https://www.loc.gov/item/2008681187/"
   },
   {
-    "id": "1881-buey-al-trote",
+    "id": "buey-al-trote",
     "titulo": "Buey al trote",
     "titulo_original": "Ox, Trotting",
     "año": 1881,
     "duracion": "7 segundos",
     "resumen_breve": "Secuencia fotográfica que registra el trote de un buey con precisión biomecánica, parte del compendio Animal Locomotion.",
     "imagen": "/historiadelcine/assets/images/posts/1881/buey-al-trote/buey-al-trote.jpg",
-    "post": "/historiadelcine/posts/1881-buey-al-trote/",
+    "post": "/historiadelcine/posts/buey-al-trote/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -811,14 +811,14 @@
     "observaciones": "Serie número 79 del compendio The Attitudes of Animals in Motion. Enlace oficial: https://www.loc.gov/item/2008681188/"
   },
   {
-    "id": "1881-vaca-en-movimiento-irregular",
+    "id": "vaca-irregular",
     "titulo": "Vaca en movimiento irregular",
     "titulo_original": "Cow, Irregular",
     "año": 1881,
     "duracion": "8 segundos",
     "resumen_breve": "Secuencia que muestra a una vaca avanzando con paso irregular, permitiendo analizar patrones no estandarizados de locomoción bovina.",
     "imagen": "/historiadelcine/assets/images/posts/1881/vaca-irregular/vaca1.jpg",
-    "post": "/historiadelcine/posts/1881-vaca-en-movimiento-irregular/",
+    "post": "/historiadelcine/posts/vaca-irregular/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -835,14 +835,14 @@
     "observaciones": "Serie número 83 del compendio The Attitudes of Animals in Motion. Enlace oficial: https://www.loc.gov/resource/cph.3g13784/"
   },
   {
-    "id": "1887-el-beso",
+    "id": "el-beso",
     "titulo": "El beso",
     "titulo_original": "Two Models Shaking Hands and Kissing Each Other (The Kiss)",
     "año": 1887,
     "duracion": "33 segundos",
     "resumen_breve": "Secuencia fotográfica animada que muestra a dos mujeres dándose la mano y besándose, considerada una de las primeras representaciones visuales del afecto humano.",
     "imagen": "/historiadelcine/assets/images/posts/1887/el-beso/el-beso.jpg",
-    "post": "/historiadelcine/posts/1887-el-beso/",
+    "post": "/historiadelcine/posts/el-beso/",
     "directores": [
       "Eadweard Muybridge"
     ],
@@ -859,14 +859,14 @@
     "observaciones": "Animación reproducida con zoopraxiscopio. Referencia: Plate 444 del proyecto Animal Locomotion. Fuente: https://addison.andover.edu/search-the-collection/?embark_query=/objects-1/info/8084?sort=0&objectName=Plate%20444.%20Two%20Models%20Shaking%20Hands%20and%20Kissing%20Each%20Other"
   },
   {
-    "id": "1881-caballo-carga-sallie",
+    "id": "caballo-carga-sallie",
     "titulo": "Caballo tirando de carga (Sallie)",
     "titulo_original": "Horses, Hauling, Sallie",
     "año": 1881,
     "duracion": "9 segundos",
     "resumen_breve": "La yegua Sallie es capturada en ocho exposiciones consecutivas mientras simula tirar de una carga, ofreciendo un valioso estudio sobre el esfuerzo de tracción en equinos.",
-    "imagen": "/historiadelcine/assets/images/posts/1881-caballo-carga-sallie/caballo-carga-sallie.jpg",
-    "post": "/historiadelcine/posts/1881-caballo-carga-sallie/",
+    "imagen": "/historiadelcine/assets/images/posts/1881/caballo-carga-sallie/caballo-carga-sallie.jpg",
+    "post": "/historiadelcine/posts/caballo-carga-sallie/",
     "directores": [
       "Eadweard Muybridge"
     ],

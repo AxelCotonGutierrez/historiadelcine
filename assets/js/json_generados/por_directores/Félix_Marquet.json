@@ -1,13 +1,13 @@
 [
   {
-    "id": "1937-alas-negras",
+    "id": "alas-negras",
     "titulo": "Alas negras",
     "titulo_original": "Alas negras (Bombardeos sobre la retaguardia de Aragón y Cataluña)",
     "año": 1937,
     "duracion": "13 minutos",
     "resumen_breve": "Documental sobre los bombardeos franquistas en Aragón y Cataluña y la respuesta colectiva desde el anarquismo.",
     "imagen": "/historiadelcine/assets/images/posts/1937/alas-negras/alas-negras.jpg",
-    "post": "/historiadelcine/posts/1937-alas-negras/",
+    "post": "/historiadelcine/posts/alas-negras/",
     "directores": [
       "Félix Marquet"
     ],
