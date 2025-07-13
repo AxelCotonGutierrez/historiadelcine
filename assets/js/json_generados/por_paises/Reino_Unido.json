@@ -881,5 +881,29 @@
       "Reino Unido"
     ],
     "observaciones": "Primera secuencia de la serie Animal Locomotion (no. 1). Fotografías tomadas en Palo Alto con cámaras sincronizadas. Fuente: https://www.loc.gov/item/2008680800"
+  },
+  {
+    "id": "caballo-nelson",
+    "titulo": "Caballo tirando de carga (Nelson)",
+    "titulo_original": "Horses, Hauling, Nelson",
+    "año": 1881,
+    "duracion": "7 segundos",
+    "resumen_breve": "Secuencia de ocho exposiciones que muestra al caballo Nelson simulando arrastrar una carga, capturando el esfuerzo físico y la mecánica del tiro equino.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/caballo-nelson/caballo-nelson.jpg",
+    "post": "/historiadelcine/posts/caballo-nelson/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Número 2 de la serie The Attitudes of Animals in Motion. Las fotografías fueron tomadas en Palo Alto con cámaras sincronizadas. Enlace oficial: https://www.loc.gov/item/2008680811/"
   }
 ]
