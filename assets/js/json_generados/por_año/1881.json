@@ -804,5 +804,29 @@
       "Reino Unido"
     ],
     "observaciones": "Serie número 83 del compendio The Attitudes of Animals in Motion. Enlace oficial: https://www.loc.gov/resource/cph.3g13784/"
+  },
+  {
+    "id": "1881-caballo-carga-sallie",
+    "titulo": "Caballo tirando de carga (Sallie)",
+    "titulo_original": "Horses, Hauling, Sallie",
+    "año": 1881,
+    "duracion": "9 segundos",
+    "resumen_breve": "La yegua Sallie es capturada en ocho exposiciones consecutivas mientras simula tirar de una carga, ofreciendo un valioso estudio sobre el esfuerzo de tracción en equinos.",
+    "imagen": "/historiadelcine/assets/images/posts/1881-caballo-carga-sallie/caballo-carga-sallie.jpg",
+    "post": "/historiadelcine/posts/1881-caballo-carga-sallie/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Primera secuencia de la serie Animal Locomotion (no. 1). Fotografías tomadas en Palo Alto con cámaras sincronizadas. Fuente: https://www.loc.gov/item/2008680800"
   }
 ]

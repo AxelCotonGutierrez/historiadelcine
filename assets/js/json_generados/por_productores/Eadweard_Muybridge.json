@@ -718,5 +718,29 @@
       "Reino Unido"
     ],
     "observaciones": "Animación reproducida con zoopraxiscopio. Referencia: Plate 444 del proyecto Animal Locomotion. Fuente: https://addison.andover.edu/search-the-collection/?embark_query=/objects-1/info/8084?sort=0&objectName=Plate%20444.%20Two%20Models%20Shaking%20Hands%20and%20Kissing%20Each%20Other"
+  },
+  {
+    "id": "1881-caballo-carga-sallie",
+    "titulo": "Caballo tirando de carga (Sallie)",
+    "titulo_original": "Horses, Hauling, Sallie",
+    "año": 1881,
+    "duracion": "9 segundos",
+    "resumen_breve": "La yegua Sallie es capturada en ocho exposiciones consecutivas mientras simula tirar de una carga, ofreciendo un valioso estudio sobre el esfuerzo de tracción en equinos.",
+    "imagen": "/historiadelcine/assets/images/posts/1881-caballo-carga-sallie/caballo-carga-sallie.jpg",
+    "post": "/historiadelcine/posts/1881-caballo-carga-sallie/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América",
+      "Reino Unido"
+    ],
+    "observaciones": "Primera secuencia de la serie Animal Locomotion (no. 1). Fotografías tomadas en Palo Alto con cámaras sincronizadas. Fuente: https://www.loc.gov/item/2008680800"
   }
 ]
