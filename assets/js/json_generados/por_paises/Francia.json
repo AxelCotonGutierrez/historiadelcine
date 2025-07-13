@@ -790,5 +790,28 @@
       "Francia"
     ],
     "observaciones": "Animaciones creadas entre 1877 y 1879 y presentadas en la Exposición Universal de París. Agrupadas en tres series de diez películas, fueron las primeras animaciones comerciales de la historia."
+  },
+  {
+    "id": "hombre-maquina",
+    "titulo": "El hombre máquina",
+    "titulo_original": "L'homme machine",
+    "año": 1885,
+    "duracion": "15 segundos",
+    "resumen_breve": "Visualización científica del cuerpo humano como un sistema mecánico, donde una figura articulada camina representando el movimiento descompuesto en puntos y líneas.",
+    "imagen": "/historiadelcine/assets/images/posts/1885/hombre-maquina/el-hombre-maquina.jpg",
+    "post": "/historiadelcine/posts/hombre-maquina/",
+    "directores": [
+      "Étienne-Jules Marey"
+    ],
+    "productores": [
+      "Étienne-Jules Marey"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Obra pionera de animación científica, realizada en el Station Physiologique de París. Su estilo inspiró la animación digital por esqueletos. Referencias: Musser, Musée des Arts et Métiers, Cinémathèque Française."
   }
 ]
