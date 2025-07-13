@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1882-transito-venus",
+    "titulo": "El tránsito de Venus de 1882",
+    "titulo_original": "The 1882 Transit of Venus",
+    "año": 1882,
+    "duracion": "1 min",
+    "resumen_breve": "Documental astronómico que muestra el paso de Venus frente al Sol, capturado con placas fotográficas en una de las primeras cronofotografías científicas del cielo.",
+    "imagen": "/historiadelcine/assets/images/posts/1882-transito-venus/el-tr-nsito-de-venus-de-1882.jpg",
+    "post": "/historiadelcine/posts/1882-transito-venus/",
+    "directores": [
+      "David Peck Todd"
+    ],
+    "productores": [
+      "Richard S. Floyd",
+      "David Peck Todd"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "UC Santa Cruz",
+      "University of California Observatories / Lick Observatory (UCO/Lick)"
+    ],
+    "paises": [
+      "Estados Unidos de América"
+    ],
+    "observaciones": "Cronofotografía científica del tránsito de Venus de 1882, animada a partir de placas tomadas en el Observatorio Lick. Precursora del cine astronómico. Fuente: Amherst College, UC Santa Cruz."
+  }
+]
