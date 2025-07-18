@@ -1001,5 +1001,28 @@
       "Reino Unido"
     ],
     "observaciones": "Número 2 de la serie The Attitudes of Animals in Motion. Las fotografías fueron tomadas en Palo Alto con cámaras sincronizadas. Enlace oficial: https://www.loc.gov/item/2008680811/"
+  },
+  {
+    "id": "caballo-clyde",
+    "titulo": "Caballo tirando de carga (Clyde)",
+    "titulo_original": "Horses, Hauling, Clyde",
+    "año": 1881,
+    "duracion": "14 segundos",
+    "resumen_breve": "El caballo Clyde es captado en doce exposiciones consecutivas mientras realiza un esfuerzo de arrastre, destacando la fuerza y dinámica del tiro equino.",
+    "imagen": "/historiadelcine/assets/images/posts/1881/caballo-clyde/Horses-Clyde.jpg",
+    "post": "/historiadelcine/posts/caballo-clyde/",
+    "directores": [
+      "Eadweard Muybridge"
+    ],
+    "productores": [
+      "Eadweard Muybridge"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [],
+    "paises": [
+      "Estados Unidos de América"
+    ],
+    "observaciones": "Serie número 3 del volumen The Attitudes of Animals in Motion. Capturada con doce cámaras sincronizadas en Palo Alto. Referencia: https://www.loc.gov/item/2008680819/"
   }
 ]
