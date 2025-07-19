@@ -4,7 +4,7 @@
     "titulo": "El beso",
     "titulo_original": "Two Models Shaking Hands and Kissing Each Other (The Kiss)",
     "año": 1887,
-    "duracion": "33 segundos",
+    "duracion": "33 seg",
     "resumen_breve": "Secuencia fotográfica animada que muestra a dos mujeres dándose la mano y besándose, considerada una de las primeras representaciones visuales del afecto humano.",
     "imagen": "/historiadelcine/assets/images/posts/1887/el-beso/el-beso.jpg",
     "post": "/historiadelcine/posts/el-beso/",
@@ -22,5 +22,30 @@
       "Reino Unido"
     ],
     "observaciones": "Animación reproducida con zoopraxiscopio. Referencia: Plate 444 del proyecto Animal Locomotion. Fuente: https://addison.andover.edu/search-the-collection/?embark_query=/objects-1/info/8084?sort=0&objectName=Plate%20444.%20Two%20Models%20Shaking%20Hands%20and%20Kissing%20Each%20Other"
+  },
+  {
+    "id": "hombre-esquina",
+    "titulo": "Hombre doblando la esquina",
+    "titulo_original": "Man Walking Around a Corner",
+    "año": 1887,
+    "duracion": "1 seg",
+    "resumen_breve": "Breve secuencia filmada por Louis Le Prince donde un hombre gira una esquina; uno de los registros más antiguos del movimiento capturado fotográficamente.",
+    "imagen": "/historiadelcine/assets/images/posts/1887/hombre-esquina/hombre-doblando-la-esquina.jpg",
+    "post": "/historiadelcine/posts/hombre-esquina/",
+    "directores": [
+      "Louis Aimé Augustin Le Prince"
+    ],
+    "productores": [
+      "Louis Aimé Augustin Le Prince"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "Whitley Partners"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Grabada en París con una cámara de 16 lentes; enviada en una carta fechada el 18 de agosto de 1887. Restaurada en 1931. Conservada en el National Science and Media Museum. Considerada una de las primeras filmaciones existentes."
   }
 ]

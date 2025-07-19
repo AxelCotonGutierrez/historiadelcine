@@ -1,0 +1,27 @@
+[
+  {
+    "id": "hombre-esquina",
+    "titulo": "Hombre doblando la esquina",
+    "titulo_original": "Man Walking Around a Corner",
+    "año": 1887,
+    "duracion": "1 seg",
+    "resumen_breve": "Breve secuencia filmada por Louis Le Prince donde un hombre gira una esquina; uno de los registros más antiguos del movimiento capturado fotográficamente.",
+    "imagen": "/historiadelcine/assets/images/posts/1887/hombre-esquina/hombre-doblando-la-esquina.jpg",
+    "post": "/historiadelcine/posts/hombre-esquina/",
+    "directores": [
+      "Louis Aimé Augustin Le Prince"
+    ],
+    "productores": [
+      "Louis Aimé Augustin Le Prince"
+    ],
+    "guionistas": [],
+    "actores": [],
+    "estudio": [
+      "Whitley Partners"
+    ],
+    "paises": [
+      "Francia"
+    ],
+    "observaciones": "Grabada en París con una cámara de 16 lentes; enviada en una carta fechada el 18 de agosto de 1887. Restaurada en 1931. Conservada en el National Science and Media Museum. Considerada una de las primeras filmaciones existentes."
+  }
+]
